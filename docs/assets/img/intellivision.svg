@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Intellivision">
+  <rect width="800" height="500" rx="34" fill="#eef2f8"/>
+  <rect x="95" y="178" width="610" height="128" rx="26" fill="#374b67"/>
+  <rect x="128" y="145" width="220" height="70" rx="18" fill="#d4dbe6"/>
+  <rect x="394" y="145" width="245" height="70" rx="18" fill="#1c2636"/>
+  <circle cx="195" cy="240" r="18" fill="#d4dbe6"/>
+  <circle cx="250" cy="240" r="18" fill="#d4dbe6"/>
+  <rect x="318" y="230" width="110" height="8" rx="4" fill="#d4dbe6"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#263346" letter-spacing="2">INTELLIVISION</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Dreamcast">
+  <rect width="800" height="500" rx="34" fill="#fff4ed"/>
+  <rect x="186" y="168" width="428" height="148" rx="32" fill="#f2f0ef" stroke="#d7d2cf" stroke-width="10"/>
+  <circle cx="514" cy="242" r="32" fill="none" stroke="#f07f4f" stroke-width="10"/>
+  <path d="M492 224c20-22 54-16 63 10 4 11 3 22-2 32" fill="none" stroke="#f07f4f" stroke-width="10" stroke-linecap="round"/>
+  <rect x="236" y="190" width="148" height="18" rx="9" fill="#d7d2cf"/>
+  <rect x="236" y="226" width="112" height="18" rx="9" fill="#d7d2cf"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#d8693d" letter-spacing="2">DREAMCAST</text>
+</svg>

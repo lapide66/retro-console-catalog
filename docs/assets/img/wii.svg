@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Nintendo Wii">
+  <rect width="800" height="500" rx="34" fill="#f3f7f8"/>
+  <rect x="274" y="114" width="252" height="220" rx="28" fill="#8da4a8"/>
+  <rect x="300" y="146" width="200" height="150" rx="20" fill="#dde6e8"/>
+  <circle cx="330" cy="144" r="8" fill="#617479"/>
+  <circle cx="360" cy="144" r="8" fill="#617479"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#617479" letter-spacing="2">WII</text>
+</svg>

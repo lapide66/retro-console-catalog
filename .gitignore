@@ -1,0 +1,8 @@
+.git/
+releases/
+base-instructions.md
+token.txt
+Thumbs.db
+.DS_Store
+*.log
+lista-geraçoes.txt

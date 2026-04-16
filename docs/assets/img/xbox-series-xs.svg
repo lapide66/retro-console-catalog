@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Xbox Series X and Series S">
+  <rect width="800" height="500" rx="34" fill="#eef4ee"/>
+  <rect x="238" y="128" width="132" height="230" rx="18" fill="#2f4d31"/>
+  <circle cx="304" cy="188" r="34" fill="#111111"/>
+  <rect x="430" y="182" width="172" height="120" rx="26" fill="#f3f3f1" stroke="#d4d7cf" stroke-width="8"/>
+  <circle cx="534" cy="242" r="34" fill="#111111"/>
+  <circle cx="534" cy="242" r="18" fill="#2f2f2f"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="32" font-family="Arial, sans-serif" fill="#2f4d31" letter-spacing="2">XBOX SERIES X / S</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Nintendo 64">
+  <rect width="800" height="500" rx="34" fill="#f4f1fb"/>
+  <rect x="120" y="176" width="560" height="126" rx="22" fill="#6f62c8"/>
+  <rect x="150" y="146" width="180" height="66" rx="14" fill="#d7d2f5"/>
+  <rect x="385" y="146" width="210" height="66" rx="14" fill="#332a72"/>
+  <circle cx="618" cy="240" r="16" fill="#d7d2f5"/>
+  <circle cx="575" cy="240" r="16" fill="#d7d2f5"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#332a72" letter-spacing="2">NINTENDO 64</text>
+</svg>

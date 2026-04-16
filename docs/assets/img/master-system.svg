@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Sega Master System">
+  <rect width="800" height="500" rx="34" fill="#eef8f8"/>
+  <rect x="115" y="180" width="570" height="120" rx="24" fill="#2f7f8f"/>
+  <rect x="144" y="150" width="210" height="58" rx="14" fill="#dfe9eb"/>
+  <rect x="392" y="148" width="220" height="62" rx="14" fill="#183f47"/>
+  <circle cx="608" cy="248" r="17" fill="#dfe9eb"/>
+  <circle cx="566" cy="248" r="17" fill="#dfe9eb"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#183f47" letter-spacing="2">MASTER SYSTEM</text>
+</svg>
