@@ -66,12 +66,6 @@ Acesse:
 - `http://localhost:8080/docs/references.html?id=mega-drive` — referências do Mega Drive
 - `http://localhost:8080/docs/about.html` — sobre o projeto
 
-## IDs disponíveis
-
-Os IDs usados na query string `?id=` são:
-
-`magnavox-odyssey` · `atari-2600` · `intellivision` · `colecovision` · `nes` · `master-system` · `super-nintendo` · `mega-drive` · `neo-geo` · `playstation` · `nintendo-64` · `sega-saturn` · `dreamcast` · `playstation-2` · `xbox` · `gamecube` · `xbox-360` · `wii` · `playstation-3` · `wii-u` · `playstation-4` · `xbox-one` · `switch`
-
 ## Dados (`consoles.json`)
 
 Cada entrada no JSON segue este schema:
@@ -103,15 +97,6 @@ Cada entrada no JSON segue este schema:
   "curiosidade_no_brasil": "string"
 }
 ```
-
-## GitHub Pages
-
-A pasta `docs/` está pronta para publicação:
-
-1. Vá em **Settings → Pages**
-2. Em **Source**, selecione `Deploy from a branch`
-3. Escolha a branch `main` e a pasta `/docs`
-4. Salve — o site estará disponível em `https://<usuario>.github.io/retro-console-catalog/`
 
 ## Contribuindo
 
