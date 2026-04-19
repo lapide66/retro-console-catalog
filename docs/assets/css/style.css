@@ -10,6 +10,7 @@
   --accent-1: #141414;
   --accent-2: #4c4c4c;
   --accent-3: #8c8c8c;
+  --accent-4: #c9c2bd;
   --shadow: 0 16px 40px rgba(25, 22, 19, 0.05);
   --radius-xl: 28px;
   --radius-lg: 18px;
@@ -117,6 +118,11 @@ img {
 .console-bar-3 {
   width: 4.2rem;
   background: var(--accent-3);
+}
+
+.console-bar-4 {
+  width: 2.2rem;
+  background: var(--accent-4);
 }
 
 .back-link {

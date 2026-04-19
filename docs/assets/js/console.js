@@ -87,13 +87,27 @@ function renderOptionalSpec(label, value) {
   return specCard(label, value);
 }
 
+function setThemeColor(color) {
+  let meta = document.querySelector('meta[name="theme-color"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute("name", "theme-color");
+    document.head.append(meta);
+  }
+
+  meta.setAttribute("content", color);
+}
+
 function renderConsole(item) {
   const generationRoman = toRoman(item.geracao);
   document.title = `${item.nome} · Retro Console Catalog`;
+  setThemeColor(item.cor);
   document.documentElement.style.setProperty("--accent", item.cor);
   document.documentElement.style.setProperty("--accent-1", item.cor);
   document.documentElement.style.setProperty("--accent-2", mixHex(item.cor, "#ffffff", 0.25));
   document.documentElement.style.setProperty("--accent-3", mixHex(item.cor, "#111111", 0.15));
+  document.documentElement.style.setProperty("--accent-4", mixHex(item.cor, "#ffffff", 0.5));
 
   const physicalCards = [
     renderOptionalSpec("Dimensões físicas", item.dimensoes),
@@ -118,6 +132,7 @@ function renderConsole(item) {
     createEl("span", "console-bar console-bar-1"),
     createEl("span", "console-bar console-bar-2"),
     createEl("span", "console-bar console-bar-3"),
+    createEl("span", "console-bar console-bar-4"),
   );
   heading.append(title, meta, intro, bars);
 
