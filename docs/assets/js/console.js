@@ -99,9 +99,24 @@ function setThemeColor(color) {
   meta.setAttribute("content", color);
 }
 
+function setMetaDescription(content) {
+  let meta = document.querySelector('meta[name="description"]');
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute("name", "description");
+    document.head.append(meta);
+  }
+
+  meta.setAttribute("content", content);
+}
+
 function renderConsole(item) {
   const generationRoman = toRoman(item.geracao);
-  document.title = `${item.nome} · Retro Console Catalog`;
+  document.title = `${item.nome} · Ficha técnica · Retro Console Catalog`;
+  setMetaDescription(
+    `Ficha técnica do ${item.nome}, lançado em ${item.ano}, com mídia ${item.midia}, preço de lançamento ${item.preco_lancamento} e vendas totais de ${item.vendas_totais}.`,
+  );
   setThemeColor(item.cor);
   document.documentElement.style.setProperty("--accent", item.cor);
   document.documentElement.style.setProperty("--accent-1", item.cor);
@@ -135,6 +150,37 @@ function renderConsole(item) {
     createEl("span", "console-bar console-bar-4"),
   );
   heading.append(title, meta, intro, bars);
+
+  const overview = createEl("section", "console-overview");
+  const overviewCopy = createEl("div", "console-overview-copy");
+  overviewCopy.append(
+    createEl("p", "eyebrow", "Visão rápida"),
+    createEl("h2", "console-overview-title", "Tudo o que importa em segundos"),
+    createEl("p", "console-overview-body", item.resumo),
+  );
+
+  const factList = createEl("dl", "fact-chips");
+  [
+    ["Ano", String(item.ano)],
+    ["Mídia", item.midia],
+    ["Vendas", item.vendas_totais],
+  ].forEach(([label, value]) => {
+    const fact = createEl("div", "fact-chip");
+    fact.append(
+      createEl("dt", "fact-label", label),
+      createEl("dd", "fact-value", value),
+    );
+    factList.append(fact);
+  });
+
+  const overviewActions = createEl("div", "console-overview-actions");
+  const sourceLink = createEl("a", "reference-link");
+  sourceLink.href = `references.html?id=${encodeURIComponent(item.id)}`;
+  const arrow = createEl("span", "", "↗");
+  arrow.setAttribute("aria-hidden", "true");
+  sourceLink.append(document.createTextNode("Ver fontes do console "), arrow);
+  overviewActions.append(sourceLink);
+  overview.append(overviewCopy, factList, overviewActions);
 
   const hero = createEl("div", "console-hero");
   const image = document.createElement("img");
@@ -198,14 +244,14 @@ function renderConsole(item) {
   brazilSection.append(createEl("h2", "section-title", "Brasil"), brazilCard);
 
   const footerActions = createEl("section", "specs-section console-footer-actions");
-  const refLink = createEl("a", "reference-link");
-  refLink.href = "references.html";
-  const arrow = createEl("span", "", "↗");
-  arrow.setAttribute("aria-hidden", "true");
-  refLink.append(document.createTextNode("Referências "), arrow);
-  footerActions.append(refLink);
+  const bottomLink = createEl("a", "reference-link");
+  bottomLink.href = `references.html?id=${encodeURIComponent(item.id)}`;
+  const bottomArrow = createEl("span", "", "↗");
+  bottomArrow.setAttribute("aria-hidden", "true");
+  bottomLink.append(document.createTextNode("Fontes e detalhes "), bottomArrow);
+  footerActions.append(bottomLink);
 
-  article.append(header, statsGrid, technicalSection);
+  article.append(header, overview, statsGrid, technicalSection);
   if (physicalSection) {
     article.append(physicalSection);
   }
