@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Neo Geo AES">
+  <rect width="800" height="500" rx="34" fill="#f3eded"/>
+  <rect x="146" y="182" width="508" height="120" rx="28" fill="#2f2a2a"/>
+  <rect x="190" y="152" width="160" height="44" rx="12" fill="#444040"/>
+  <rect x="418" y="150" width="176" height="48" rx="12" fill="#111111"/>
+  <rect x="260" y="212" width="280" height="18" rx="9" fill="#f4cf62"/>
+  <rect x="260" y="248" width="280" height="18" rx="9" fill="#555151"/>
+  <text x="50%" y="404" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#2f2a2a" letter-spacing="2">NEO GEO AES</text>
+</svg>

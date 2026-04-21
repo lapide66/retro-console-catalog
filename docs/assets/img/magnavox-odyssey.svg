@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Magnavox Odyssey">
+  <rect width="800" height="500" rx="34" fill="#f4ece4"/>
+  <rect x="80" y="170" width="640" height="160" rx="28" fill="#c7b39f" stroke="#7a6555" stroke-width="8"/>
+  <rect x="135" y="120" width="210" height="90" rx="14" fill="#f5f0ea" stroke="#7a6555" stroke-width="6"/>
+  <rect x="355" y="110" width="265" height="105" rx="18" fill="#2f2d2c"/>
+  <circle cx="600" cy="158" r="18" fill="#f4ece4"/>
+  <rect x="250" y="280" width="300" height="26" rx="12" fill="#7a6555" opacity=".4"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#2c241f" letter-spacing="2">MAGNAVOX ODYSSEY</text>
+</svg>

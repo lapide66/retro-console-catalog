@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Mega Drive">
+  <rect width="800" height="500" rx="34" fill="#ececef"/>
+  <ellipse cx="400" cy="248" rx="232" ry="108" fill="#1f1f24"/>
+  <ellipse cx="400" cy="248" rx="118" ry="58" fill="#2e2e34" stroke="#6e6e78" stroke-width="8"/>
+  <circle cx="400" cy="248" r="20" fill="#6e6e78"/>
+  <rect x="256" y="156" width="288" height="40" rx="12" fill="#111114"/>
+  <rect x="322" y="162" width="156" height="14" rx="7" fill="#b44f4f"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#1f1f24" letter-spacing="2">MEGA DRIVE</text>
+</svg>

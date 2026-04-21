@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Atari 2600">
+  <rect width="800" height="500" rx="34" fill="#f8eee2"/>
+  <rect x="120" y="195" width="560" height="110" rx="22" fill="#3a2418"/>
+  <rect x="170" y="165" width="160" height="55" rx="14" fill="#b87333"/>
+  <rect x="360" y="154" width="90" height="80" rx="14" fill="#e8dfd4"/>
+  <circle cx="576" cy="250" r="17" fill="#e8dfd4"/>
+  <circle cx="618" cy="250" r="17" fill="#e8dfd4"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#3a2418" letter-spacing="2">ATARI 2600</text>
+</svg>

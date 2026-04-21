@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Xbox One">
+  <rect width="800" height="500" rx="34" fill="#eff4ef"/>
+  <rect x="168" y="172" width="464" height="132" rx="24" fill="#2f4333"/>
+  <rect x="168" y="172" width="232" height="132" rx="24" fill="#404a42"/>
+  <circle cx="568" cy="238" r="20" fill="#cedccc"/>
+  <circle cx="568" cy="238" r="8" fill="#2f4333"/>
+  <rect x="216" y="206" width="120" height="14" rx="7" fill="#9ca8a0"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#314835" letter-spacing="2">XBOX ONE</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="PlayStation 5">
+  <rect width="800" height="500" rx="34" fill="#fafafa"/>
+  <rect x="272" y="86" width="256" height="286" rx="24" fill="#e7e7ea"/>
+  <rect x="313" y="114" width="174" height="230" rx="18" fill="#ffffff"/>
+  <rect x="235" y="118" width="60" height="224" rx="18" fill="#1f1f24"/>
+  <rect x="505" y="118" width="60" height="224" rx="18" fill="#1f1f24"/>
+  <circle cx="252" cy="150" r="8" fill="#e7e7ea"/>
+  <circle cx="548" cy="150" r="8" fill="#e7e7ea"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#1f1f24" letter-spacing="2">PLAYSTATION 5</text>
+</svg>

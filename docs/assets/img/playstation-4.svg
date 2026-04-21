@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="PlayStation 4">
+  <rect width="800" height="500" rx="34" fill="#eef2f8"/>
+  <path d="M240 306l110-126h204l-110 126z" fill="#1f293f"/>
+  <path d="M350 180l90 126h120l-90-126z" fill="#2d3953"/>
+  <path d="M318 244h232" stroke="#4e72c6" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="522" cy="284" r="10" fill="#cfd7eb"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#1f293f" letter-spacing="2">PLAYSTATION 4</text>
+</svg>

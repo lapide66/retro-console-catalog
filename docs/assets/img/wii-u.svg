@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Nintendo Wii U">
+  <rect width="800" height="500" rx="34" fill="#edf4fb"/>
+  <rect x="144" y="154" width="512" height="188" rx="34" fill="#4b89b9"/>
+  <rect x="210" y="188" width="380" height="120" rx="20" fill="#f4fbff"/>
+  <circle cx="192" cy="248" r="16" fill="#d2ebf8"/>
+  <circle cx="608" cy="248" r="16" fill="#d2ebf8"/>
+  <rect x="318" y="208" width="164" height="80" rx="14" fill="#c6def0"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#3a6d95" letter-spacing="2">WII U</text>
+</svg>

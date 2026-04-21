@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Nintendo GameCube">
+  <rect width="800" height="500" rx="34" fill="#f1eefb"/>
+  <path d="M400 140l142 82v146l-142 82-142-82V222z" fill="#5e4fb4"/>
+  <path d="M400 184l74 42v84l-74 42-74-42v-84z" fill="#b9b1ea"/>
+  <path d="M400 140v86l74 42" fill="none" stroke="#dfdaf8" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M400 140l-142 82 74 42 68-38" fill="none" stroke="#42358e" stroke-width="12" stroke-linejoin="round"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#4c3fa1" letter-spacing="2">GAMECUBE</text>
+</svg>

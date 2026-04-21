@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Rajdhani", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Orbitron", sans-serif;
+  
+  --color-cyber-blue: #00f3ff;
+  --color-cyber-pink: #ff00ff;
+  --color-cyber-yellow: #f3e600;
+  --color-cyber-bg: #050505;
+  --color-cyber-surface: #0d0d0d;
+  --color-cyber-border: #1a1a1a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cyber-bg);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle scanlines effect */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cyber-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-cyber-cyan);
+  border: 1px solid var(--color-cyber-bg);
+}
+
+.cyber-glitch-text {
+  text-shadow: 2px 0 var(--color-cyber-pink), -2px 0 var(--color-cyber-blue);
+}
+
+.cyber-border-gradient {
+  border-image: linear-gradient(to right, var(--color-cyber-blue), var(--color-cyber-pink)) 1;
+}

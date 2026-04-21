@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Nintendo Switch">
+  <rect width="800" height="500" rx="34" fill="#f3f4f7"/>
+  <rect x="215" y="118" width="370" height="238" rx="34" fill="#2f3b52"/>
+  <rect x="258" y="145" width="284" height="184" rx="20" fill="#e9edf2"/>
+  <rect x="180" y="154" width="60" height="160" rx="20" fill="#7db5a8"/>
+  <rect x="560" y="154" width="60" height="160" rx="20" fill="#d75b57"/>
+  <circle cx="212" cy="220" r="10" fill="#2f3b52"/>
+  <circle cx="588" cy="220" r="10" fill="#2f3b52"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#2f3b52" letter-spacing="2">NINTENDO SWITCH</text>
+</svg>

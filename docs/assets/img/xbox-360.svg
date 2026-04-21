@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Xbox 360">
+  <rect width="800" height="500" rx="34" fill="#f3f8f1"/>
+  <path d="M336 126h140l34 44v198H302V170z" fill="#f3f5f1" stroke="#cfd8c9" stroke-width="10"/>
+  <circle cx="406" cy="254" r="28" fill="#82b57d"/>
+  <circle cx="406" cy="254" r="10" fill="#f3f5f1"/>
+  <path d="M382 254h48" stroke="#f3f5f1" stroke-width="8" stroke-linecap="round"/>
+  <rect x="322" y="170" width="168" height="14" rx="7" fill="#dde5d9"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#5a8a56" letter-spacing="2">XBOX 360</text>
+</svg>

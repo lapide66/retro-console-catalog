@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="PlayStation 3">
+  <rect width="800" height="500" rx="34" fill="#f0f1f3"/>
+  <path d="M282 150h188c38 0 68 30 68 68v126H262V170c0-11 9-20 20-20z" fill="#303235"/>
+  <path d="M312 172h194" stroke="#5a5d61" stroke-width="10" stroke-linecap="round"/>
+  <rect x="336" y="220" width="128" height="20" rx="10" fill="#5a5d61"/>
+  <circle cx="454" cy="286" r="12" fill="#bfc4cb"/>
+  <circle cx="486" cy="286" r="12" fill="#bfc4cb"/>
+  <text x="50%" y="405" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#2d2f32" letter-spacing="2">PLAYSTATION 3</text>
+</svg>
