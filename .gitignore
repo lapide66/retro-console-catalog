@@ -1,8 +1,8 @@
-.git/
-releases/
-base-instructions.md
-token.txt
-Thumbs.db
+node_modules/
+build/
+dist/
+coverage/
 .DS_Store
 *.log
-lista-geraçoes.txt
+.env*
+!.env.example

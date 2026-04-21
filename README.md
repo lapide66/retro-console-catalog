@@ -2,19 +2,55 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Ready-brightgreen)
 
-This contains everything you need to run your app locally.
+# Retro Console Catalog
 
-View your app in AI Studio: https://ai.studio/apps/b3072a6f-d1bc-4a1e-9030-93b8ada35156
+Catálogo interativo de consoles de videogame retro com informações detalhadas sobre cada console, incluindo especificações técnicas, geração e jogos marcantes.
 
-## Run Locally
+## Visualizar
 
-**Prerequisites:**  Node.js
+**Online:** https://lapide66.github.io/retro-console-catalog/
 
+## Executar Localmente
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Pré-requisitos:** Node.js
+
+1. Instalar dependências:
+   ```bash
+   npm install
+   ```
+2. Configurar a chave da API do Gemini em [.env.local](.env.local):
+   ```
+   GEMINI_API_KEY=sua_chave_aqui
+   ```
+3. Executar o app:
+   ```bash
+   npm run dev
+   ```
+
+## Build para GitHub Pages
+
+```bash
+npm run build
+```
+
+O build será gerado na pasta `docs/` e deployado automaticamente via GitHub Actions ao fazer push para a branch `ai-studio-google`.
+
+## Stack
+
+- React + TypeScript
+- Vite
+- TailwindCSS
+- GitHub Pages
+
+## Version History
+
+| Versão | Data | Descrição |
+|--------|------|----------|
+| 1.0.0 | 2026-04-21 | Lançamento inicial com catálogos de consoles retro |
+
+## Contribuição
+
+Fork o projeto, crie uma branch e envie um PR.
