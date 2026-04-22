@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card-bento {
+    @apply rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm transition-all duration-200;
+  }
+
+  .card-bento-hover {
+    @apply hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 hover:-translate-y-0.5;
+  }
+
+  .micro-label {
+    @apply text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400;
+  }
+
+  .heading-premium {
+    @apply text-xl font-black tracking-tighter;
+  }
+}
