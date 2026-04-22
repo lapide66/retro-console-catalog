@@ -11,7 +11,6 @@ export function ConsoleListItem({ item, onPress }) {
         <Text style={styles.consoleYear}>{item.ano}</Text>
       </View>
       <Text style={styles.consoleManufacturer}>{item.fabricante}</Text>
-      <Text style={styles.consoleSummary}>{item.resumo}</Text>
       <Text style={styles.consoleHint}>Toque para ver detalhes</Text>
     </Pressable>
   )
@@ -47,12 +46,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '600',
     color: '#334155',
-    marginBottom: 6,
-  },
-  consoleSummary: {
-    fontSize: 14,
-    lineHeight: 20,
-    color: '#475569',
     marginBottom: 10,
   },
   consoleHint: {

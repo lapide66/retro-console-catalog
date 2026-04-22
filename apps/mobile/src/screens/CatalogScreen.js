@@ -1,38 +1,41 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { SectionList, StyleSheet, Text, View } from 'react-native'
-import {
-  groupConsolesByGeneration,
-  sortConsolesByYearAndName,
-} from '../../../../shared/domain/catalog'
-import {
-  getGenerationLabel,
-  toConsoleViewModel,
-} from '../../../../shared/domain/consoleModel'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { useCatalog } from '../hooks/useCatalog'
 import { ConsoleListItem } from '../components/ConsoleListItem'
+import { GenerationChips } from '../components/GenerationChips'
+import { SearchInput } from '../components/SearchInput'
 
-function buildSections(consoles) {
-  const groupedConsoles = groupConsolesByGeneration(consoles)
-
-  return Object.entries(groupedConsoles)
-    .sort(([a], [b]) => Number(a) - Number(b))
-    .map(([generation, generationConsoles]) => ({
-      title: getGenerationLabel(Number(generation)),
-      data: sortConsolesByYearAndName(generationConsoles).map((consoleItem) =>
-        toConsoleViewModel(consoleItem)
-      ),
-    }))
-}
-
-export function CatalogScreen({ consoles, onSelectConsole }) {
-  const sections = useMemo(() => buildSections(consoles), [consoles])
+export function CatalogScreen({ onSelectConsole }) {
+  const {
+    generation,
+    generationOptions,
+    search,
+    sections,
+    setGeneration,
+    setSearch,
+    totalResults,
+  } = useCatalog()
 
   return (
-    <>
+    <SafeAreaView style={styles.screen} edges={['top', 'left', 'right']}>
       <View style={styles.header}>
         <Text style={styles.eyebrow}>Camada Mobile</Text>
         <Text style={styles.title}>Retro Console Catalog</Text>
         <Text style={styles.subtitle}>
-          Catalogo inicial consumindo a camada compartilhada.
+          Busca e filtro usando a mesma regra de negocio da web.
+        </Text>
+      </View>
+
+      <View style={styles.controls}>
+        <SearchInput value={search} onChange={setSearch} />
+        <GenerationChips
+          options={generationOptions}
+          value={generation}
+          onChange={setGeneration}
+        />
+        <Text style={styles.resultCount}>
+          {totalResults} resultado{totalResults !== 1 ? 's' : ''}
         </Text>
       </View>
 
@@ -50,16 +53,25 @@ export function CatalogScreen({ consoles, onSelectConsole }) {
             onPress={() => onSelectConsole(item.id)}
           />
         )}
+        ListEmptyComponent={
+          <View style={styles.emptyState}>
+            <Text style={styles.emptyStateText}>Nenhum console encontrado</Text>
+          </View>
+        }
       />
-    </>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: '#f8fafc',
+  },
   header: {
     paddingHorizontal: 20,
     paddingTop: 20,
-    paddingBottom: 12,
+    paddingBottom: 8,
   },
   eyebrow: {
     fontSize: 12,
@@ -80,6 +92,11 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     color: '#475569',
   },
+  controls: {
+    gap: 12,
+    paddingHorizontal: 20,
+    paddingBottom: 8,
+  },
   listContent: {
     paddingHorizontal: 20,
     paddingBottom: 24,
@@ -90,5 +107,20 @@ const styles = StyleSheet.create({
     color: '#0f172a',
     marginTop: 20,
     marginBottom: 12,
+  },
+  resultCount: {
+    fontSize: 12,
+    fontWeight: '700',
+    letterSpacing: 0.8,
+    color: '#64748b',
+    textTransform: 'uppercase',
+  },
+  emptyState: {
+    paddingVertical: 32,
+  },
+  emptyStateText: {
+    fontSize: 15,
+    color: '#64748b',
+    textAlign: 'center',
   },
 })

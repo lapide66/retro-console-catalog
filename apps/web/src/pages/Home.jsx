@@ -1,31 +1,21 @@
-import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import ConsoleCard from '../components/ConsoleCard'
 import SearchBar from '../components/SearchBar'
 import GenerationFilter from '../components/GenerationFilter'
-import { getAllConsoles } from '@shared/data/catalogData'
-import {
-  filterConsoles,
-  groupConsolesByGeneration,
-  sortConsolesByYearAndName,
-} from '@shared/domain/catalog'
+import { sortConsolesByYearAndName } from '@shared/domain/catalog'
+import { useCatalog } from '../hooks/useCatalog'
 import { getGenerationLabel } from '@shared/domain/consoleModel'
 
-const consolesData = getAllConsoles()
-
 export default function Home() {
-  const [search, setSearch] = useState('')
-  const [geracao, setGeracao] = useState(0)
-
-  const filteredConsoles = useMemo(() => {
-    return filterConsoles(consolesData, search, geracao)
-  }, [search, geracao])
-
-  const groupedConsoles = useMemo(() => {
-    if (geracao !== 0) return null
-
-    return groupConsolesByGeneration(filteredConsoles)
-  }, [filteredConsoles, geracao])
+  const {
+    filteredConsoles,
+    generation,
+    groupedConsoles,
+    search,
+    setGeneration,
+    setSearch,
+    totalResults,
+  } = useCatalog()
 
   return (
     <div className="min-h-screen pt-20 pb-8">
@@ -45,16 +35,16 @@ export default function Home() {
 
         <div className="mb-8 space-y-4">
           <SearchBar value={search} onChange={setSearch} />
-          <GenerationFilter value={geracao} onChange={setGeracao} />
+          <GenerationFilter value={generation} onChange={setGeneration} />
         </div>
 
         <div className="mb-6">
           <p className="micro-label">
-            {filteredConsoles.length} resultado{filteredConsoles.length !== 1 ? 's' : ''}
+            {totalResults} resultado{totalResults !== 1 ? 's' : ''}
           </p>
         </div>
 
-        {geracao !== 0 ? (
+        {generation !== 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredConsoles.map((console, index) => (
               <ConsoleCard key={console.id} console={console} index={index} />
@@ -88,7 +78,7 @@ export default function Home() {
             ))
         )}
 
-        {filteredConsoles.length === 0 && (
+        {totalResults === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import {
   Pressable,
   ScrollView,
+  SafeAreaView,
   StyleSheet,
   Text,
   View,
 } from 'react-native'
+import { getConsoleById } from '../../../../shared/domain/catalog'
+import { getCatalogConsoles } from '../../../../shared/services/catalogService'
 import { toConsoleViewModel } from '../../../../shared/domain/consoleModel'
 
 function DetailRow({ label, value }) {
@@ -17,79 +20,107 @@ function DetailRow({ label, value }) {
   )
 }
 
-export function ConsoleDetailScreen({ consoleItem, onBack }) {
-  const consoleViewModel = toConsoleViewModel(consoleItem)
+const allConsoles = getCatalogConsoles()
+
+export function ConsoleDetailScreen({ consoleId, onBack }) {
+  const consoleViewModel = useMemo(() => {
+    const consoleItem = getConsoleById(allConsoles, consoleId)
+
+    return consoleItem ? toConsoleViewModel(consoleItem) : null
+  }, [consoleId])
+
+  if (!consoleViewModel) {
+    return (
+      <SafeAreaView style={styles.notFound}>
+        <Pressable style={styles.backButton} onPress={onBack}>
+          <Text style={styles.backButtonText}>Voltar</Text>
+        </Pressable>
+        <View style={styles.notFoundContent}>
+          <Text style={styles.notFoundTitle}>Console nao encontrado</Text>
+          <Text style={styles.notFoundText}>
+            Nao foi possivel carregar os detalhes deste console.
+          </Text>
+        </View>
+      </SafeAreaView>
+    )
+  }
 
   return (
-    <ScrollView contentContainerStyle={styles.content}>
-      <Pressable style={styles.backButton} onPress={onBack}>
-        <Text style={styles.backButtonText}>Voltar ao catalogo</Text>
-      </Pressable>
+    <SafeAreaView style={styles.screen}>
+      <ScrollView contentContainerStyle={styles.content}>
+        <Pressable style={styles.backButton} onPress={onBack}>
+          <Text style={styles.backButtonText}>Voltar para o catalogo</Text>
+        </Pressable>
 
-      <View style={styles.hero}>
-        <Text style={styles.generationLabel}>
-          {consoleViewModel.generationLabelUppercase}
-        </Text>
-        <Text
-          style={[
-            styles.consoleName,
-            { color: consoleViewModel.consoleNameColor },
-          ]}
-        >
-          {consoleViewModel.nome}
-        </Text>
-        <Text style={styles.consoleMeta}>
-          {consoleViewModel.fabricante} / {consoleViewModel.ano}
-        </Text>
-      </View>
+        <View style={styles.hero}>
+          <Text style={styles.generationLabel}>
+            {consoleViewModel.generationLabelUppercase}
+          </Text>
+          <Text
+            style={[
+              styles.consoleName,
+              { color: consoleViewModel.consoleNameColor },
+            ]}
+          >
+            {consoleViewModel.nome}
+          </Text>
+          <Text style={styles.consoleMeta}>
+            {consoleViewModel.fabricante} / {consoleViewModel.ano}
+          </Text>
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Resumo</Text>
-        <Text style={styles.sectionText}>{consoleViewModel.resumo}</Text>
-      </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Resumo</Text>
+          <Text style={styles.sectionText}>{consoleViewModel.resumo}</Text>
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Especificacoes</Text>
-        <DetailRow label="CPU" value={consoleViewModel.cpu} />
-        <DetailRow label="GPU" value={consoleViewModel.gpu} />
-        <DetailRow label="RAM" value={consoleViewModel.ram} />
-        <DetailRow label="Midia" value={consoleViewModel.midia} />
-        <DetailRow label="Resolucao" value={consoleViewModel.resolucao} />
-        <DetailRow label="Peso" value={consoleViewModel.peso} />
-        <DetailRow label="Dimensoes" value={consoleViewModel.dimensoes} />
-        <DetailRow
-          label="Retrocompatibilidade"
-          value={consoleViewModel.retrocompatibilidade}
-        />
-        <DetailRow
-          label="Conectividade"
-          value={consoleViewModel.conectividade}
-        />
-      </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Especificacoes</Text>
+          <DetailRow label="CPU" value={consoleViewModel.cpu} />
+          <DetailRow label="GPU" value={consoleViewModel.gpu} />
+          <DetailRow label="RAM" value={consoleViewModel.ram} />
+          <DetailRow label="Midia" value={consoleViewModel.midia} />
+          <DetailRow label="Resolucao" value={consoleViewModel.resolucao} />
+          <DetailRow label="Peso" value={consoleViewModel.peso} />
+          <DetailRow label="Dimensoes" value={consoleViewModel.dimensoes} />
+          <DetailRow
+            label="Retrocompatibilidade"
+            value={consoleViewModel.retrocompatibilidade}
+          />
+          <DetailRow
+            label="Conectividade"
+            value={consoleViewModel.conectividade}
+          />
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Mercado</Text>
-        <DetailRow
-          label="Preco de lancamento"
-          value={consoleViewModel.preco_lancamento}
-        />
-        <DetailRow
-          label="Vendas totais"
-          value={consoleViewModel.vendas_totais}
-        />
-      </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Mercado</Text>
+          <DetailRow
+            label="Preco de lancamento"
+            value={consoleViewModel.preco_lancamento}
+          />
+          <DetailRow
+            label="Vendas totais"
+            value={consoleViewModel.vendas_totais}
+          />
+        </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Curiosidade no Brasil</Text>
-        <Text style={styles.sectionText}>
-          {consoleViewModel.curiosidade_no_brasil}
-        </Text>
-      </View>
-    </ScrollView>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Curiosidade no Brasil</Text>
+          <Text style={styles.sectionText}>
+            {consoleViewModel.curiosidade_no_brasil}
+          </Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: '#f8fafc',
+  },
   content: {
     paddingHorizontal: 20,
     paddingTop: 20,
@@ -97,15 +128,15 @@ const styles = StyleSheet.create({
   },
   backButton: {
     alignSelf: 'flex-start',
-    backgroundColor: '#e2e8f0',
-    borderRadius: 999,
-    paddingHorizontal: 14,
     paddingVertical: 10,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+    backgroundColor: '#e2e8f0',
     marginBottom: 16,
   },
   backButtonText: {
     fontSize: 13,
-    fontWeight: '700',
+    fontWeight: '800',
     color: '#0f172a',
   },
   hero: {
@@ -167,5 +198,28 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 22,
     color: '#334155',
+  },
+  notFound: {
+    flex: 1,
+    backgroundColor: '#f8fafc',
+    paddingHorizontal: 24,
+    paddingTop: 20,
+  },
+  notFoundContent: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  notFoundTitle: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#0f172a',
+    marginBottom: 8,
+  },
+  notFoundText: {
+    fontSize: 15,
+    lineHeight: 22,
+    color: '#475569',
+    textAlign: 'center',
   },
 })

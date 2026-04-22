@@ -1,45 +1,37 @@
-import React, { useMemo, useState } from 'react'
-import { SafeAreaView, StyleSheet } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { BackHandler } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
-import { getAllConsoles } from '../../shared/data/catalogData'
-import { getConsoleById } from '../../shared/domain/catalog'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { CatalogScreen } from './src/screens/CatalogScreen'
 import { ConsoleDetailScreen } from './src/screens/ConsoleDetailScreen'
-
-const consolesData = getAllConsoles()
 
 export default function App() {
   const [selectedConsoleId, setSelectedConsoleId] = useState(null)
 
-  const selectedConsole = useMemo(() => {
-    if (!selectedConsoleId) {
-      return null
-    }
+  useEffect(() => {
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (!selectedConsoleId) {
+        return false
+      }
 
-    return getConsoleById(consolesData, selectedConsoleId) ?? null
+      setSelectedConsoleId(null)
+      return true
+    })
+
+    return () => subscription.remove()
   }, [selectedConsoleId])
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaProvider>
       <StatusBar style="dark" />
-      {selectedConsole ? (
+      {selectedConsoleId ? (
         <ConsoleDetailScreen
-          consoleItem={selectedConsole}
+          consoleId={selectedConsoleId}
           onBack={() => setSelectedConsoleId(null)}
         />
       ) : (
-        <CatalogScreen
-          consoles={consolesData}
-          onSelectConsole={(consoleId) => setSelectedConsoleId(consoleId)}
-        />
+        <CatalogScreen onSelectConsole={(consoleId) => setSelectedConsoleId(consoleId)} />
       )}
-    </SafeAreaView>
+    </SafeAreaProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f8fafc',
-  },
-})
