@@ -13,7 +13,11 @@ import {
   Gamepad2,
   Globe,
 } from 'lucide-react'
-import consolesData from '../data/consoles.json'
+import { getAllConsoles } from '../../shared/data/catalogData'
+import { getConsoleById } from '../../shared/domain/catalog'
+import { toConsoleViewModel } from '../../shared/domain/consoleModel'
+
+const consolesData = getAllConsoles()
 
 function SpecItem({ icon: Icon, label, value, href }) {
   const content = (
@@ -44,9 +48,10 @@ function SpecItem({ icon: Icon, label, value, href }) {
 
 export default function Console() {
   const { id } = useParams()
-  const console = consolesData.find((c) => c.id === id)
+  const console = getConsoleById(consolesData, id)
+  const consoleView = console ? toConsoleViewModel(console) : null
 
-  if (!console) {
+  if (!consoleView) {
     return (
       <div className="min-h-screen pt-20">
         <div className="container-app">
@@ -79,40 +84,40 @@ export default function Console() {
         >
           <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800">
             <img
-              src={console.imagem}
-              alt={console.nome}
+              src={consoleView.imagem}
+              alt={consoleView.nome}
               className="w-full h-full object-cover"
             />
           </div>
 
           <div>
             <div className="mb-2">
-              <span className="micro-label">{console.geracao}ª GERAÇÃO</span>
+              <span className="micro-label">{consoleView.generationLabelUppercase}</span>
             </div>
             <h1
               className="heading-premium text-3xl sm:text-4xl mb-2"
-              style={{ color: console.cor }}
+              style={{ color: consoleView.consoleNameColor }}
             >
-              {console.nome}
+              {consoleView.nome}
             </h1>
             <p className="text-slate-500 dark:text-slate-400 mb-6">
-              {console.fabricante} • {console.ano}
+              {consoleView.fabricante} • {consoleView.ano}
             </p>
 
-            <p className="text-lg mb-8">{console.resumo}</p>
+            <p className="text-lg mb-8">{consoleView.resumo}</p>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
               <SpecItem
                 icon={DollarSign}
                 label="PREÇO LANÇAMENTO"
-                value={console.preco_lancamento}
-                href={console.preco_fonte}
+                value={consoleView.preco_lancamento}
+                href={consoleView.preco_fonte}
               />
               <SpecItem
                 icon={TrendingUp}
                 label="VENDAS TOTAIS"
-                value={console.vendas_totais}
-                href={console.vendas_fonte}
+                value={consoleView.vendas_totais}
+                href={consoleView.vendas_fonte}
               />
             </div>
           </div>
@@ -126,14 +131,18 @@ export default function Console() {
         >
           <h2 className="heading-premium text-2xl mb-6">Especificações Técnicas</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <SpecItem icon={Cpu} label="CPU" value={console.cpu} />
-            <SpecItem icon={HardDrive} label="RAM" value={console.ram} />
-            <SpecItem icon={Monitor} label="GPU" value={console.gpu} />
-            <SpecItem icon={Disc} label="MÍDIA" value={console.midia} />
-            <SpecItem icon={Monitor} label="RESOLUÇÃO" value={console.resolucao} />
-            <SpecItem icon={Scale} label="PESO" value={console.peso} />
-            <SpecItem icon={Wifi} label="CONECTIVIDADE" value={console.conectividade} />
-            <SpecItem icon={Gamepad2} label="RETROCOMPATIBILIDADE" value={console.retrocompatibilidade} />
+            <SpecItem icon={Cpu} label="CPU" value={consoleView.cpu} />
+            <SpecItem icon={HardDrive} label="RAM" value={consoleView.ram} />
+            <SpecItem icon={Monitor} label="GPU" value={consoleView.gpu} />
+            <SpecItem icon={Disc} label="MÍDIA" value={consoleView.midia} />
+            <SpecItem icon={Monitor} label="RESOLUÇÃO" value={consoleView.resolucao} />
+            <SpecItem icon={Scale} label="PESO" value={consoleView.peso} />
+            <SpecItem icon={Wifi} label="CONECTIVIDADE" value={consoleView.conectividade} />
+            <SpecItem
+              icon={Gamepad2}
+              label="RETROCOMPATIBILIDADE"
+              value={consoleView.retrocompatibilidade}
+            />
           </div>
         </motion.div>
 
@@ -145,7 +154,7 @@ export default function Console() {
         >
           <h2 className="heading-premium text-2xl mb-6">Dimensões</h2>
           <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900">
-            <p className="text-sm font-medium">{console.dimensoes}</p>
+            <p className="text-sm font-medium">{consoleView.dimensoes}</p>
           </div>
         </motion.div>
 
@@ -160,7 +169,7 @@ export default function Console() {
               <Globe className="w-5 h-5 text-slate-400 mt-0.5" />
               <div>
                 <p className="micro-label mb-2 text-slate-400">NO BRASIL</p>
-                <p className="text-base">{console.curiosidade_no_brasil}</p>
+                <p className="text-base">{consoleView.curiosidade_no_brasil}</p>
               </div>
             </div>
           </div>

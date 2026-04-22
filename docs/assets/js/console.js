@@ -74,7 +74,7 @@ function specCard(label, value) {
   const card = createEl("article", "spec-card");
   card.append(
     createEl("span", "spec-label", label),
-    createEl("p", "spec-value", value),
+    createEl("p", "spec-value", value || "N/D"),
   );
   return card;
 }
@@ -111,6 +111,29 @@ function setMetaDescription(content) {
   meta.setAttribute("content", content);
 }
 
+function createFactChip(label, value) {
+  const chip = createEl("div", "fact-chip");
+  chip.append(
+    createEl("dt", "fact-label", label),
+    createEl("dd", "fact-value", value),
+  );
+  return chip;
+}
+
+function createSectionHeading(title, text) {
+  const wrap = createEl("div", "section-heading");
+  const copy = createEl("div");
+  copy.append(
+    createEl("p", "eyebrow", "Detalhamento"),
+    createEl("h2", "section-title", title),
+  );
+  if (text) {
+    copy.append(createEl("p", "section-text", text));
+  }
+  wrap.append(copy);
+  return wrap;
+}
+
 function renderConsole(item) {
   const generationRoman = toRoman(item.geracao);
   document.title = `${item.nome} · Ficha técnica · Retro Console Catalog`;
@@ -119,10 +142,9 @@ function renderConsole(item) {
   );
   setThemeColor(item.cor);
   document.documentElement.style.setProperty("--accent", item.cor);
-  document.documentElement.style.setProperty("--accent-1", item.cor);
-  document.documentElement.style.setProperty("--accent-2", mixHex(item.cor, "#ffffff", 0.25));
-  document.documentElement.style.setProperty("--accent-3", mixHex(item.cor, "#111111", 0.15));
-  document.documentElement.style.setProperty("--accent-4", mixHex(item.cor, "#ffffff", 0.5));
+  document.documentElement.style.setProperty("--accent-soft", mixHex(item.cor, "#fff3d8", 0.55));
+  document.documentElement.style.setProperty("--accent-deep", mixHex(item.cor, "#1c1614", 0.45));
+  document.documentElement.style.setProperty("--accent-ghost", `${mixHex(item.cor, "#ffffff", 0.72)}55`);
 
   const physicalCards = [
     renderOptionalSpec("Dimensões físicas", item.dimensoes),
@@ -136,11 +158,15 @@ function renderConsole(item) {
 
   const article = createEl("article", "console-layout");
 
-  const header = createEl("header", "console-header");
-  const heading = createEl("div", "console-heading");
-  const title = createEl("h1", "", item.nome);
-  const meta = createEl("p", "console-meta-line", `${item.fabricante} · ${item.ano} · Geração ${generationRoman}`);
-  const intro = createEl("p", "console-intro", item.resumo);
+  const hero = createEl("section", "console-hero-section glass-panel");
+  const heroCopy = createEl("div", "console-hero-copy");
+  heroCopy.append(
+    createEl("p", "eyebrow", `Geração ${generationRoman}`),
+    createEl("h1", "console-title", item.nome),
+    createEl("p", "console-meta-line", `${item.fabricante} · ${item.ano}`),
+    createEl("p", "console-intro", item.resumo),
+  );
+
   const bars = createEl("div", "console-bars");
   bars.setAttribute("aria-hidden", "true");
   bars.append(
@@ -149,113 +175,119 @@ function renderConsole(item) {
     createEl("span", "console-bar console-bar-3"),
     createEl("span", "console-bar console-bar-4"),
   );
-  heading.append(title, meta, intro, bars);
 
-  const overview = createEl("section", "console-overview");
-  const overviewCopy = createEl("div", "console-overview-copy");
-  overviewCopy.append(
-    createEl("p", "eyebrow", "Visão rápida"),
-    createEl("h2", "console-overview-title", "Tudo o que importa em segundos"),
-    createEl("p", "console-overview-body", item.resumo),
+  const facts = createEl("dl", "fact-chips");
+  facts.append(
+    createFactChip("Ano", String(item.ano)),
+    createFactChip("Mídia", item.midia),
+    createFactChip("Vendas", item.vendas_totais),
+    createFactChip("Resolução", item.resolucao),
   );
 
-  const factList = createEl("dl", "fact-chips");
-  [
-    ["Ano", String(item.ano)],
-    ["Mídia", item.midia],
-    ["Vendas", item.vendas_totais],
-  ].forEach(([label, value]) => {
-    const fact = createEl("div", "fact-chip");
-    fact.append(
-      createEl("dt", "fact-label", label),
-      createEl("dd", "fact-value", value),
-    );
-    factList.append(fact);
-  });
+  const actions = createEl("div", "console-footer-actions");
+  const backLink = createEl("a", "back-link", "← Voltar ao catálogo");
+  backLink.href = "index.html";
 
-  const overviewActions = createEl("div", "console-overview-actions");
-  const sourceLink = createEl("a", "reference-link");
+  const sourceLink = createEl("a", "reference-link", "Ver fontes do console");
   sourceLink.href = `references.html?id=${encodeURIComponent(item.id)}`;
-  const arrow = createEl("span", "", "↗");
-  arrow.setAttribute("aria-hidden", "true");
-  sourceLink.append(document.createTextNode("Ver fontes do console "), arrow);
-  overviewActions.append(sourceLink);
-  overview.append(overviewCopy, factList, overviewActions);
 
-  const hero = createEl("div", "console-hero");
+  actions.append(backLink, sourceLink);
+  heroCopy.append(bars, facts, actions);
+
+  const heroMedia = createEl("aside", "console-hero-media");
+  const stage = createEl("div", "console-image-stage");
   const image = document.createElement("img");
   image.src = item.imagem;
   image.alt = item.nome;
-  hero.append(image);
+  image.className = "console-hero-image";
+  stage.append(image);
 
   const credit = createEl("p", "image-credit");
   if (item.imagem_fonte && item.imagem_fonte.startsWith("assets/")) {
     credit.textContent = "Imagem local do projeto.";
   } else if (item.imagem_fonte) {
-    const sourceLink = createEl("a", "", "Wikimedia Commons");
-    sourceLink.href = item.imagem_fonte;
-    sourceLink.target = "_blank";
-    sourceLink.rel = "noreferrer";
-    credit.append(document.createTextNode("Foto real via "), sourceLink, document.createTextNode("."));
+    const source = createEl("a", "", "Wikimedia Commons");
+    source.href = item.imagem_fonte;
+    source.target = "_blank";
+    source.rel = "noreferrer";
+    credit.append(document.createTextNode("Foto real via "), source, document.createTextNode("."));
+  } else {
+    credit.textContent = "Imagem sem link de crédito informado.";
   }
-  hero.append(credit);
-  header.append(heading, hero);
 
-  const statsGrid = createEl("section", "stats-grid");
-  statsGrid.setAttribute("aria-label", "Informações de mercado");
+  heroMedia.append(stage, credit);
+  hero.append(heroCopy, heroMedia);
+
+  const marketSection = createEl("section", "info-section");
+  marketSection.append(
+    createSectionHeading("Mercado e posicionamento", "Os dados abaixo consolidam preço, volume e mídia principal do console."),
+  );
+  const statsGrid = createEl("div", "stats-grid");
   statsGrid.append(
     specCard("Preço de lançamento", item.preco_lancamento),
     specCard("Vendas totais", item.vendas_totais),
     specCard("Ano de lançamento", String(item.ano)),
     specCard("Mídia principal", item.midia),
   );
+  marketSection.append(statsGrid);
 
-  const technicalSection = createEl("section", "specs-section");
+  const technicalSection = createEl("section", "info-section");
   technicalSection.append(
-    createEl("h2", "section-title", "Ficha técnica"),
-    (() => {
-      const grid = createEl("div", "specs-grid");
-      grid.append(
-        specCard("CPU", item.cpu),
-        specCard("GPU", item.gpu),
-        specCard("RAM", item.ram),
-        specCard("Resolução", item.resolucao),
-      );
-      return grid;
-    })(),
+    createSectionHeading("Ficha técnica", "Especificações centrais para leitura rápida do hardware."),
   );
+  const technicalGrid = createEl("div", "specs-grid");
+  technicalGrid.append(
+    specCard("CPU", item.cpu),
+    specCard("GPU", item.gpu),
+    specCard("RAM", item.ram),
+    specCard("Resolução", item.resolucao),
+  );
+  technicalSection.append(technicalGrid);
 
   const physicalSection = physicalCards.length
     ? (() => {
-        const section = createEl("section", "specs-section");
+        const section = createEl("section", "info-section");
         const grid = createEl("div", "specs-grid");
         grid.append(...physicalCards);
-        section.append(createEl("h2", "section-title", "Dados físicos"), grid);
+        section.append(
+          createSectionHeading("Dimensões e conectividade", "Informações físicas e de uso do aparelho."),
+          grid,
+        );
         return section;
       })()
     : null;
 
-  const brazilSection = createEl("section", "specs-section");
-  const brazilCard = createEl("div", "br-card");
+  const brazilSection = createEl("section", "info-section");
+  brazilSection.append(
+    createSectionHeading("Contexto no Brasil", "Uma nota curta sobre presença, percepção ou impacto local."),
+  );
+  const brazilCard = createEl("article", "story-highlight");
   brazilCard.append(
     createEl("span", "spec-label", "Curiosidade no Brasil"),
     createEl("p", "spec-value", item.curiosidade_no_brasil),
   );
-  brazilSection.append(createEl("h2", "section-title", "Brasil"), brazilCard);
+  brazilSection.append(brazilCard);
 
-  const footerActions = createEl("section", "specs-section console-footer-actions");
-  const bottomLink = createEl("a", "reference-link");
+  const sourcesSection = createEl("section", "info-section");
+  sourcesSection.append(
+    createSectionHeading("Fontes e continuidade", "A ficha continua ligada à página de referências dedicada ao console."),
+  );
+  const sourcesGrid = createEl("div", "sources-grid");
+  sourcesGrid.append(
+    specCard("Preço", item.preco_fonte ? "Fonte disponível" : "Fonte não informada"),
+    specCard("Vendas", item.vendas_fonte ? "Fonte disponível" : "Fonte não informada"),
+  );
+  const linkWrap = createEl("div", "console-footer-actions");
+  const bottomLink = createEl("a", "reference-link", "Abrir referências detalhadas");
   bottomLink.href = `references.html?id=${encodeURIComponent(item.id)}`;
-  const bottomArrow = createEl("span", "", "↗");
-  bottomArrow.setAttribute("aria-hidden", "true");
-  bottomLink.append(document.createTextNode("Fontes e detalhes "), bottomArrow);
-  footerActions.append(bottomLink);
+  linkWrap.append(bottomLink);
+  sourcesSection.append(sourcesGrid, linkWrap);
 
-  article.append(header, overview, statsGrid, technicalSection);
+  article.append(hero, marketSection, technicalSection);
   if (physicalSection) {
     article.append(physicalSection);
   }
-  article.append(brazilSection, footerActions);
+  article.append(brazilSection, sourcesSection);
   el.append(article);
 }
 
@@ -267,8 +299,8 @@ function renderError(message) {
     createEl("h1", "", "Console não encontrado"),
     createEl("p", "", message),
   );
-  const linkWrap = createEl("p");
-  const backLink = createEl("a", "back-link", "Voltar ao índice");
+  const linkWrap = createEl("div", "console-footer-actions");
+  const backLink = createEl("a", "back-link", "Voltar ao catálogo");
   backLink.href = "index.html";
   linkWrap.append(backLink);
   section.append(linkWrap);

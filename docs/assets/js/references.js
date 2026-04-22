@@ -29,29 +29,6 @@ const REFERENCE_TYPES = [
   },
 ];
 
-function createRefRow(item, type) {
-  const source = item[type.key];
-  const row = createEl("article", "ref-row");
-  const copy = createEl("div", "ref-copy");
-  copy.append(
-    createEl("p", "ref-console", item.nome),
-    createEl("p", "ref-meta", `${item.fabricante} · ${item.ano}`),
-  );
-
-  const side = createEl("div", "ref-side");
-  const kind = createEl("span", "ref-kind", source && source.startsWith("assets/") ? "Imagem local" : type.label);
-  const link = createEl("a", "", source);
-  link.href = source;
-  if (source && !source.startsWith("assets/")) {
-    link.target = "_blank";
-    link.rel = "noreferrer";
-  }
-  side.append(kind, link);
-
-  row.append(copy, side);
-  return row;
-}
-
 function setMetaDescription(content) {
   let meta = document.querySelector('meta[name="description"]');
 
@@ -62,6 +39,62 @@ function setMetaDescription(content) {
   }
 
   meta.setAttribute("content", content);
+}
+
+function createRefRow(item, type) {
+  const source = item[type.key];
+  const row = createEl("article", "ref-row");
+  const copy = createEl("div", "ref-copy");
+  copy.append(
+    createEl("p", "ref-console", item.nome),
+    createEl("p", "ref-meta", `${item.fabricante} · ${item.ano}`),
+  );
+
+  const side = createEl("div", "ref-side");
+  const kind = createEl(
+    "span",
+    "ref-kind",
+    source && source.startsWith("assets/") ? "Imagem local" : type.label,
+  );
+  const value = createEl("span", "ref-value", item[type.valueKey] || "Sem valor associado");
+  const link = createEl(
+    "a",
+    "",
+    source && source.startsWith("assets/") ? "Abrir arquivo local" : source,
+  );
+  link.href = source;
+  if (source && !source.startsWith("assets/")) {
+    link.target = "_blank";
+    link.rel = "noreferrer";
+  }
+  side.append(kind, value, link);
+
+  row.append(copy, side);
+  return row;
+}
+
+function createSpotlight(selected) {
+  if (!selected) {
+    return null;
+  }
+
+  const spotlight = createEl("aside", "bibliography-spotlight");
+  const stage = createEl("div", "console-image-stage");
+  const image = document.createElement("img");
+  image.src = selected.imagem;
+  image.alt = selected.nome;
+  image.className = "console-hero-image";
+  stage.append(image);
+
+  const card = createEl("article", "story-highlight");
+  card.append(
+    createEl("span", "spec-label", "Console selecionado"),
+    createEl("p", "spec-value", `${selected.nome} · ${selected.fabricante} · ${selected.ano}`),
+    createEl("p", "reference-help", "Use esta página para validar os links de preço, vendas e imagem usados na ficha."),
+  );
+
+  spotlight.append(stage, card);
+  return spotlight;
 }
 
 function renderReferences(data, selectedId) {
@@ -84,46 +117,61 @@ function renderReferences(data, selectedId) {
   const el = document.getElementById("refs");
   el.replaceChildren();
 
-  const article = createEl("article", "console-layout bibliography-layout");
-  const header = createEl("header", "console-heading");
-  header.append(
-    createEl("h1", "", selected ? `Referências de ${selected.nome}` : "Referências"),
+  const article = createEl("article", "bibliography-layout");
+  const hero = createEl("section", "bib-section bibliography-hero");
+  hero.append(
+    createEl("p", "eyebrow", selected ? "Referências por console" : "Bibliografia completa"),
+    createEl("h1", "console-title", selected ? `Fontes de ${selected.nome}` : "Referências do catálogo"),
     createEl(
       "p",
-      "console-intro",
+      "section-text",
       selected
-        ? `Fontes consolidadas da ficha de ${selected.nome}, organizadas para consulta rápida.`
-        : "Bibliografia consolidada do catálogo, reunida em uma única página.",
+        ? `Página dedicada às fontes usadas na ficha de ${selected.nome}.`
+        : "Visão consolidada com preço, vendas e origem das imagens de todos os consoles.",
     ),
   );
 
-  const summary = createEl("section", "bib-summary");
-  const backLink = createEl("a", "back-link", "← Voltar ao índice");
-  backLink.href = "index.html";
-  summary.append(backLink);
+  const toolbar = createEl("div", "bibliography-toolbar");
+  const homeLink = createEl("a", "back-link", "← Voltar ao catálogo");
+  homeLink.href = "index.html";
+  toolbar.append(homeLink);
 
   if (selected) {
-    const consoleLink = createEl("a", "reference-link");
+    const consoleLink = createEl("a", "reference-link", "Abrir ficha do console");
     consoleLink.href = `console.html?id=${encodeURIComponent(selected.id)}`;
-    const arrow = createEl("span", "", "↗");
-    arrow.setAttribute("aria-hidden", "true");
-    consoleLink.append(document.createTextNode("Abrir ficha do console "), arrow);
-    summary.append(consoleLink);
+    toolbar.append(consoleLink);
   }
 
-  article.append(header, summary);
+  hero.append(toolbar);
+  article.append(hero);
 
+  const sectionsWrap = createEl("div", "bibliography-layout");
   REFERENCE_TYPES.forEach((type) => {
     const section = createEl("section", "bib-section");
-    section.append(createEl("h2", "", type.label));
+    section.append(
+      createEl("p", "eyebrow", "Tipo de fonte"),
+      createEl("h2", "section-title", type.label),
+    );
     const list = createEl("div", "bib-list");
     const items = selected ? [selected] : data;
     items.forEach((item) => {
       list.append(createRefRow(item, type));
     });
     section.append(list);
-    article.append(section);
+    sectionsWrap.append(section);
   });
+
+  if (selected) {
+    const body = createEl("section", "bibliography-body");
+    const spotlight = createSpotlight(selected);
+    if (spotlight) {
+      body.append(spotlight);
+    }
+    body.append(sectionsWrap);
+    article.append(body);
+  } else {
+    article.append(sectionsWrap);
+  }
 
   el.append(article);
 }
@@ -135,8 +183,8 @@ function renderError(message) {
     createEl("h1", "", "Referências não encontradas"),
     createEl("p", "", message),
   );
-  const linkWrap = createEl("p");
-  const backLink = createEl("a", "back-link", "Voltar ao índice");
+  const linkWrap = createEl("div", "console-footer-actions");
+  const backLink = createEl("a", "back-link", "Voltar ao catálogo");
   backLink.href = "index.html";
   linkWrap.append(backLink);
   section.append(linkWrap);

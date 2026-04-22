@@ -3,31 +3,28 @@ import { motion } from 'framer-motion'
 import ConsoleCard from '../components/ConsoleCard'
 import SearchBar from '../components/SearchBar'
 import GenerationFilter from '../components/GenerationFilter'
-import consolesData from '../data/consoles.json'
+import { getAllConsoles } from '../../shared/data/catalogData'
+import {
+  filterConsoles,
+  groupConsolesByGeneration,
+  sortConsolesByYearAndName,
+} from '../../shared/domain/catalog'
+import { getGenerationLabel } from '../../shared/domain/consoleModel'
+
+const consolesData = getAllConsoles()
 
 export default function Home() {
   const [search, setSearch] = useState('')
   const [geracao, setGeracao] = useState(0)
 
   const filteredConsoles = useMemo(() => {
-    return consolesData.filter((console) => {
-      const matchSearch =
-        search === '' ||
-        console.nome.toLowerCase().includes(search.toLowerCase()) ||
-        console.fabricante.toLowerCase().includes(search.toLowerCase())
-      const matchGeracao = geracao === 0 || console.geracao === geracao
-      return matchSearch && matchGeracao
-    })
+    return filterConsoles(consolesData, search, geracao)
   }, [search, geracao])
 
   const groupedConsoles = useMemo(() => {
     if (geracao !== 0) return null
-    const groups = {}
-    filteredConsoles.forEach((console) => {
-      if (!groups[console.geracao]) groups[console.geracao] = []
-      groups[console.geracao].push(console)
-    })
-    return groups
+
+    return groupConsolesByGeneration(filteredConsoles)
   }, [filteredConsoles, geracao])
 
   return (
@@ -74,14 +71,16 @@ export default function Home() {
                 className="mb-12"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="heading-premium text-2xl">{geracaoNum}ª Geração</span>
+                  <span className="heading-premium text-2xl">
+                    {getGenerationLabel(Number(geracaoNum))}
+                  </span>
                   <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800" />
                   <span className="text-sm text-slate-500">
                     {consoles.length} console{consoles.length !== 1 ? 's' : ''}
                   </span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {consoles.map((console, index) => (
+                  {sortConsolesByYearAndName(consoles).map((console, index) => (
                     <ConsoleCard key={console.id} console={console} index={index} />
                   ))}
                 </div>

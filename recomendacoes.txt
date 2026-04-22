@@ -1,0 +1,47 @@
+Recomendações para imagens locais do site
+
+Objetivo
+- Padronizar as imagens dos consoles para uso local no projeto.
+- Melhorar consistência visual, qualidade e desempenho do site.
+
+Formato recomendado
+- Usar WebP como formato principal.
+- Se necessário manter uma cópia de trabalho editável, usar PNG durante a edição e exportar a versão final em WebP.
+
+Tamanho recomendado
+- Padrão único sugerido para todos os consoles: 1200x900 px.
+- Esse tamanho atende bem tanto os cards da home quanto a página interna do console.
+- Para exibição menor, o CSS já reduz corretamente a imagem.
+
+Fundo
+- Preferência: fundo transparente.
+- Motivo: combina melhor com o layout atual, mantém flexibilidade visual e evita conflito com o fundo dos cards.
+- Evitar fundos coloridos embutidos na imagem, a menos que exista uma decisão visual futura para padronizar isso em todo o site.
+
+Enquadramento
+- Centralizar o console na imagem.
+- Deixar margem visual ao redor do aparelho para ele respirar dentro do card.
+- Preferir orientação horizontal quando possível.
+- Evitar cortes agressivos.
+
+Qualidade
+- Exportar em WebP com qualidade entre 75 e 85.
+- Buscar equilíbrio entre nitidez e peso do arquivo.
+
+Nomenclatura
+- Usar nomes em kebab-case.
+- Exemplos:
+- atari-2600.webp
+- playstation-2.webp
+- sega-saturn.webp
+
+Fluxo recomendado
+- Coletar ou editar a imagem original.
+- Remover o fundo.
+- Ajustar enquadramento em 1200x900 px.
+- Exportar em WebP.
+- Salvar com nome padronizado.
+
+Observação
+- Algumas imagens vão exigir edição manual para remoção de fundo e melhor centralização.
+- O ideal é manter um padrão visual semelhante entre todos os consoles.

@@ -10,26 +10,114 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <header class="site-header shell site-header-compact">
-      <a class="back-link" href="index.html">← Voltar ao índice</a>
+  <body class="page-about">
+    <header class="site-header">
+      <div class="shell topbar">
+        <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-copy">
+            <span class="brand-title">Retro Console Catalog</span>
+            <span class="brand-subtitle">Sobre o projeto</span>
+          </span>
+        </a>
+
+        <nav class="topbar-nav" aria-label="Navegação principal">
+          <a class="topbar-link" href="index.html">Catálogo</a>
+          <a class="topbar-link" href="references.html">Referências</a>
+          <a class="topbar-link is-active" href="about.html">Sobre</a>
+        </nav>
+      </div>
     </header>
 
     <main class="shell about-page">
-      <section class="about-card">
-        <p class="eyebrow">Sobre</p>
-        <h1>Retro Console Catalog</h1>
-        <p>Catálogo técnico de consoles por geração, organizado como índice editorial e alimentado por dados públicos.</p>
-        <p>O projeto reúne <strong>25 consoles em 9 gerações</strong>, da primeira geração doméstica (1972) até a oitava geração (2017). Cada ficha inclui especificações técnicas, preço de lançamento, vendas totais, dimensões, conectividade e uma curiosidade sobre a história do console no Brasil.</p>
-        <p>Todos os dados têm fontes verificáveis. As imagens são fotos reais dos aparelhos obtidas do Wikimedia Commons, sob licenças de domínio público ou uso livre.</p>
-        <p>O projeto é estático — sem backend, sem dependências externas, sem build. Funciona diretamente no navegador e está pronto para publicação no GitHub Pages.</p>
-        <hr />
-        <p class="eyebrow">Tecnologia</p>
-        <p>HTML · CSS · JavaScript puro · JSON como fonte de dados</p>
-        <hr />
-        <p class="eyebrow">Aviso</p>
-        <p>Projeto independente, sem afiliação com nenhum fabricante. Dados de vendas e preços são históricos e podem variar conforme a fonte.</p>
-      </section>
+      <div class="about-layout">
+        <section class="about-card">
+          <p class="eyebrow">Arquivo editorial de videogames</p>
+          <h1>Contexto, critérios e navegação do catálogo em um só lugar.</h1>
+          <p class="about-copy">
+            O Retro Console Catalog organiza consoles por geração e apresenta cada aparelho
+            com resumo histórico, ficha técnica, indicadores de mercado, dados físicos e uma
+            curiosidade sobre sua presença no Brasil.
+          </p>
+          <p class="about-copy">
+            A proposta é manter a leveza de um site estático enquanto melhora clareza,
+            hierarquia e presença visual. Tudo continua funcionando apenas com HTML, CSS,
+            JavaScript e JSON.
+          </p>
+        </section>
+
+        <section class="about-grid">
+          <article class="about-card">
+            <p class="eyebrow">Leitura rápida</p>
+            <ul class="about-list">
+              <li>Use a home para navegar direto entre os consoles por geração.</li>
+              <li>Abra a ficha individual para ver mercado, hardware e contexto no Brasil.</li>
+              <li>Abra referências para validar preço, vendas e origem das imagens.</li>
+            </ul>
+          </article>
+
+          <article class="about-card">
+            <p class="eyebrow">Índice principal</p>
+            <p class="about-note">
+              A página inicial agora foi simplificada para priorizar usabilidade. Ela concentra
+              somente o catálogo e reduz distrações antes da exploração dos consoles.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <p class="eyebrow">Escopo</p>
+            <div class="about-metric-grid">
+              <div class="about-metric">
+                <strong>25 consoles</strong>
+                <span>Organizados em 9 gerações históricas.</span>
+              </div>
+              <div class="about-metric">
+                <strong>100% estático</strong>
+                <span>Sem backend, sem build obrigatório, sem dependências extras.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-card">
+            <p class="eyebrow">Tecnologia</p>
+            <ul class="about-list">
+              <li>HTML5 para estrutura e navegação entre páginas.</li>
+              <li>CSS para identidade visual, responsividade e hierarquia.</li>
+              <li>JavaScript puro para renderizar conteúdo a partir do JSON.</li>
+              <li>JSON como fonte central de dados do catálogo.</li>
+            </ul>
+          </article>
+
+          <article class="about-card">
+            <p class="eyebrow">Conteúdo</p>
+            <ul class="about-list">
+              <li>Especificações técnicas como CPU, GPU, RAM, mídia e resolução.</li>
+              <li>Preço de lançamento, vendas totais e links de referência.</li>
+              <li>Dimensões, peso, conectividade e retrocompatibilidade quando disponível.</li>
+              <li>Curiosidade sobre o contexto brasileiro de cada console.</li>
+            </ul>
+          </article>
+
+          <article class="about-card">
+            <p class="eyebrow">Aviso</p>
+            <p class="about-note">
+              Projeto independente, sem afiliação com fabricantes. Os dados de preço e
+              vendas são históricos e podem variar conforme a fonte consultada.
+            </p>
+          </article>
+        </section>
+      </div>
     </main>
+
+    <footer class="shell site-footer">
+      <div class="footer-note">
+        <span>Projeto editorial independente</span>
+        <span>Dados públicos e verificáveis</span>
+      </div>
+      <div class="footer-links">
+        <a class="topbar-link" href="index.html">Catálogo</a>
+        <a class="topbar-link" href="references.html">Referências</a>
+      </div>
+    </footer>
   </body>
 </html>

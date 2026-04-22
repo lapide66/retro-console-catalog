@@ -11,24 +11,40 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/index.js" defer></script>
   </head>
-  <body>
-    <header class="site-header shell">
-      <div class="brand-lockup">
-        <h1>Catálogo de consoles</h1>
-        <p class="intro">Catálogo técnico de consoles por geração.</p>
+  <body class="page-home">
+    <header class="site-header">
+      <div class="shell topbar">
+        <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-copy">
+            <span class="brand-title">Retro Console Catalog</span>
+            <span class="brand-subtitle">Arquivo visual de gerações</span>
+          </span>
+        </a>
+
+        <nav class="topbar-nav" aria-label="Navegação principal">
+          <a class="topbar-link is-active" href="index.html">Catálogo</a>
+          <a class="topbar-link" href="references.html">Referências</a>
+          <a class="topbar-link" href="about.html">Sobre</a>
+        </nav>
       </div>
     </header>
 
-    <main id="app" class="shell catalog"></main>
+    <main class="shell catalog-page">
+      <section id="app" class="catalog-content" aria-live="polite"></section>
+    </main>
 
     <footer class="shell site-footer">
-      <div class="footer-meta">
+      <div class="footer-note">
         <span>Projeto independente</span>
         <span>Dados públicos</span>
         <span>Sem afiliação com fabricantes</span>
-        <span>v1.0 · 2026</span>
+        <span>HTML5 · CSS · JavaScript</span>
       </div>
-      <a class="footer-link" href="about.html">Sobre</a>
+      <div class="footer-links">
+        <a class="topbar-link" href="references.html">Referências</a>
+        <a class="topbar-link" href="about.html">Sobre</a>
+      </div>
     </footer>
   </body>
 </html>

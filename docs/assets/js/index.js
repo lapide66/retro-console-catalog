@@ -11,6 +11,41 @@ function createEl(tagName, className, textContent) {
   return element;
 }
 
+function hexToRgb(hex) {
+  const value = hex.replace("#", "");
+  const normalized =
+    value.length === 3
+      ? value
+          .split("")
+          .map((part) => part + part)
+          .join("")
+      : value;
+  const numeric = Number.parseInt(normalized, 16);
+
+  return {
+    r: (numeric >> 16) & 255,
+    g: (numeric >> 8) & 255,
+    b: numeric & 255,
+  };
+}
+
+function rgbToHex({ r, g, b }) {
+  return `#${[r, g, b]
+    .map((channel) => Math.max(0, Math.min(255, Math.round(channel))).toString(16).padStart(2, "0"))
+    .join("")}`;
+}
+
+function mixHex(baseHex, mixHexValue, weight) {
+  const base = hexToRgb(baseHex);
+  const mix = hexToRgb(mixHexValue);
+
+  return rgbToHex({
+    r: base.r * (1 - weight) + mix.r * weight,
+    g: base.g * (1 - weight) + mix.g * weight,
+    b: base.b * (1 - weight) + mix.b * weight,
+  });
+}
+
 function groupByGeneration(consoles) {
   return consoles.reduce((groups, item) => {
     const key = String(item.geracao);
@@ -44,26 +79,82 @@ function toRoman(num) {
     }
   }
 
-  return result;
+  return result || String(num);
+}
+
+function createConsoleSpec(label, value) {
+  const row = createEl("div", "console-card-spec");
+  row.append(
+    createEl("dt", "", label),
+    createEl("dd", "", value),
+  );
+  return row;
 }
 
 function createConsoleItem(item) {
-  const link = createEl("a", "item");
+  const link = createEl("a", "console-card");
   link.href = `console.html?id=${encodeURIComponent(item.id)}`;
-  link.style.setProperty("--row-accent", item.cor);
+  link.style.setProperty("--card-accent", item.cor);
+  link.style.setProperty("--card-accent-soft", mixHex(item.cor, "#ffffff", 0.78));
 
+  const media = createEl("div", "console-card-media");
+  const badge = createEl("span", "console-card-badge", `Geração ${toRoman(item.geracao)}`);
   const image = document.createElement("img");
   image.src = item.imagem;
   image.alt = item.nome;
+  image.loading = "lazy";
+  media.append(badge, image);
 
-  const copy = createEl("div", "item-copy");
-  const name = createEl("strong", "", item.nome);
-  const meta = createEl("span", "", `${item.fabricante} · ${item.ano}`);
+  const body = createEl("div", "console-card-body");
+  const meta = createEl("div", "console-card-meta");
+  meta.append(
+    createEl("span", "", item.fabricante),
+    createEl("span", "", String(item.ano)),
+  );
 
-  copy.append(name, meta);
-  link.append(image, copy);
+  const title = createEl("h3", "console-card-title", item.nome);
+  title.style.color = item.cor;
 
+  const summary = createEl("p", "console-card-summary", item.resumo);
+  const specs = createEl("dl", "console-card-specs");
+  specs.append(
+    createConsoleSpec("CPU", item.cpu),
+    createConsoleSpec("RAM", item.ram),
+    createConsoleSpec("Mídia", item.midia),
+  );
+
+  body.append(meta, title, summary, specs);
+  link.append(media, body);
   return link;
+}
+
+function createGenerationSection(generation, consolesInGeneration) {
+  const years = consolesInGeneration.map((item) => item.ano).sort((a, b) => a - b);
+  const section = createEl("section", "generation-section glass-panel");
+
+  const heading = createEl("header", "generation-section-head");
+  const titleWrap = createEl("div", "generation-title-wrap");
+  titleWrap.append(
+    createEl("p", "generation-kicker", `Geração ${toRoman(generation)}`),
+    createEl("h2", "generation-title", `${generation}ª geração`),
+    createEl("p", "generation-range", `${years[0]} até ${years[years.length - 1]}`),
+  );
+
+  const count = createEl(
+    "span",
+    "generation-count",
+    `${consolesInGeneration.length} console${consolesInGeneration.length !== 1 ? "s" : ""}`,
+  );
+
+  heading.append(titleWrap, count);
+
+  const grid = createEl("div", "console-grid");
+  consolesInGeneration.forEach((item) => {
+    grid.appendChild(createConsoleItem(item));
+  });
+
+  section.append(heading, grid);
+  return section;
 }
 
 function renderCatalog(consoles) {
@@ -75,8 +166,6 @@ function renderCatalog(consoles) {
 
   app.replaceChildren();
 
-  const grid = createEl("section", "generation-grid");
-
   generations.forEach((generation) => {
     const consolesInGeneration = grouped[String(generation)]
       .slice()
@@ -87,26 +176,8 @@ function renderCatalog(consoles) {
         return a.ano - b.ano;
       });
 
-    const section = createEl("section", "gen");
-
-    const heading = createEl("h2");
-    const count = createEl("span", "gen-count", String(consolesInGeneration.length));
-    heading.append(
-      document.createTextNode(`Geração ${toRoman(generation)} `),
-      count,
-    );
-
-    const list = createEl("div", "gen-list");
-
-    consolesInGeneration.forEach((item) => {
-      list.appendChild(createConsoleItem(item));
-    });
-
-    section.append(heading, list);
-    grid.appendChild(section);
+    app.appendChild(createGenerationSection(generation, consolesInGeneration));
   });
-
-  app.appendChild(grid);
 }
 
 function renderError(message) {
