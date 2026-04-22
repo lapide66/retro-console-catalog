@@ -3,13 +3,13 @@ import { motion } from 'framer-motion'
 import ConsoleCard from '../components/ConsoleCard'
 import SearchBar from '../components/SearchBar'
 import GenerationFilter from '../components/GenerationFilter'
-import { getAllConsoles } from '../../shared/data/catalogData'
+import { getAllConsoles } from '@shared/data/catalogData'
 import {
   filterConsoles,
   groupConsolesByGeneration,
   sortConsolesByYearAndName,
-} from '../../shared/domain/catalog'
-import { getGenerationLabel } from '../../shared/domain/consoleModel'
+} from '@shared/domain/catalog'
+import { getGenerationLabel } from '@shared/domain/consoleModel'
 
 const consolesData = getAllConsoles()
 

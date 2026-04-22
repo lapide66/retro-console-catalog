@@ -13,9 +13,9 @@ import {
   Gamepad2,
   Globe,
 } from 'lucide-react'
-import { getAllConsoles } from '../../shared/data/catalogData'
-import { getConsoleById } from '../../shared/domain/catalog'
-import { toConsoleViewModel } from '../../shared/domain/consoleModel'
+import { getAllConsoles } from '@shared/data/catalogData'
+import { getConsoleById } from '@shared/domain/catalog'
+import { toConsoleViewModel } from '@shared/domain/consoleModel'
 
 const consolesData = getAllConsoles()
 

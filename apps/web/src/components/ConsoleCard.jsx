@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Cpu, HardDrive, Monitor, Disc } from 'lucide-react'
-import { getGenerationLabel, toConsoleViewModel } from '../../shared/domain/consoleModel'
+import { getGenerationLabel, toConsoleViewModel } from '@shared/domain/consoleModel'
 
 function GenerationBadge({ geracao }) {
   return <span className="micro-label">{getGenerationLabel(geracao, { uppercase: true })}</span>
