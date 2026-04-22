@@ -80,15 +80,7 @@ function assertColorHex(value, fieldPath) {
 }
 
 function assertHttpUrl(value, fieldPath) {
-  let parsedUrl
-
-  try {
-    parsedUrl = new URL(value)
-  } catch {
-    throw new Error(`Campo invalido: ${fieldPath} deve ser uma URL valida.`)
-  }
-
-  if (parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') {
+  if (!/^https?:\/\/.+/i.test(value)) {
     throw new Error(`Campo invalido: ${fieldPath} deve usar http ou https.`)
   }
 

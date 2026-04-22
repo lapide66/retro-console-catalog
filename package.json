@@ -6,8 +6,12 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "npm --workspace apps/web run dev",
+    "dev": "npm run dev:web",
+    "dev:web": "npm --workspace apps/web run dev",
     "build": "npm --workspace apps/web run build",
-    "preview": "npm --workspace apps/web run preview"
+    "preview": "npm --workspace apps/web run preview",
+    "dev:mobile": "npm --workspace apps/mobile run start",
+    "android:mobile": "npm --workspace apps/mobile run android",
+    "ios:mobile": "npm --workspace apps/mobile run ios"
   }
 }
