@@ -1,10 +1,14 @@
 # Retro Console Catalog
 
-Catálogo estático de consoles retro em HTML, CSS e JavaScript puro, pronto para GitHub Pages.
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react)
+![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat&logo=tailwind-css)
+
+Catálogo de consoles retro com interface premium, pronto para GitHub Pages.
 
 ## Visão Geral
 
-O projeto organiza **25 consoles em 9 gerações**, com navegação por índice e fichas técnicas individuais. As imagens usam fotos públicas do Wikimedia Commons e os dados ficam centralizados em `docs/data/consoles.json`.
+O projeto organiza **25 consoles em 9 gerações**, com navegação por geração, busca e fichas técnicas individuais. As imagens usam fotos públicas do Wikimedia Commons e os dados ficam centralizados em `src/data/consoles.json`.
 
 Cada console inclui:
 - Especificações técnicas (CPU, GPU, RAM, mídia, resolução)
@@ -15,27 +19,53 @@ Cada console inclui:
 - Conectividade
 - Curiosidade sobre o Brasil
 
+## Stack
+
+- **React 18** - Framework UI
+- **Vite** - Build tool
+- **Tailwind CSS** - Estilização
+- **Framer Motion** - Animações
+- **Lucide React** - Ícones
+
 ## Estrutura
 
-```text
-retro-console-catalog/
-├── docs/
-│   ├── assets/
-│   │   ├── css/          # Estilos globais
-│   │   ├── img/          # Imagens locais (se houver)
-│   │   └── js/           # Scripts por página
-│   ├── data/
-│   │   └── consoles.json # Fonte única de dados
-│   ├── index.html        # Índice por geração
-│   ├── console.html      # Ficha técnica individual (?id=<id>)
-│   ├── about.html        # Sobre o projeto
-│   ├── atari-2600.html   # Página dedicada ao Atari 2600
-│   ├── nintendinho.html  # Página dedicada ao NES
-│   ├── references.html   # Referências por console (?id=<id>)
-│   ├── script.js         # Script auxiliar raiz
-│   └── styles.css        # Estilos auxiliares raiz
-└── README.md
 ```
+retro-console-catalog/
+├── src/
+│   ├── components/     # Componentes React
+│   │   ├── Header.jsx
+│   │   ├── ConsoleCard.jsx
+│   │   ├── Footer.jsx
+│   │   ├── GenerationFilter.jsx
+│   │   └── SearchBar.jsx
+│   ├── pages/         # Páginas
+│   │   ├── Home.jsx
+│   │   ├── Console.jsx
+│   │   └── About.jsx
+│   ├── data/          # Dados
+│   │   └── consoles.json
+│   └── App.jsx
+├── docs/              # Output build (GitHub Pages)
+└── public/
+    └── _redirects     # SPA fallback
+```
+
+## Como Executar Localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Acesse: `http://localhost:3000`
+
+### Build para Produção
+
+```bash
+npm run build
+```
+
+Output em `docs/` para GitHub Pages.
 
 ## Gerações Cobertas
 
@@ -49,22 +79,7 @@ retro-console-catalog/
 | 6ª | Dreamcast, PlayStation 2, Xbox, GameCube |
 | 7ª | Xbox 360, Wii, PlayStation 3 |
 | 8ª | Wii U, PlayStation 4, Xbox One, Nintendo Switch |
-
-## Como Executar Localmente
-
-Sem instalar nada, use Python:
-
-```bash
-python3 -m http.server 8080
-```
-
-Acesse:
-
-- `http://localhost:8080/docs/` — índice principal
-- `http://localhost:8080/docs/console.html?id=nes` — ficha do NES
-- `http://localhost:8080/docs/console.html?id=playstation-2` — ficha do PS2
-- `http://localhost:8080/docs/references.html?id=mega-drive` — referências do Mega Drive
-- `http://localhost:8080/docs/about.html` — sobre o projeto
+| 9ª | PlayStation 5, Xbox Series X/S |
 
 ## Dados (`consoles.json`)
 
@@ -102,7 +117,7 @@ Cada entrada no JSON segue este schema:
 
 Para adicionar um novo console:
 
-1. Adicione uma entrada em `docs/data/consoles.json` seguindo o schema acima
+1. Adicione uma entrada em `src/data/consoles.json` seguindo o schema acima
 2. Use um `id` em kebab-case único (ex: `sega-32x`)
 3. Prefira imagens do Wikimedia Commons e inclua sempre `imagem_fonte`
 4. Inclua `preco_fonte` e `vendas_fonte` com URLs verificáveis
@@ -112,3 +127,10 @@ Para adicionar um novo console:
 - Dados técnicos: fontes públicas (Wikipedia, sites oficiais)
 - Imagens: Wikimedia Commons (domínio público ou licenças livres)
 - Projeto independente, sem afiliação com fabricantes
+
+## Histórico de Versões
+
+| Versão | Data | Descrição |
+|-------|------|----------|
+| 1.0.0 | 2026-04-21 | Nova interface premium (React + Vite + Tailwind) |
+| 0.1.0 | 2024 | Versão original Vanilla HTML/CSS/JS |
