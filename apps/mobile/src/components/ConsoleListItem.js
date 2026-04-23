@@ -1,17 +1,26 @@
 import React from 'react'
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 
 export function ConsoleListItem({ item, onPress }) {
   return (
     <Pressable style={styles.card} onPress={onPress}>
-      <View style={styles.cardHeader}>
-        <Text style={[styles.consoleName, { color: item.consoleNameColor }]}>
-          {item.nome}
-        </Text>
-        <Text style={styles.consoleYear}>{item.ano}</Text>
+      <View style={styles.mediaRow}>
+        <Image
+          source={{ uri: item.imagem }}
+          style={styles.consoleImage}
+          resizeMode="cover"
+        />
+        <View style={styles.content}>
+          <View style={styles.cardHeader}>
+            <Text style={[styles.consoleName, { color: item.consoleNameColor }]}>
+              {item.nome}
+            </Text>
+            <Text style={styles.consoleYear}>{item.ano}</Text>
+          </View>
+          <Text style={styles.consoleManufacturer}>{item.fabricante}</Text>
+          <Text style={styles.consoleHint}>Toque para ver detalhes</Text>
+        </View>
       </View>
-      <Text style={styles.consoleManufacturer}>{item.fabricante}</Text>
-      <Text style={styles.consoleHint}>Toque para ver detalhes</Text>
     </Pressable>
   )
 }
@@ -24,6 +33,19 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 16,
     marginBottom: 12,
+  },
+  mediaRow: {
+    flexDirection: 'row',
+    gap: 14,
+  },
+  consoleImage: {
+    width: 92,
+    height: 92,
+    borderRadius: 14,
+    backgroundColor: '#e2e8f0',
+  },
+  content: {
+    flex: 1,
   },
   cardHeader: {
     flexDirection: 'row',
@@ -46,7 +68,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '600',
     color: '#334155',
-    marginBottom: 10,
+    marginBottom: 8,
   },
   consoleHint: {
     fontSize: 12,

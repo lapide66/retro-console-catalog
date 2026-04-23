@@ -1,136 +1,120 @@
 # Retro Console Catalog
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react)
-![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat&logo=tailwind-css)
+Catalogo de consoles retro com aplicacao web em React, aplicacao mobile em Expo/React Native e camada compartilhada de dominio e servicos.
 
-Catálogo de consoles retro com interface premium, pronto para GitHub Pages.
+## Estado atual
 
-## Visão Geral
+- Web em `apps/web`
+- Mobile em `apps/mobile`
+- Dados canonicos em `shared/data`
+- Regras de negocio em `shared/domain` e `shared/services`
+- Busca, filtro, lista e detalhe funcionando em web e mobile
+- Navegacao mobile local funcionando, incluindo o botao fisico voltar no Android
+- Imagens remotas funcionam na web; no mobile a estrategia final sera migrar para assets locais
 
-O projeto organiza **25 consoles em 9 gerações**, com navegação por geração, busca e fichas técnicas individuais. As imagens usam fotos públicas do Wikimedia Commons e os dados ficam centralizados em `src/data/consoles.json`.
+## Arquitetura adotada
 
-Cada console inclui:
-- Especificações técnicas (CPU, GPU, RAM, mídia, resolução)
-- Preço de lançamento com fonte
-- Vendas totais com fonte
-- Dimensões e peso
-- Retrocompatibilidade
-- Conectividade
-- Curiosidade sobre o Brasil
-
-## Stack
-
-- **React 18** - Framework UI
-- **Vite** - Build tool
-- **Tailwind CSS** - Estilização
-- **Framer Motion** - Animações
-- **Lucide React** - Ícones
+- Monorepo com npm workspaces
+- UI separada por plataforma
+- Compartilhamento apenas de dados, schema, dominio, servicos e funcoes puras
+- Hooks React mantidos por plataforma para evitar acoplamento entre runtimes diferentes
+- `docs/` permanece como destino de publicacao da web no fluxo atual, mesmo com reorganizacao estrutural futura ainda pendente
 
 ## Estrutura
 
-```
+```text
 retro-console-catalog/
-├── src/
-│   ├── components/     # Componentes React
-│   │   ├── Header.jsx
-│   │   ├── ConsoleCard.jsx
-│   │   ├── Footer.jsx
-│   │   ├── GenerationFilter.jsx
-│   │   └── SearchBar.jsx
-│   ├── pages/         # Páginas
-│   │   ├── Home.jsx
-│   │   ├── Console.jsx
-│   │   └── About.jsx
-│   ├── data/          # Dados
-│   │   └── consoles.json
-│   └── App.jsx
-├── docs/              # Output build (GitHub Pages)
-└── public/
-    └── _redirects     # SPA fallback
+|-- apps/
+|   |-- web/
+|   `-- mobile/
+|-- shared/
+|   |-- data/
+|   |-- domain/
+|   `-- services/
+|-- docs/
+|-- migrationPlan.txt
+`-- package.json
 ```
 
-## Como Executar Localmente
+## Stack
+
+### Web
+
+- React 18
+- Vite
+- React Router
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+### Mobile
+
+- Expo SDK 54
+- React Native
+- react-native-safe-area-context
+
+### Compartilhado
+
+- JSON canonico do catalogo
+- Modulos JS puros em `shared/domain` e `shared/services`
+
+## Como executar localmente
 
 ```bash
 npm install
 npm run dev
 ```
 
-Acesse: `http://localhost:3000`
-
-### Build para Produção
+Mobile:
 
 ```bash
-npm run build
+npm run dev:mobile
 ```
 
-Output em `docs/` para GitHub Pages.
+## Decisoes de arquitetura implementadas
 
-## Gerações Cobertas
+- A web oficial deixou de ser o frontend antigo da raiz e passou a viver em `apps/web`
+- O mobile foi criado em `apps/mobile` consumindo o mesmo nucleo compartilhado
+- A fonte canonica dos dados deixou de ser a estrutura antiga e passou para `shared/data`
+- Busca, filtro, agrupamento e transformacoes de catalogo foram extraidos da UI para modulos puros
+- A navegacao mobile foi mantida local, sem React Navigation, para evitar conflito de runtime no monorepo atual
 
-| Geração | Consoles |
-|---------|----------|
-| 1ª | Magnavox Odyssey |
-| 2ª | Atari 2600, Intellivision, ColecoVision |
-| 3ª | NES, Sega Master System |
-| 4ª | Super Nintendo, Mega Drive, Neo Geo AES |
-| 5ª | PlayStation, Nintendo 64, Sega Saturn |
-| 6ª | Dreamcast, PlayStation 2, Xbox, GameCube |
-| 7ª | Xbox 360, Wii, PlayStation 3 |
-| 8ª | Wii U, PlayStation 4, Xbox One, Nintendo Switch |
-| 9ª | PlayStation 5, Xbox Series X/S |
+## Dados do catalogo
 
-## Dados (`consoles.json`)
+Cada console inclui, entre outros campos:
 
-Cada entrada no JSON segue este schema:
+- `id`
+- `nome`
+- `fabricante`
+- `ano`
+- `geracao`
+- `cpu`
+- `gpu`
+- `ram`
+- `midia`
+- `resolucao`
+- `imagem`
+- `imagem_fonte`
+- `preco_lancamento`
+- `preco_fonte`
+- `vendas_totais`
+- `vendas_fonte`
+- `resumo`
+- `cor`
+- `dimensoes`
+- `peso`
+- `retrocompatibilidade`
+- `conectividade`
+- `curiosidade_no_brasil`
 
-```json
-{
-  "id": "string",
-  "nome": "string",
-  "fabricante": "string",
-  "ano": number,
-  "geracao": number,
-  "cpu": "string",
-  "gpu": "string",
-  "ram": "string",
-  "midia": "string",
-  "resolucao": "string",
-  "imagem": "URL Wikimedia Commons",
-  "imagem_fonte": "URL da página da imagem",
-  "preco_lancamento": "string",
-  "preco_fonte": "URL",
-  "vendas_totais": "string",
-  "vendas_fonte": "URL",
-  "resumo": "string",
-  "cor": "#hexcolor",
-  "dimensoes": "string",
-  "peso": "string",
-  "retrocompatibilidade": "string",
-  "conectividade": "string",
-  "curiosidade_no_brasil": "string"
-}
-```
+## Situacao das imagens
 
-## Contribuindo
+- Hoje o catalogo ainda referencia imagens remotas
+- A recomendacao do projeto e migrar para imagens locais padronizadas
+- O guia de preparo das imagens esta em `recomendacoes.txt`
 
-Para adicionar um novo console:
+## Proximos passos naturais
 
-1. Adicione uma entrada em `src/data/consoles.json` seguindo o schema acima
-2. Use um `id` em kebab-case único (ex: `sega-32x`)
-3. Prefira imagens do Wikimedia Commons e inclua sempre `imagem_fonte`
-4. Inclua `preco_fonte` e `vendas_fonte` com URLs verificáveis
-
-## Licença e Atribuição
-
-- Dados técnicos: fontes públicas (Wikipedia, sites oficiais)
-- Imagens: Wikimedia Commons (domínio público ou licenças livres)
-- Projeto independente, sem afiliação com fabricantes
-
-## Histórico de Versões
-
-| Versão | Data | Descrição |
-|-------|------|----------|
-| 1.0.0 | 2026-04-21 | Nova interface premium (React + Vite + Tailwind) |
-| 0.1.0 | 2025 | Versão original Vanilla HTML/CSS/JS |
+- Integrar imagens locais no projeto
+- Revisar a estrategia final de publicacao da web
+- Fazer a reorganizacao estrutural futura sem misturar isso com evolucao funcional

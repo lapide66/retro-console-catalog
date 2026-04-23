@@ -16,8 +16,9 @@ export default function About() {
 
           <div className="prose prose-slate dark:prose-invert">
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-              Catálogo estático de consoles retro em HTML, CSS e JavaScript puro,
-              pronto para GitHub Pages.
+              Catalogo de consoles retro com aplicacao web em React,
+              aplicacao mobile em Expo/React Native e regras de negocio
+              compartilhadas em uma camada comum do projeto.
             </p>
 
             <div className="card-bento p-6 mb-8">
@@ -26,31 +27,30 @@ export default function About() {
                   <Gamepad2 className="w-5 h-5 text-white dark:text-slate-900" />
                 </div>
                 <div>
-                  <h2 className="heading-premium text-xl mb-2">
-                    Visão Geral
-                  </h2>
+                  <h2 className="heading-premium text-xl mb-2">Visao Geral</h2>
                   <p className="text-slate-600 dark:text-slate-400">
-                    O projeto organiza <strong>25 consoles em 9 gerações</strong>,
-                    com navegação por índice e fichas técnicas individuais. As imagens usam
-                    fotos públicas do Wikimedia Commons e os dados ficam centralizados
-                    em um arquivo JSON.
+                    O projeto organiza <strong>25 consoles em 9 geracoes</strong>,
+                    com busca, filtro, detalhes por console e uma arquitetura
+                    preparada para evoluir web e mobile sem duplicar regras de negocio.
+                    As imagens usam fotos publicas do Wikimedia Commons e os dados
+                    ficam centralizados na camada compartilhada do catalogo.
                   </p>
                 </div>
               </div>
             </div>
 
-            <h2 className="heading-premium text-2xl mb-4">Gerações Cobertas</h2>
+            <h2 className="heading-premium text-2xl mb-4">Geracoes Cobertas</h2>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {[
-                { gen: '1ª', console: 'Magnavox Odyssey' },
-                { gen: '2ª', console: 'Atari 2600, Intellivision, ColecoVision' },
-                { gen: '3ª', console: 'NES, Sega Master System' },
-                { gen: '4ª', console: 'Super Nintendo, Mega Drive, Neo Geo AES' },
-                { gen: '5ª', console: 'PlayStation, Nintendo 64, Sega Saturn' },
-                { gen: '6ª', console: 'Dreamcast, PlayStation 2, Xbox, GameCube' },
-                { gen: '7ª', console: 'Xbox 360, Wii, PlayStation 3' },
-                { gen: '8ª', console: 'Wii U, PlayStation 4, Xbox One, Switch' },
-                { gen: '9ª', console: 'PlayStation 5, Xbox Series X/S' },
+                { gen: '1a', console: 'Magnavox Odyssey' },
+                { gen: '2a', console: 'Atari 2600, Intellivision, ColecoVision' },
+                { gen: '3a', console: 'NES, Sega Master System' },
+                { gen: '4a', console: 'Super Nintendo, Mega Drive, Neo Geo AES' },
+                { gen: '5a', console: 'PlayStation, Nintendo 64, Sega Saturn' },
+                { gen: '6a', console: 'Dreamcast, PlayStation 2, Xbox, GameCube' },
+                { gen: '7a', console: 'Xbox 360, Wii, PlayStation 3' },
+                { gen: '8a', console: 'Wii U, PlayStation 4, Xbox One, Switch' },
+                { gen: '9a', console: 'PlayStation 5, Xbox Series X/S' },
               ].map((item) => (
                 <div
                   key={item.gen}
@@ -68,7 +68,11 @@ export default function About() {
 
             <h2 className="heading-premium text-2xl mb-4">Tecnologias</h2>
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
-              {['React 18', 'Tailwind CSS', 'Framer Motion'].map((tech) => (
+              {[
+                'React 18 + Vite',
+                'Expo / React Native',
+                'Shared Domain + Services',
+              ].map((tech) => (
                 <div
                   key={tech}
                   className="p-3 rounded-xl bg-slate-900 dark:bg-slate-800 text-white text-center text-sm font-medium"
@@ -78,26 +82,26 @@ export default function About() {
               ))}
             </div>
 
-            <h2 className="heading-premium text-2xl mb-4">Licença e Atribuição</h2>
+            <h2 className="heading-premium text-2xl mb-4">Licenca e Atribuicao</h2>
             <div className="card-bento p-6 mb-8">
               <ul className="space-y-3 text-slate-600 dark:text-slate-400">
                 <li className="flex items-start gap-2">
                   <Info className="w-4 h-4 mt-1 text-slate-400" />
                   <span>
-                    <strong>Dados técnicos:</strong> fontes públicas (Wikipedia, sites oficiais)
+                    <strong>Dados tecnicos:</strong> fontes publicas (Wikipedia, sites oficiais)
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Info className="w-4 h-4 mt-1 text-slate-400" />
                   <span>
-                    <strong>Imagens:</strong> Wikimedia Commons (domínio público
-                    ou licenças livres)
+                    <strong>Imagens:</strong> Wikimedia Commons (dominio publico
+                    ou licencas livres)
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Info className="w-4 h-4 mt-1 text-slate-400" />
                   <span>
-                    <strong>Projeto:</strong> independente, sem afiliação com
+                    <strong>Projeto:</strong> independente, sem afiliacao com
                     fabricantes
                   </span>
                 </li>

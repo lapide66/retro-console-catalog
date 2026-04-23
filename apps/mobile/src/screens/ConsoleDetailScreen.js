@@ -1,12 +1,13 @@
 import React, { useMemo } from 'react'
 import {
+  Image,
   Pressable,
   ScrollView,
-  SafeAreaView,
   StyleSheet,
   Text,
   View,
 } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { getConsoleById } from '../../../../shared/domain/catalog'
 import { getCatalogConsoles } from '../../../../shared/services/catalogService'
 import { toConsoleViewModel } from '../../../../shared/domain/consoleModel'
@@ -31,7 +32,7 @@ export function ConsoleDetailScreen({ consoleId, onBack }) {
 
   if (!consoleViewModel) {
     return (
-      <SafeAreaView style={styles.notFound}>
+      <SafeAreaView style={styles.notFound} edges={['top', 'left', 'right', 'bottom']}>
         <Pressable style={styles.backButton} onPress={onBack}>
           <Text style={styles.backButtonText}>Voltar</Text>
         </Pressable>
@@ -46,13 +47,18 @@ export function ConsoleDetailScreen({ consoleId, onBack }) {
   }
 
   return (
-    <SafeAreaView style={styles.screen}>
+    <SafeAreaView style={styles.screen} edges={['top', 'left', 'right', 'bottom']}>
       <ScrollView contentContainerStyle={styles.content}>
         <Pressable style={styles.backButton} onPress={onBack}>
           <Text style={styles.backButtonText}>Voltar para o catalogo</Text>
         </Pressable>
 
         <View style={styles.hero}>
+          <Image
+            source={{ uri: consoleViewModel.imagem }}
+            style={styles.consoleImage}
+            resizeMode="cover"
+          />
           <Text style={styles.generationLabel}>
             {consoleViewModel.generationLabelUppercase}
           </Text>
@@ -145,6 +151,13 @@ const styles = StyleSheet.create({
     borderColor: '#e2e8f0',
     borderRadius: 20,
     padding: 20,
+    marginBottom: 16,
+  },
+  consoleImage: {
+    width: '100%',
+    aspectRatio: 4 / 3,
+    borderRadius: 16,
+    backgroundColor: '#e2e8f0',
     marginBottom: 16,
   },
   generationLabel: {
