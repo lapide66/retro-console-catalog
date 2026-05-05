@@ -71,6 +71,11 @@ Mobile:
 npm run dev:mobile
 ```
 
+Web:
+```
+npm run dev:web
+```
+
 ## Decisoes de arquitetura implementadas
 
 - A web oficial deixou de ser o frontend antigo da raiz e passou a viver em `apps/web`

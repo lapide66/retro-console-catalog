@@ -1,0 +1,36 @@
+{
+    "id":  "xbox",
+    "nome":  "Xbox",
+    "fabricante":  "Microsoft",
+    "ano":  2001,
+    "geracao":  6,
+    "cpu":  "Intel Pentium III customizado",
+    "gpu":  "NVIDIA NV2A",
+    "ram":  "64 MB",
+    "midia":  "DVD-ROM",
+    "resolucao":  "480p",
+    "preco_lancamento":  "US$ 299,99",
+    "preco_fonte":  "https://en.wikipedia.org/wiki/Xbox_(console)",
+    "vendas_totais":  "24 milhões de unidades",
+    "vendas_fonte":  "https://en.wikipedia.org/wiki/Xbox_(console)",
+    "resumo":  "A entrada da Microsoft no mercado trouxe foco em hardware robusto, disco rígido interno e jogo online em console.",
+    "cor":  "#3f7a3b",
+    "dimensoes":  "320 × 260 × 100 mm",
+    "peso":  "3,9 kg",
+    "retrocompatibilidade":  "Nenhuma",
+    "conectividade":  "Ethernet, 4 portas de controle, AV, disco rígido interno",
+    "curiosidade_no_brasil":  "O Xbox original foi menos dominante no Brasil, mas ganhou espaço entre jogadores que buscavam Halo, multiplayer e hardware forte.",
+
+    "imagemConsole": "",
+    "imagemControle": "",
+
+    "jogoMaisFamoso": "Pong",
+    "imagemDoJogoNaTela": "",
+    "imagemMidiaJogo": "",
+
+    "modelo1":  "",
+    "modelo2":  "",
+    "modelo3":  "",
+    "modelo4":  "",
+    "modelo5":  ""
+}

@@ -1,0 +1,36 @@
+{
+    "id":  "super-nintendo",
+    "nome":  "Super Nintendo Entertainment System",
+    "fabricante":  "Nintendo",
+    "ano":  1990,
+    "geracao":  4,
+    "cpu":  "Ricoh 5A22",
+    "gpu":  "PPU1 / PPU2",
+    "ram":  "128 KB",
+    "midia":  "Cartucho ROM",
+    "resolucao":  "512x448",
+    "preco_lancamento":  "US$ 199,99",
+    "preco_fonte":  "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
+    "vendas_totais":  "49,1 milhões de unidades",
+    "vendas_fonte":  "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
+    "resumo":  "O SNES elevou o padrão de áudio, imagem e design de controles na geração de 16 bits.",
+    "cor":  "#7b5bbd",
+    "dimensoes":  "200 × 242 × 72 mm",
+    "peso":  "1,1 kg",
+    "retrocompatibilidade":  "Nenhuma",
+    "conectividade":  "2 portas para controle, RF, S-Video, AV Multi Out",
+    "curiosidade_no_brasil":  "No Brasil, o Super Nintendo marcou a consolidação da era 16-bit, especialmente em locadoras e importadoras.",
+
+    "imagemConsole": "",
+    "imagemControle": "",
+
+    "jogoMaisFamoso": "Pong",
+    "imagemDoJogoNaTela": "",
+    "imagemMidiaJogo": "",
+
+    "modelo1":  "",
+    "modelo2":  "",
+    "modelo3":  "",
+    "modelo4":  "",
+    "modelo5":  ""
+}

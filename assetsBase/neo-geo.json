@@ -1,0 +1,36 @@
+{
+    "id":  "neo-geo",
+    "nome":  "Neo Geo AES",
+    "fabricante":  "SNK",
+    "ano":  1990,
+    "geracao":  4,
+    "cpu":  "Motorola 68000",
+    "gpu":  "LSPC2-A2 e chipset gráfico SNK",
+    "ram":  "64 KB",
+    "midia":  "Cartucho ROM",
+    "resolucao":  "320x224",
+    "preco_lancamento":  "US$ 649,99",
+    "preco_fonte":  "https://en.wikipedia.org/wiki/Neo_Geo_(system)",
+    "vendas_totais":  "Cerca de 1 milhão de unidades",
+    "vendas_fonte":  "https://en.wikipedia.org/wiki/Neo_Geo_(system)",
+    "resumo":  "O Neo Geo levou experiência de arcade para casa com hardware premium e cartuchos famosos pelo alto custo.",
+    "cor":  "#2f2a2a",
+    "dimensoes":  "325 × 237 × 65 mm",
+    "peso":  "2,4 kg",
+    "retrocompatibilidade":  "Nenhuma",
+    "conectividade":  "2 portas para controle, saída AV, entrada para cartucho arcade doméstico",
+    "curiosidade_no_brasil":  "Por aqui, ficou muito mais no imaginário dos jogadores do que nas salas de estar, por causa do preço extremamente alto.",
+
+    "imagemConsole": "",
+    "imagemControle": "",
+
+    "jogoMaisFamoso": "Pong",
+    "imagemDoJogoNaTela": "",
+    "imagemMidiaJogo": "",
+
+    "modelo1":  "",
+    "modelo2":  "",
+    "modelo3":  "",
+    "modelo4":  "",
+    "modelo5":  ""
+}

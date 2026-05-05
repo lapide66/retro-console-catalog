@@ -1,0 +1,36 @@
+{
+    "id":  "atari-2600",
+    "nome":  "Atari 2600",
+    "fabricante":  "Atari",
+    "ano":  1977,
+    "geracao":  2,
+    "cpu":  "MOS 6507 8-bit",
+    "gpu":  "TIA",
+    "ram":  "128 B",
+    "midia":  "Cartucho ROM",
+    "resolucao":  "160x192",
+    "preco_lancamento":  "US$ 189,95",
+    "preco_fonte":  "https://en.wikipedia.org/wiki/Atari_2600",
+    "vendas_totais":  "30 milhões de unidades",
+    "vendas_fonte":  "https://en.wikipedia.org/wiki/Atari_2600",
+    "resumo":  "O console popularizou cartuchos intercambiáveis e transformou videogame em produto de massa.",
+    "cor":  "#c16a2d",
+    "dimensoes":  "346,1 × 231,8 × 88,9 mm",
+    "peso":  "2,1 kg",
+    "retrocompatibilidade":  "Nenhuma",
+    "conectividade":  "2 portas para joystick, saída RF",
+    "curiosidade_no_brasil":  "Virou sinônimo de videogame doméstico no Brasil e foi amplamente conhecido por seus clones locais.",
+
+    "imagemConsole": "",
+    "imagemControle": "",
+
+    "jogoMaisFamoso": "Pong",
+    "imagemDoJogoNaTela": "",
+    "imagemMidiaJogo": "",
+
+    "modelo1":  "",
+    "modelo2":  "",
+    "modelo3":  "",
+    "modelo4":  "",
+    "modelo5":  ""
+}

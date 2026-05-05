@@ -1,0 +1,36 @@
+{
+    "id":  "magnavox-odyssey",
+    "nome":  "Magnavox Odyssey",
+    "fabricante":  "Magnavox",
+    "ano":  1972,
+    "geracao":  1,
+    "cpu":  "Circuitos analógicos dedicados",
+    "gpu":  "Sem processador gráfico dedicado",
+    "ram":  "Sem RAM programável",
+    "midia":  "Cartões de circuito",
+    "resolucao":  "Saída de vídeo analógica",
+    "preco_lancamento":  "US$ 99,95",
+    "preco_fonte":  "https://www.indianapolismonthly.com/longform/magnavox-odyssey-ralph-baer/",
+    "vendas_totais":  "Cerca de 350 mil unidades",
+    "vendas_fonte":  "https://www.indianapolismonthly.com/longform/magnavox-odyssey-ralph-baer/",
+    "resumo":  "O primeiro console doméstico comercializado em larga escala abriu o caminho para o mercado que viria depois.",
+    "cor":  "#b56c4d",
+    "dimensoes":  "43,2 × 44,5 × 15,2 cm",
+    "peso": "",
+    "retrocompatibilidade":  "Nenhuma",
+    "conectividade":  "Saída RF, 2 controles com cabos",
+    "curiosidade_no_brasil":  "Não teve distribuição ampla no Brasil, mas virou referência histórica para a geração de consoles que depois ganharia força no país.",
+        
+    "imagemConsole": "",
+    "imagemControle": "",
+
+    "jogoMaisFamoso": "Pong",
+    "imagemDoJogoNaTela": "",
+    "imagemMidiaJogo": "",
+
+    "modelo1": "",
+    "modelo2": "",
+    "modelo3": "",
+    "modelo4": "",
+    "modelo5": ""
+}

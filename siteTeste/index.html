@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Magnavox Odyssey</title>
+    <meta name="description" content="Página estática de teste sobre o console Magnavox Odyssey.">
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Cabeçalho">
+      <a class="brand" href="#topo" aria-label="Magnavox Odyssey">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Retro Catalog</span>
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="#historia">História</a>
+        <a href="#especificacoes">Ficha</a>
+        <a href="#galeria">Galeria</a>
+      </nav>
+    </header>
+
+    <main id="topo">
+      <section class="hero magazine-cover" aria-labelledby="console-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Especial Retro</p>
+          <p class="issue-line" id="console-generation"></p>
+          <h1 id="console-title"></h1>
+          <p class="hero-summary" id="console-summary"></p>
+          <div class="cover-lines" id="cover-lines" aria-label="Chamadas da edição"></div>
+          <div class="hero-actions" aria-label="Atalhos">
+            <a class="button primary" href="#especificacoes">Ver ficha técnica</a>
+            <a class="button ghost" href="#galeria">Ver imagens</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <span class="cover-badge" id="console-hero-year"></span>
+          <img id="console-image" alt="">
+          <div class="hero-slider-controls" id="hero-slider-controls" aria-label="Selecionar versão do console"></div>
+          <figcaption id="console-caption"></figcaption>
+        </figure>
+      </section>
+
+      <section class="stats-band" aria-label="Dados principais">
+        <div class="stat">
+          <span>Ano</span>
+          <strong id="stat-year"></strong>
+        </div>
+        <div class="stat">
+          <span>Fabricante</span>
+          <strong id="stat-maker"></strong>
+        </div>
+        <div class="stat">
+          <span>Vendas</span>
+          <strong id="stat-sales"></strong>
+        </div>
+        <div class="stat">
+          <span>Preço</span>
+          <strong id="stat-price"></strong>
+        </div>
+      </section>
+
+      <section class="content-section story-section" id="historia" aria-labelledby="history-title">
+        <div>
+          <p class="section-kicker">Contexto</p>
+          <h2 id="history-title">O ponto de partida dos consoles domésticos</h2>
+        </div>
+        <div class="story-grid">
+          <article class="story-panel">
+            <h3>Resumo histórico</h3>
+            <p id="history-summary"></p>
+          </article>
+          <article class="story-panel accent-panel">
+            <h3>No Brasil</h3>
+            <p id="brazil-note"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section spec-section" id="especificacoes" aria-labelledby="spec-title">
+        <div class="section-heading">
+          <p class="section-kicker">Detalhes</p>
+          <h2 id="spec-title">Ficha técnica organizada</h2>
+        </div>
+        <div class="spec-layout">
+          <div class="spec-card">
+            <h3>Hardware</h3>
+            <dl id="hardware-list"></dl>
+          </div>
+          <div class="spec-card">
+            <h3>Formato e uso</h3>
+            <dl id="format-list"></dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section gallery-section" id="galeria" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <p class="section-kicker">Imagens</p>
+          <h2 id="gallery-title">Console, controle e jogo em destaque</h2>
+        </div>
+        <section class="models-section" aria-labelledby="models-title">
+          <div class="models-heading">
+            <h3 id="models-title">Console versões</h3>
+            <p>Modelos lançados desta família de console.</p>
+          </div>
+          <div class="models-grid" id="models-grid"></div>
+        </section>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img id="gallery-controller" alt="">
+            <figcaption>Controle</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img id="gallery-game-screen" alt="">
+            <figcaption id="game-screen-caption"></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img id="gallery-game-media" alt="">
+            <figcaption id="game-media-caption"></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section source-section" aria-labelledby="source-title">
+        <div class="section-heading">
+          <p class="section-kicker">Referências</p>
+          <h2 id="source-title">Fontes registradas</h2>
+        </div>
+        <div class="source-list" id="source-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span id="footer-title"></span>
+      <span>Site estático offline gerado a partir do conteúdo local.</span>
+    </footer>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>

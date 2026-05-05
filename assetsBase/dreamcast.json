@@ -1,0 +1,37 @@
+{
+    "id":  "dreamcast",
+    "nome":  "Dreamcast",
+    "fabricante":  "Sega",
+    "ano":  1998,
+    "geracao":  6,
+    "cpu":  "Hitachi SH-4",
+    "gpu":  "PowerVR2",
+    "ram":  "16 MB",
+    "midia":  "GD-ROM",
+    "resolucao":  "640x480",
+    
+    "preco_lancamento":  "US$ 199",
+    "preco_fonte":  "https://en.wikipedia.org/wiki/Dreamcast",
+    "vendas_totais":  "9,13 milhões de unidades",
+    "vendas_fonte":  "https://en.wikipedia.org/wiki/Dreamcast",
+    "resumo":  "Último console da Sega, o Dreamcast combinou hardware avançado, rede integrada e uma biblioteca muito cultuada.",
+    "cor":  "#f07f4f",
+    "dimensoes":  "190 × 195,8 × 75,5 mm",
+    "peso":  "1,5 kg",
+    "retrocompatibilidade":  "Nenhuma",
+    "conectividade":  "Modem 56k integrado, 4 portas de controle, saída AV",
+    "curiosidade_no_brasil":  "No Brasil, ganhou sobrevida em feiras, locadoras e comunidades de importação, tornando-se um console de culto.",
+
+    "imagemConsole": "",
+    "imagemControle": "",
+
+    "jogoMaisFamoso": "Pong",
+    "imagemDoJogoNaTela": "",
+    "imagemMidiaJogo": "",
+
+    "modelo1":  "",
+    "modelo2":  "",
+    "modelo3":  "",
+    "modelo4":  "",
+    "modelo5":  ""
+}

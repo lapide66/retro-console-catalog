@@ -1,0 +1,36 @@
+{
+    "id":  "playstation-4",
+    "nome":  "PlayStation 4",
+    "fabricante":  "Sony",
+    "ano":  2013,
+    "geracao":  8,
+    "cpu":  "AMD Jaguar 8-core",
+    "gpu":  "AMD Radeon GCN",
+    "ram":  "8 GB GDDR5",
+    "midia":  "Blu-ray Disc",
+    "resolucao":  "Até 1080p",
+    "preco_lancamento":  "US$ 399,99",
+    "preco_fonte":  "https://en.wikipedia.org/wiki/PlayStation_4",
+    "vendas_totais":  "117,2 milhões de unidades",
+    "vendas_fonte":  "https://en.wikipedia.org/wiki/PlayStation_4",
+    "resumo":  "O PS4 simplificou a arquitetura da Sony, fortaleceu serviços online e liderou boa parte da oitava geração.",
+    "cor":  "#1f293f",
+    "dimensoes":  "275 × 53 × 305 mm",
+    "peso":  "2,8 kg",
+    "retrocompatibilidade":  "Nenhuma nativa com discos de gerações anteriores",
+    "conectividade":  "HDMI, Ethernet, Wi-Fi, Bluetooth, USB 3.0",
+    "curiosidade_no_brasil":  "Chegou oficialmente ao Brasil com preço muito alto, mas ainda assim teve grande popularidade e forte mercado paralelo.",
+
+    "imagemConsole": "",
+    "imagemControle": "",
+
+    "jogoMaisFamoso": "Pong",
+    "imagemDoJogoNaTela": "",
+    "imagemMidiaJogo": "",
+
+    "modelo1":  "",
+    "modelo2":  "",
+    "modelo3":  "",
+    "modelo4":  "",
+    "modelo5":  ""
+}
