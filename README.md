@@ -21,7 +21,6 @@ retro-catalog/
 |-- .github/
 |   `-- workflows/
 |       `-- pages.yml
-|-- .old/
 |-- img/
 |-- src/
 |   |-- consoles/
@@ -33,7 +32,6 @@ retro-catalog/
 |   `-- main.py
 |-- index.html
 |-- README.md
-`-- recomendacoes.txt
 ```
 
 ## Site
@@ -103,5 +101,3 @@ O script salva os arquivos convertidos em `webpConverter/out/`, preservando subp
 ## Observacoes
 
 - O projeto nao depende de npm para a versao atual do site.
-- A pasta `.old/` guarda o conteudo anterior apenas como referencia.
-- O arquivo `recomendacoes.txt` mantem orientacoes de preparo das imagens.
