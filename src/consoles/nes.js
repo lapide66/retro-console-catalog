@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 3,
   cor: "#c73a35",
 
-  resumo: "A Nintendo consolidou aqui a linguagem moderna dos consoles de 8 bits e da navegação por franquias.",
+  resumo: "A Nintendo consolidou aqui a linguagem moderna dos consoles de 8 bits e da navegaÃ§Ã£o por franquias.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, ficou famoso como Nintendinho e abriu espaço para os clones que dominaram a era 8 bits.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, ficou famoso como Nintendinho e abriu espaÃ§o para os clones que dominaram a era 8 bits.",
+  jogoMaisFamoso: "XXXXXX",
 
   hardware: {
     cpu: "Ricoh 2A03 8-bit",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 179,99",
     precoFonte: "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
-    vendasTotais: "61,91 milhões de unidades",
+    vendasTotais: "61,91 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System"
   },
 
   detalhes: {
-    dimensoes: "256 × 203,2 × 88,9 mm",
+    dimensoes: "256 x 203,2 x 88,9 mm",
     peso: "2,27 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas de controle, saída RF"
+    conectividade: "2 portas de controle, saÃ­da RF"
   },
 
   imagens: {

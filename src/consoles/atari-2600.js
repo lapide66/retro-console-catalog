@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 2,
   cor: "#c16a2d",
 
-  resumo: "O console popularizou cartuchos intercambiáveis e transformou videogame em produto de massa.",
+  resumo: "O console popularizou cartuchos intercambiÃ¡veis e transformou videogame em produto de massa.",
   diferencial: "",
-  curiosidadeNoBrasil: "Virou sinônimo de videogame doméstico no Brasil e foi amplamente conhecido por seus clones locais.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "Virou sinï¿½nimo de videogame domÃ©stico no Brasil e foi amplamente conhecido por seus clones locais.",
+  jogoMaisFamoso: "XXXX",
 
   hardware: {
     cpu: "MOS 6507 8-bit",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 189,95",
     precoFonte: "https://en.wikipedia.org/wiki/Atari_2600",
-    vendasTotais: "30 milhões de unidades",
+    vendasTotais: "30 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Atari_2600"
   },
 
   detalhes: {
-    dimensoes: "346,1 × 231,8 × 88,9 mm",
+    dimensoes: "346,1 x 231,8 x 88,9 mm",
     peso: "2,1 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas para joystick, saída RF"
+    conectividade: "2 portas para joystick, saÃ­da RF"
   },
 
   imagens: {

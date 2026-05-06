@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 6,
   cor: "#f07f4f",
 
-  resumo: "Último console da Sega, o Dreamcast combinou hardware avançado, rede integrada e uma biblioteca muito cultuada.",
+  resumo: "Ã“ltimo console da Sega, o Dreamcast combinou hardware avanÃ§ado, rede integrada e uma biblioteca muito cultuada.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, ganhou sobrevida em feiras, locadoras e comunidades de importação, tornando-se um console de culto.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, ganhou sobrevida em feiras, locadoras e comunidades de importaÃ§Ã£o, tornando-se um console de culto.",
+  jogoMaisFamoso: "XXXXX",
 
   hardware: {
     cpu: "Hitachi SH-4",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 199",
     precoFonte: "https://en.wikipedia.org/wiki/Dreamcast",
-    vendasTotais: "9,13 milhões de unidades",
+    vendasTotais: "9,13 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Dreamcast"
   },
 
   detalhes: {
-    dimensoes: "190 × 195,8 × 75,5 mm",
+    dimensoes: "190 x 195,8 x 75,5 mm",
     peso: "1,5 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "Modem 56k integrado, 4 portas de controle, saída AV"
+    conectividade: "Modem 56k integrado, 4 portas de controle, saÃ­da AV"
   },
 
   imagens: {

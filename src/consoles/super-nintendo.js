@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 4,
   cor: "#7b5bbd",
 
-  resumo: "O SNES elevou o padrão de áudio, imagem e design de controles na geração de 16 bits.",
+  resumo: "O SNES elevou o padrÃ£o de Ã¡udio, imagem e design de controles na geraÃ§Ã£o de 16 bits.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, o Super Nintendo marcou a consolidação da era 16-bit, especialmente em locadoras e importadoras.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, o Super Nintendo marcou a consolidaÃ§Ã£o da era 16-bit, especialmente em locadoras e importadoras.",
+  jogoMaisFamoso: "Super Mario World",
 
   hardware: {
     cpu: "Ricoh 5A22",
@@ -22,12 +22,12 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 199,99",
     precoFonte: "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
-    vendasTotais: "49,1 milhões de unidades",
+    vendasTotais: "49,1 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System"
   },
 
   detalhes: {
-    dimensoes: "200 × 242 × 72 mm",
+    dimensoes: "200 x 242 x 72 mm",
     peso: "1,1 kg",
     retrocompatibilidade: "Nenhuma",
     conectividade: "2 portas para controle, RF, S-Video, AV Multi Out"

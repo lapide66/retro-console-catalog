@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 7,
   cor: "#8da4a8",
 
-  resumo: "O Wii reposicionou o videogame como atividade física e social, não só como hobby tradicional.",
+  resumo: "O Wii reposicionou o videogame como atividade fÃ­sica e social, nÃ£o sÃ³ como hobby tradicional.",
   diferencial: "",
-  curiosidadeNoBrasil: "A proposta de movimento fez o Wii aparecer em casas, festas, escolas e espaços de convivência no Brasil.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "A proposta de movimento fez o Wii aparecer em casas, festas, escolas e espaÃ§os de convivÃªncia no Brasil.",
+  jogoMaisFamoso: "Super Mario Galaxy",
 
   hardware: {
     cpu: "Broadway PowerPC",
@@ -22,12 +22,12 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 249,99",
     precoFonte: "https://en.wikipedia.org/wiki/Wii",
-    vendasTotais: "101,63 milhões de unidades",
+    vendasTotais: "101,63 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Wii"
   },
 
   detalhes: {
-    dimensoes: "157 × 215,4 × 44 mm",
+    dimensoes: "157 x 215,4 x 44 mm",
     peso: "1,2 kg",
     retrocompatibilidade: "GameCube",
     conectividade: "Wi-Fi, Bluetooth, 2 USB 2.0, 4 portas GameCube"

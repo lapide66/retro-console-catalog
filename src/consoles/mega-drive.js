@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 4,
   cor: "#1f1f24",
 
-  resumo: "O Mega Drive foi o principal console da Sega nos 16 bits e se destacou por jogos rápidos, marketing agressivo e forte identidade visual.",
+  resumo: "O Mega Drive foi o principal console da Sega nos 16 bits e se destacou por jogos rÃ¡pidos, marketing agressivo e forte identidade visual.",
   diferencial: "",
-  curiosidadeNoBrasil: "Com distribuição da Tec Toy, o Mega Drive virou um dos consoles mais populares da história brasileira.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "Com distribuiÃ§Ã£o da Tec Toy, o Mega Drive virou um dos consoles mais populares da histÃ³ria brasileira.",
+  jogoMaisFamoso: "XXXXXXXXXXX",
 
   hardware: {
     cpu: "Motorola 68000",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 189,99",
     precoFonte: "https://en.wikipedia.org/wiki/Sega_Genesis",
-    vendasTotais: "Cerca de 30,75 milhões de unidades",
+    vendasTotais: "Cerca de 30,75 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Sega_Genesis"
   },
 
   detalhes: {
-    dimensoes: "280 × 212 × 75 mm",
+    dimensoes: "280 x 212 x 75 mm",
     peso: "1,8 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas para controle, saída RF e AV, porta de expansão"
+    conectividade: "2 portas para controle, saÃ­da RF e AV, porta de expansÃ§Ã£o"
   },
 
   imagens: {

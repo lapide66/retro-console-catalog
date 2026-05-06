@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 5,
   cor: "#3f5fb8",
 
-  resumo: "O primeiro PlayStation fez do CD a mídia dominante e virou um divisor de águas no mercado doméstico.",
+  resumo: "O primeiro PlayStation fez do CD a mÃ­dia dominante e virou um divisor de Ã¡guas no mercado domÃ©stico.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, o PS1 se espalhou por importação e mercado paralelo e virou um dos consoles mais lembrados da geração 32-bit.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, o PS1 se espalhou por importaÃ§Ã£o e mercado paralelo e virou um dos consoles mais lembrados da geraÃ§Ã£o 32-bit.",
+  jogoMaisFamoso: "Gran Turismo 2",
 
   hardware: {
     cpu: "MIPS R3000A",
@@ -22,12 +22,12 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 299,99",
     precoFonte: "https://en.wikipedia.org/wiki/PlayStation_(console)",
-    vendasTotais: "102,49 milhões de unidades",
+    vendasTotais: "102,49 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/PlayStation_(console)"
   },
 
   detalhes: {
-    dimensoes: "275 × 63,5 × 190 mm",
+    dimensoes: "275 x 63,5 x 190 mm",
     peso: "1,5 kg",
     retrocompatibilidade: "Nenhuma",
     conectividade: "2 portas de controle, 2 slots Memory Card, AV Multi Out"

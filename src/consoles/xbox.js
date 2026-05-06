@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 6,
   cor: "#3f7a3b",
 
-  resumo: "A entrada da Microsoft no mercado trouxe foco em hardware robusto, disco rígido interno e jogo online em console.",
+  resumo: "A entrada da Microsoft no mercado trouxe foco em hardware robusto, disco rÃ¡gido interno e jogo online em console.",
   diferencial: "",
-  curiosidadeNoBrasil: "O Xbox original foi menos dominante no Brasil, mas ganhou espaço entre jogadores que buscavam Halo, multiplayer e hardware forte.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "O Xbox original foi menos dominante no Brasil, mas ganhou espaÃ§o entre jogadores que buscavam Halo, multiplayer e hardware forte.",
+  jogoMaisFamoso: "Halo Combat Evolved",
 
   hardware: {
     cpu: "Intel Pentium III customizado",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 299,99",
     precoFonte: "https://en.wikipedia.org/wiki/Xbox_(console)",
-    vendasTotais: "24 milhões de unidades",
+    vendasTotais: "24 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Xbox_(console)"
   },
 
   detalhes: {
-    dimensoes: "320 × 260 × 100 mm",
+    dimensoes: "320 x 260 x 100 mm",
     peso: "3,9 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "Ethernet, 4 portas de controle, AV, disco rígido interno"
+    conectividade: "Ethernet, 4 portas de controle, AV, disco rÃ¡gido interno"
   },
 
   imagens: {

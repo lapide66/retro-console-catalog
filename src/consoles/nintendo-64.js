@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O N64 foi o salto da Nintendo para o 3D em tempo real com controles de design muito influente.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o custo dos cartuchos importados limitou a popularidade do N64 frente ao PlayStation.",
-  jogoMaisFamoso: "Pong",
+  jogoMaisFamoso: "XXXXXXXX",
 
   hardware: {
     cpu: "NEC VR4300",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 199,99",
     precoFonte: "https://en.wikipedia.org/wiki/Nintendo_64",
-    vendasTotais: "32,93 milhões de unidades",
+    vendasTotais: "32,93 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Nintendo_64"
   },
 
   detalhes: {
-    dimensoes: "260 × 190 × 73 mm",
+    dimensoes: "260 x 190 x 73 mm",
     peso: "1,1 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "4 portas para controle, A/V Multi Out, expansão de memória"
+    conectividade: "4 portas para controle, A/V Multi Out, expansÃ£o de memÃ³ria"
   },
 
   imagens: {

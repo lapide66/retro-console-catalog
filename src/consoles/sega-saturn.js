@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 5,
   cor: "#5a5554",
 
-  resumo: "O Saturn ficou marcado por arquitetura complexa, bom desempenho em 2D e uma transição turbulenta da Sega para os 32 bits.",
+  resumo: "O Saturn ficou marcado por arquitetura complexa, bom desempenho em 2D e uma transiÃ§Ã£o turbulenta da Sega para os 32 bits.",
   diferencial: "",
-  curiosidadeNoBrasil: "Teve circulação menor no Brasil do que o concorrente PlayStation, mas criou uma base fiel entre entusiastas e locadoras.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "Teve circulaÃ§Ã£o menor no Brasil do que o concorrente PlayStation, mas criou uma base fiel entre entusiastas e locadoras.",
+  jogoMaisFamoso: "XXXXXXXXX",
 
   hardware: {
     cpu: "Dual Hitachi SH-2",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 399",
     precoFonte: "https://en.wikipedia.org/wiki/Sega_Saturn",
-    vendasTotais: "9,26 milhões de unidades",
+    vendasTotais: "9,26 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Sega_Saturn"
   },
 
   detalhes: {
-    dimensoes: "260 × 230 × 83 mm",
+    dimensoes: "260 x 230 x 83 mm",
     peso: "1,7 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas de controle, slot de expansão, saída AV"
+    conectividade: "2 portas de controle, slot de expansÃ£o, saÃ­da AV"
   },
 
   imagens: {

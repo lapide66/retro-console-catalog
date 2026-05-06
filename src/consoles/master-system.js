@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 3,
   cor: "#1b2b3b",
 
-  resumo: "O Master System foi a resposta da Sega ao NES e teve vida longa em vários mercados, especialmente fora dos Estados Unidos.",
+  resumo: "O Master System foi a resposta da Sega ao NES e teve vida longa em vÃ¡rios mercados, especialmente fora dos Estados Unidos.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, fez enorme sucesso com a Tec Toy e permaneceu ativo por muitos anos além do ciclo original.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, fez enorme sucesso com a Tec Toy e permaneceu ativo por muitos anos alÃ©m do ciclo original.",
+  jogoMaisFamoso: "XXXXXXXXX",
 
   hardware: {
     cpu: "Zilog Z80A",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 199,99",
     precoFonte: "https://en.wikipedia.org/wiki/Master_System",
-    vendasTotais: "Cerca de 13 milhões de unidades",
+    vendasTotais: "Cerca de 13 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Master_System"
   },
 
   detalhes: {
-    dimensoes: "365 × 170 × 70 mm",
+    dimensoes: "365 x 170 x 70 mm",
     peso: "1,8 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas para controle, saída RF, entrada para pistola de luz"
+    conectividade: "2 portas para controle, saÃ­da RF, entrada para pistola de luz"
   },
 
   imagens: {

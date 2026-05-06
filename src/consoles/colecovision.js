@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 2,
   cor: "#8a5a3c",
 
-  resumo: "O ColecoVision trouxe jogos de visual mais próximo dos arcades e virou um dos pontos altos da segunda geração.",
+  resumo: "O ColecoVision trouxe jogos de visual mais prÃ³ximo dos arcades e virou um dos pontos altos da segunda geraÃ§Ã£o.",
   diferencial: "",
-  curiosidadeNoBrasil: "Apareceu pouco no mercado brasileiro, mas ganhou fama entre colecionadores por seu módulo de expansão compatível com Atari 2600.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "Apareceu pouco no mercado brasileiro, mas ganhou fama entre colecionadores por seu mÃ³dulo de expansÃ£o compatÃ­vel com Atari 2600.",
+  jogoMaisFamoso: "XXX",
 
   hardware: {
     cpu: "Zilog Z80A",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 175",
     precoFonte: "https://en.wikipedia.org/wiki/ColecoVision",
-    vendasTotais: "Cerca de 2 milhões de unidades",
+    vendasTotais: "Cerca de 2 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/ColecoVision"
   },
 
   detalhes: {
-    dimensoes: "356 × 248 × 89 mm",
+    dimensoes: "356 x 248 x 89 mm",
     peso: "2,4 kg",
-    retrocompatibilidade: "Expansão para Atari 2600",
-    conectividade: "2 portas para controles, saída RF, baia de expansão"
+    retrocompatibilidade: "ExpansÃ£o para Atari 2600",
+    conectividade: "2 portas para controles, saÃ­da RF, baia de expansÃ£o"
   },
 
   imagens: {

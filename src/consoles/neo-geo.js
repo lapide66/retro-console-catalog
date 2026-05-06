@@ -6,14 +6,14 @@ window.consoleData = {
   geracao: 4,
   cor: "#2f2a2a",
 
-  resumo: "O Neo Geo levou experiência de arcade para casa com hardware premium e cartuchos famosos pelo alto custo.",
+  resumo: "O Neo Geo levou experiÃªncia de arcade para casa com hardware premium e cartuchos famosos pelo alto custo.",
   diferencial: "",
-  curiosidadeNoBrasil: "Por aqui, ficou muito mais no imaginário dos jogadores do que nas salas de estar, por causa do preço extremamente alto.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "Por aqui, ficou muito mais no imaginÃ¡rio dos jogadores do que nas salas de estar, por causa do preÃ§o extremamente alto.",
+  jogoMaisFamoso: "XXXXXXXXXXXX",
 
   hardware: {
     cpu: "Motorola 68000",
-    gpu: "LSPC2-A2 e chipset gráfico SNK",
+    gpu: "LSPC2-A2 e chipset grÃ¡fico SNK",
     ram: "64 KB",
     midia: "Cartucho ROM",
     resolucao: "320x224"
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 649,99",
     precoFonte: "https://en.wikipedia.org/wiki/Neo_Geo_(system)",
-    vendasTotais: "Cerca de 1 milhão de unidades",
+    vendasTotais: "Cerca de 1 milhÃµo de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Neo_Geo_(system)"
   },
 
   detalhes: {
-    dimensoes: "325 × 237 × 65 mm",
+    dimensoes: "325 x 237 x 65 mm",
     peso: "2,4 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas para controle, saída AV, entrada para cartucho arcade doméstico"
+    conectividade: "2 portas para controle, saÃ­da AV, entrada para cartucho arcade domÃ©stico"
   },
 
   imagens: {

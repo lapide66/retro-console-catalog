@@ -6,30 +6,30 @@ window.consoleData = {
   geracao: 7,
   cor: "#303235",
 
-  resumo: "O PS3 marcou a entrada da Sony no Blu-ray e em serviços online mais robustos, apesar do início caro e complexo.",
+  resumo: "O PS3 marcou a entrada da Sony no Blu-ray e em serviÃ§os online mais robustos, apesar do inÃ­cio caro e complexo.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, o preço inicial alto dificultou a adoção, mas o aparelho ganhou terreno ao longo da geração.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, o preÃ§o inicial alto dificultou a adoÃ§Ã£o, mas o aparelho ganhou terreno ao longo da geracÃ£o.",
+  jogoMaisFamoso: "The Last of US",
 
   hardware: {
     cpu: "Cell Broadband Engine",
     gpu: "NVIDIA RSX",
     ram: "256 MB XDR + 256 MB GDDR3",
     midia: "Blu-ray Disc",
-    resolucao: "Até 1080p"
+    resolucao: "AtÃ© 1080p"
   },
 
   mercado: {
     precoLancamento: "US$ 499,99 / US$ 599,99",
     precoFonte: "https://en.wikipedia.org/wiki/PlayStation_3",
-    vendasTotais: "87,4 milhões de unidades",
+    vendasTotais: "87,4 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/PlayStation_3"
   },
 
   detalhes: {
-    dimensoes: "325 × 274 × 98 mm",
+    dimensoes: "325 x 274 x 98 mm",
     peso: "5 kg",
-    retrocompatibilidade: "Limitada em modelos iniciais com PS1 e parte do catálogo PS2",
+    retrocompatibilidade: "Limitada em modelos iniciais com PS1 e parte do catÃ¡logo PS2",
     conectividade: "Wi-Fi, Bluetooth 2.0, HDMI, Ethernet, USB"
   },
 

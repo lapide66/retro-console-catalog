@@ -1,0 +1,8 @@
+Criar um script, que vai verificar todos os arquivos de controles separados, pegando apenas algumas sessões e criando um novo script, entre elas.
+
+id, nome, fabricante, ano, geracao, resumo,
+
+a imagem que será usada na página principal, será uma com menor resolução, para que a página carregue mais rapidamente, todas as imagens menores estatão em
+img/consoleHome/
+
+a intenção é fazer que a página principal seja bem otimizada

@@ -8,8 +8,8 @@ window.consoleData = {
 
   resumo: "Compacto e centrado em first-party, o GameCube ficou marcado por identidade visual forte e controles muito elogiados.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, teve alcance menor que PS2, mas cultivou público fiel por franquias da Nintendo e pelo controle marcante.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, teve alcance menor que PS2, mas cultivou pÃºblico fiel por franquias da Nintendo e pelo controle marcante.",
+  jogoMaisFamoso: "XXXXXX",
 
   hardware: {
     cpu: "IBM PowerPC Gekko",
@@ -22,15 +22,15 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 199,99",
     precoFonte: "https://en.wikipedia.org/wiki/GameCube",
-    vendasTotais: "21,74 milhões de unidades",
+    vendasTotais: "21,74 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/GameCube"
   },
 
   detalhes: {
-    dimensoes: "150 × 161 × 110 mm",
+    dimensoes: "150 x 161 x 110 mm",
     peso: "2,4 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "4 portas de controle, 2 slots Memory Card, saída AV digital em alguns modelos"
+    conectividade: "4 portas de controle, 2 slots Memory Card, saÃ­da AV digital em alguns modelos"
   },
 
   imagens: {

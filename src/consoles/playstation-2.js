@@ -6,10 +6,10 @@ window.consoleData = {
   geracao: 6,
   cor: "#1c2c5b",
 
-  resumo: "O PS2 uniu jogos, DVD e longevidade incomum, tornando-se o console doméstico mais vendido da história.",
+  resumo: "O PS2 uniu jogos, DVD e longevidade incomum, tornando-se o console domÃ©stico mais vendido da histÃ³ria.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, o PS2 virou um fenômeno de massa no início dos anos 2000, impulsionado pelo DVD e pela ampla disponibilidade.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, o PS2 virou um fenÃ´meno de massa no inÃ­cio dos anos 2000, impulsionado pelo DVD e pela ampla disponibilidade.",
+  jogoMaisFamoso: "God of War 2",
 
   hardware: {
     cpu: "Emotion Engine",
@@ -22,12 +22,12 @@ window.consoleData = {
   mercado: {
     precoLancamento: "US$ 299,99",
     precoFonte: "https://en.wikipedia.org/wiki/PlayStation_2",
-    vendasTotais: "Mais de 160 milhões de unidades",
+    vendasTotais: "Mais de 160 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/PlayStation_2"
   },
 
   detalhes: {
-    dimensoes: "301 × 182 × 78 mm",
+    dimensoes: "301 x 182 x 78 mm",
     peso: "2,2 kg",
     retrocompatibilidade: "Jogos de PlayStation 1",
     conectividade: "2 USB, Ethernet, AV Multi Out"

@@ -6,28 +6,28 @@ window.consoleData = {
   geracao: 8,
   cor: "#4b89b9",
 
-  resumo: "O Wii U tentou combinar console HD e segunda tela no GamePad, mas sofreu com comunicação confusa e baixa adesão.",
+  resumo: "O Wii U tentou combinar console HD e segunda tela no GamePad, mas sofreu com comunicaÃ§Ã£o confusa e baixa adesÃ£o.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, teve presença bem mais discreta do que o Wii e acabou ofuscado por importados e pela transição para o Switch.",
-  jogoMaisFamoso: "Pong",
+  curiosidadeNoBrasil: "No Brasil, teve presenÃ§a bem mais discreta do que o Wii e acabou ofuscado por importados e pela transiÃ§Ã£o para o Switch.",
+  jogoMaisFamoso: "XXXXXXX",
 
   hardware: {
     cpu: "IBM PowerPC Espresso",
     gpu: "AMD Radeon Latte",
     ram: "2 GB",
     midia: "Wii U Optical Disc",
-    resolucao: "Até 1080p"
+    resolucao: "AtÃ© 1080p"
   },
 
   mercado: {
     precoLancamento: "US$ 299,99 / US$ 349,99",
     precoFonte: "https://en.wikipedia.org/wiki/Wii_U",
-    vendasTotais: "13,56 milhões de unidades",
+    vendasTotais: "13,56 milhÃµes de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Wii_U"
   },
 
   detalhes: {
-    dimensoes: "268,5 × 133,4 × 46 mm",
+    dimensoes: "268,5 x 133,4 x 46 mm",
     peso: "1,55 kg",
     retrocompatibilidade: "Wii",
     conectividade: "HDMI, 4 USB 2.0, Wi-Fi, Bluetooth, NFC no GamePad"
