@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "gamecube",
   nome: "Nintendo GameCube",
   fabricante: "Nintendo",
@@ -8,7 +8,7 @@
 
   resumo: "Compacto e centrado em first-party, o GameCube ficou marcado por identidade visual forte e controles muito elogiados.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, teve alcance menor que PS2, mas cultivou pÃºblico fiel por franquias da Nintendo e pelo controle marcante.",
+  curiosidadeNoBrasil: "No Brasil, teve alcance menor que PS2, mas cultivou público fiel por franquias da Nintendo e pelo controle marcante.",
   jogoMaisFamoso: "Pong",
 
   hardware: {
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 199,99",
     precoFonte: "https://en.wikipedia.org/wiki/GameCube",
-    vendasTotais: "21,74 milhÃµes de unidades",
+    vendasTotais: "21,74 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/GameCube"
   },
 
   detalhes: {
-    dimensoes: "150 Ã— 161 Ã— 110 mm",
+    dimensoes: "150 × 161 × 110 mm",
     peso: "2,4 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "4 portas de controle, 2 slots Memory Card, saÃ­da AV digital em alguns modelos"
+    conectividade: "4 portas de controle, 2 slots Memory Card, saída AV digital em alguns modelos"
   },
 
   imagens: {
-    controle: "img/gamecube/gamepad.png",
-    jogoNaTela: "img/gamecube/gameNaTela.png",
-    midiaJogo: "img/gamecube/bestGame.png"
+    controle: "img/gamecube/gamepad.webp",
+    jogoNaTela: "img/gamecube/gameNaTela.webp",
+    midiaJogo: "img/gamecube/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo GameCube",
       ano: 2001,
-      imagem: "img/gamecube/consolev1.png"
+      imagem: "img/gamecube/consolev1.webp"
     },
     {
       nome: "Nintendo GameCube",
       ano: 2001,
-      imagem: "img/gamecube/consolev2.png"
+      imagem: "img/gamecube/consolev2.webp"
     },
     {
       nome: "Nintendo GameCube",
       ano: 2001,
-      imagem: "img/gamecube/consolev3.png"
+      imagem: "img/gamecube/consolev3.webp"
     }
   ]
 };

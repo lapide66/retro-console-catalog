@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "nintendo-64",
   nome: "Nintendo 64",
   fabricante: "Nintendo",
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 199,99",
     precoFonte: "https://en.wikipedia.org/wiki/Nintendo_64",
-    vendasTotais: "32,93 milhÃµes de unidades",
+    vendasTotais: "32,93 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Nintendo_64"
   },
 
   detalhes: {
-    dimensoes: "260 Ã— 190 Ã— 73 mm",
+    dimensoes: "260 × 190 × 73 mm",
     peso: "1,1 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "4 portas para controle, A/V Multi Out, expansÃ£o de memÃ³ria"
+    conectividade: "4 portas para controle, A/V Multi Out, expansão de memória"
   },
 
   imagens: {
-    controle: "img/nintendo-64/gamepad.png",
-    jogoNaTela: "img/nintendo-64/gameNaTela.png",
-    midiaJogo: "img/nintendo-64/bestGame.png"
+    controle: "img/nintendo-64/gamepad.webp",
+    jogoNaTela: "img/nintendo-64/gameNaTela.webp",
+    midiaJogo: "img/nintendo-64/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo 64",
       ano: 1996,
-      imagem: "img/nintendo-64/consolev1.png"
+      imagem: "img/nintendo-64/consolev1.webp"
     },
     {
       nome: "Nintendo 64",
       ano: 1996,
-      imagem: "img/nintendo-64/consolev2.png"
+      imagem: "img/nintendo-64/consolev2.webp"
     },
     {
       nome: "Nintendo 64",
       ano: 1996,
-      imagem: "img/nintendo-64/consolev3.png"
+      imagem: "img/nintendo-64/consolev3.webp"
     }
   ]
 };

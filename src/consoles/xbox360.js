@@ -34,26 +34,26 @@ window.consoleData = {
   },
 
   imagens: {
-    controle: "img/xbox360/gamepad.png",
-    jogoNaTela: "img/xbox360/gameNaTela.png",
-    midiaJogo: "img/xbox360/bestGame.png"
+    controle: "img/xbox360/gamepad.webp",
+    jogoNaTela: "img/xbox360/gameNaTela.webp",
+    midiaJogo: "img/xbox360/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Xbox 360 Fat",
       ano: 2005,
-      imagem: "img/xbox360/consolev1.png"
+      imagem: "img/xbox360/consolev1.webp"
     },
     {
       nome: "Xbox 360 Slim",
       ano: 2010,
-      imagem: "img/xbox360/consolev2.png"
+      imagem: "img/xbox360/consolev2.webp"
     },
     {
       nome: "Xbox 360 Super Slim",
       ano: 2013,
-      imagem: "img/xbox360/consolev3.png"
+      imagem: "img/xbox360/consolev3.webp"
     }
   ]
 };

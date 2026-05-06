@@ -34,26 +34,26 @@ window.consoleData = {
   },
 
   imagens: {
-    controle: "img/magnavox-odyssey/gamepad.png",
-    jogoNaTela: "img/magnavox-odyssey/gameNaTela.png",
-    midiaJogo: "img/magnavox-odyssey/bestGame.png"
+    controle: "img/magnavox-odyssey/gamepad.webp",
+    jogoNaTela: "img/magnavox-odyssey/gameNaTela.webp",
+    midiaJogo: "img/magnavox-odyssey/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Magnavox Odyssey",
       ano: 1972,
-      imagem: "img/magnavox-odyssey/consolev1.png"
+      imagem: "img/magnavox-odyssey/consolev1.webp"
     },
     {
       nome: "Magnavox Odyssey 3000",
       ano: 1977,
-      imagem: "img/magnavox-odyssey/consolev2.png"
+      imagem: "img/magnavox-odyssey/consolev2.webp"
     },
     {
       nome: "Magnavox Odyssey 4000",
       ano: 1977,
-      imagem: "img/magnavox-odyssey/consolev3.png"
+      imagem: "img/magnavox-odyssey/consolev3.webp"
     }
   ]
 };

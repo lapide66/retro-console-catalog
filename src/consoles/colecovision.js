@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "colecovision",
   nome: "ColecoVision",
   fabricante: "Coleco",
@@ -6,9 +6,9 @@
   geracao: 2,
   cor: "#8a5a3c",
 
-  resumo: "O ColecoVision trouxe jogos de visual mais prÃ³ximo dos arcades e virou um dos pontos altos da segunda geraÃ§Ã£o.",
+  resumo: "O ColecoVision trouxe jogos de visual mais próximo dos arcades e virou um dos pontos altos da segunda geração.",
   diferencial: "",
-  curiosidadeNoBrasil: "Apareceu pouco no mercado brasileiro, mas ganhou fama entre colecionadores por seu mÃ³dulo de expansÃ£o compatÃ­vel com Atari 2600.",
+  curiosidadeNoBrasil: "Apareceu pouco no mercado brasileiro, mas ganhou fama entre colecionadores por seu módulo de expansão compatível com Atari 2600.",
   jogoMaisFamoso: "Pong",
 
   hardware: {
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 175",
     precoFonte: "https://en.wikipedia.org/wiki/ColecoVision",
-    vendasTotais: "Cerca de 2 milhÃµes de unidades",
+    vendasTotais: "Cerca de 2 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/ColecoVision"
   },
 
   detalhes: {
-    dimensoes: "356 Ã— 248 Ã— 89 mm",
+    dimensoes: "356 × 248 × 89 mm",
     peso: "2,4 kg",
-    retrocompatibilidade: "ExpansÃ£o para Atari 2600",
-    conectividade: "2 portas para controles, saÃ­da RF, baia de expansÃ£o"
+    retrocompatibilidade: "Expansão para Atari 2600",
+    conectividade: "2 portas para controles, saída RF, baia de expansão"
   },
 
   imagens: {
-    controle: "img/colecovision/gamepad.png",
-    jogoNaTela: "img/colecovision/gameNaTela.png",
-    midiaJogo: "img/colecovision/bestGame.png"
+    controle: "img/colecovision/gamepad.webp",
+    jogoNaTela: "img/colecovision/gameNaTela.webp",
+    midiaJogo: "img/colecovision/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "ColecoVision",
       ano: 1982,
-      imagem: "img/colecovision/consolev1.png"
+      imagem: "img/colecovision/consolev1.webp"
     },
     {
       nome: "ColecoVision",
       ano: 1982,
-      imagem: "img/colecovision/consolev2.png"
+      imagem: "img/colecovision/consolev2.webp"
     },
     {
       nome: "ColecoVision",
       ano: 1982,
-      imagem: "img/colecovision/consolev3.png"
+      imagem: "img/colecovision/consolev3.webp"
     }
   ]
 };

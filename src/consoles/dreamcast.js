@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "dreamcast",
   nome: "Dreamcast",
   fabricante: "Sega",
@@ -6,9 +6,9 @@
   geracao: 6,
   cor: "#f07f4f",
 
-  resumo: "Ãšltimo console da Sega, o Dreamcast combinou hardware avanÃ§ado, rede integrada e uma biblioteca muito cultuada.",
+  resumo: "Último console da Sega, o Dreamcast combinou hardware avançado, rede integrada e uma biblioteca muito cultuada.",
   diferencial: "",
-  curiosidadeNoBrasil: "No Brasil, ganhou sobrevida em feiras, locadoras e comunidades de importaÃ§Ã£o, tornando-se um console de culto.",
+  curiosidadeNoBrasil: "No Brasil, ganhou sobrevida em feiras, locadoras e comunidades de importação, tornando-se um console de culto.",
   jogoMaisFamoso: "Pong",
 
   hardware: {
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 199",
     precoFonte: "https://en.wikipedia.org/wiki/Dreamcast",
-    vendasTotais: "9,13 milhÃµes de unidades",
+    vendasTotais: "9,13 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Dreamcast"
   },
 
   detalhes: {
-    dimensoes: "190 Ã— 195,8 Ã— 75,5 mm",
+    dimensoes: "190 × 195,8 × 75,5 mm",
     peso: "1,5 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "Modem 56k integrado, 4 portas de controle, saÃ­da AV"
+    conectividade: "Modem 56k integrado, 4 portas de controle, saída AV"
   },
 
   imagens: {
-    controle: "img/dreamcast/gamepad.png",
-    jogoNaTela: "img/dreamcast/gameNaTela.png",
-    midiaJogo: "img/dreamcast/bestGame.png"
+    controle: "img/dreamcast/gamepad.webp",
+    jogoNaTela: "img/dreamcast/gameNaTela.webp",
+    midiaJogo: "img/dreamcast/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Dreamcast",
       ano: 1998,
-      imagem: "img/dreamcast/consolev1.png"
+      imagem: "img/dreamcast/consolev1.webp"
     },
     {
       nome: "Dreamcast",
       ano: 1998,
-      imagem: "img/dreamcast/consolev2.png"
+      imagem: "img/dreamcast/consolev2.webp"
     },
     {
       nome: "Dreamcast",
       ano: 1998,
-      imagem: "img/dreamcast/consolev3.png"
+      imagem: "img/dreamcast/consolev3.webp"
     }
   ]
 };

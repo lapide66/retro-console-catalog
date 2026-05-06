@@ -1,5 +1,5 @@
-//const DATA_FILE = "src/consoles/xbox360.js";
-const DATA_FILE = "src/consoles/xbox-one.js";
+const DATA_FILE = "src/consoles/xbox360.js";
+//const DATA_FILE = "src/consoles/xbox-one.js";
 //const DATA_FILE = "src/consoles/magnavox-odyssey.js";
 
 let consoleData = {};

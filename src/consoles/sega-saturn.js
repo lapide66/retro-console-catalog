@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "sega-saturn",
   nome: "Sega Saturn",
   fabricante: "Sega",
@@ -6,9 +6,9 @@
   geracao: 5,
   cor: "#5a5554",
 
-  resumo: "O Saturn ficou marcado por arquitetura complexa, bom desempenho em 2D e uma transiÃ§Ã£o turbulenta da Sega para os 32 bits.",
+  resumo: "O Saturn ficou marcado por arquitetura complexa, bom desempenho em 2D e uma transição turbulenta da Sega para os 32 bits.",
   diferencial: "",
-  curiosidadeNoBrasil: "Teve circulaÃ§Ã£o menor no Brasil do que o concorrente PlayStation, mas criou uma base fiel entre entusiastas e locadoras.",
+  curiosidadeNoBrasil: "Teve circulação menor no Brasil do que o concorrente PlayStation, mas criou uma base fiel entre entusiastas e locadoras.",
   jogoMaisFamoso: "Pong",
 
   hardware: {
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 399",
     precoFonte: "https://en.wikipedia.org/wiki/Sega_Saturn",
-    vendasTotais: "9,26 milhÃµes de unidades",
+    vendasTotais: "9,26 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Sega_Saturn"
   },
 
   detalhes: {
-    dimensoes: "260 Ã— 230 Ã— 83 mm",
+    dimensoes: "260 × 230 × 83 mm",
     peso: "1,7 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas de controle, slot de expansÃ£o, saÃ­da AV"
+    conectividade: "2 portas de controle, slot de expansão, saída AV"
   },
 
   imagens: {
-    controle: "img/sega-saturn/gamepad.png",
-    jogoNaTela: "img/sega-saturn/gameNaTela.png",
-    midiaJogo: "img/sega-saturn/bestGame.png"
+    controle: "img/sega-saturn/gamepad.webp",
+    jogoNaTela: "img/sega-saturn/gameNaTela.webp",
+    midiaJogo: "img/sega-saturn/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Sega Saturn",
       ano: 1994,
-      imagem: "img/sega-saturn/consolev1.png"
+      imagem: "img/sega-saturn/consolev1.webp"
     },
     {
       nome: "Sega Saturn",
       ano: 1994,
-      imagem: "img/sega-saturn/consolev2.png"
+      imagem: "img/sega-saturn/consolev2.webp"
     },
     {
       nome: "Sega Saturn",
       ano: 1994,
-      imagem: "img/sega-saturn/consolev3.png"
+      imagem: "img/sega-saturn/consolev3.webp"
     }
   ]
 };

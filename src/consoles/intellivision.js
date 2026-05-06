@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "intellivision",
   nome: "Intellivision",
   fabricante: "Mattel Electronics",
@@ -6,9 +6,9 @@
   geracao: 2,
   cor: "#7c6c62",
 
-  resumo: "A Mattel apostou em hardware mais sofisticado para desafiar a Atari e destacar jogos esportivos e estratÃ©gicos.",
+  resumo: "A Mattel apostou em hardware mais sofisticado para desafiar a Atari e destacar jogos esportivos e estratégicos.",
   diferencial: "",
-  curiosidadeNoBrasil: "Nunca teve a mesma penetraÃ§Ã£o do Atari por aqui, mas foi conhecido em revistas e lojas especializadas como rival tecnicamente superior.",
+  curiosidadeNoBrasil: "Nunca teve a mesma penetração do Atari por aqui, mas foi conhecido em revistas e lojas especializadas como rival tecnicamente superior.",
   jogoMaisFamoso: "Pong",
 
   hardware: {
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 275",
     precoFonte: "https://en.wikipedia.org/wiki/Intellivision",
-    vendasTotais: "Cerca de 3 milhÃµes de unidades",
+    vendasTotais: "Cerca de 3 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Intellivision"
   },
 
   detalhes: {
-    dimensoes: "330 Ã— 250 Ã— 90 mm",
+    dimensoes: "330 × 250 × 90 mm",
     peso: "2,3 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 controles fixos por cabo, saÃ­da RF"
+    conectividade: "2 controles fixos por cabo, saída RF"
   },
 
   imagens: {
-    controle: "img/intellivision/gamepad.png",
-    jogoNaTela: "img/intellivision/gameNaTela.png",
-    midiaJogo: "img/intellivision/bestGame.png"
+    controle: "img/intellivision/gamepad.webp",
+    jogoNaTela: "img/intellivision/gameNaTela.webp",
+    midiaJogo: "img/intellivision/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Intellivision",
       ano: 1979,
-      imagem: "img/intellivision/consolev1.png"
+      imagem: "img/intellivision/consolev1.webp"
     },
     {
       nome: "Intellivision",
       ano: 1979,
-      imagem: "img/intellivision/consolev2.png"
+      imagem: "img/intellivision/consolev2.webp"
     },
     {
       nome: "Intellivision",
       ano: 1979,
-      imagem: "img/intellivision/consolev3.png"
+      imagem: "img/intellivision/consolev3.webp"
     }
   ]
 };

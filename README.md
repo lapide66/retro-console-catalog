@@ -1,125 +1,107 @@
 # Retro Console Catalog
 
-Catalogo de consoles retro com aplicacao web em React, aplicacao mobile em Expo/React Native e camada compartilhada de dominio e servicos.
+Catalogo estatico de consoles retro feito com HTML, CSS e JavaScript puro.
+
+O projeto foi reorganizado para deixar de ser um app React/Expo. A versao atual do site fica na raiz do repositorio e carrega os dados dos consoles a partir dos arquivos JavaScript em `src/consoles/`.
 
 ## Estado atual
 
-- Web em `apps/web`
-- Mobile em `apps/mobile`
-- Dados canonicos em `shared/data`
-- Regras de negocio em `shared/domain` e `shared/services`
-- Busca, filtro, lista e detalhe funcionando em web e mobile
-- Navegacao mobile local funcionando, incluindo o botao fisico voltar no Android
-- Imagens remotas funcionam na web; no mobile a estrategia final sera migrar para assets locais
-
-## Arquitetura adotada
-
-- Monorepo com npm workspaces
-- UI separada por plataforma
-- Compartilhamento apenas de dados, schema, dominio, servicos e funcoes puras
-- Hooks React mantidos por plataforma para evitar acoplamento entre runtimes diferentes
-- `docs/` permanece como destino de publicacao da web no fluxo atual, mesmo com reorganizacao estrutural futura ainda pendente
+- Site estatico em `index.html`
+- Estilos principais em `src/styles.css`
+- Logica de carregamento e renderizacao em `src/script.js`
+- Dados de cada console em `src/consoles/`
+- Imagens publicas em `img/`
+- Conteudo antigo preservado em `.old/`
+- Publicacao configurada para GitHub Pages via GitHub Actions
 
 ## Estrutura
 
 ```text
-retro-console-catalog/
-|-- apps/
-|   |-- web/
-|   `-- mobile/
-|-- shared/
-|   |-- data/
-|   |-- domain/
-|   `-- services/
-|-- docs/
-|-- migrationPlan.txt
-`-- package.json
+retro-catalog/
+|-- .github/
+|   `-- workflows/
+|       `-- pages.yml
+|-- .old/
+|-- img/
+|-- src/
+|   |-- consoles/
+|   |-- script.js
+|   `-- styles.css
+|-- webpConverter/
+|   |-- base/
+|   |-- out/
+|   `-- main.py
+|-- index.html
+|-- README.md
+`-- recomendacoes.txt
 ```
 
-## Stack
+## Site
 
-### Web
+O site atual usa uma pagina HTML unica. O arquivo `src/script.js` carrega o arquivo de dados definido em `DATA_FILE` e preenche a pagina com:
 
-- React 18
-- Vite
-- React Router
-- Tailwind CSS
-- Framer Motion
-- Lucide React
+- dados principais do console
+- imagem principal com slider de modelos
+- ficha tecnica
+- galeria
+- referencias
 
-### Mobile
+As imagens dos consoles devem estar em formato `.webp` dentro de `img/`.
 
-- Expo SDK 54
-- React Native
-- react-native-safe-area-context
+## GitHub Pages
 
-### Compartilhado
+A publicacao esta configurada em `.github/workflows/pages.yml`.
 
-- JSON canonico do catalogo
-- Modulos JS puros em `shared/domain` e `shared/services`
+O workflow nao faz build. Ele prepara uma pasta temporaria `_site` contendo apenas:
 
-## Como executar localmente
+- `index.html`
+- `img/`
+- `src/`
+
+Depois publica esse conteudo no GitHub Pages.
+
+Para ativar no GitHub:
+
+1. Acesse `Settings > Pages`
+2. Em `Build and deployment`, selecione `GitHub Actions`
+3. Faca push para a branch configurada no workflow
+
+## Conversor WebP
+
+A pasta `webpConverter/` contem uma ferramenta simples em Python para converter imagens `.png` para `.webp` com qualidade 92.
+
+Estrutura esperada:
+
+```text
+webpConverter/
+|-- base/
+|   `-- imagens .png
+|-- out/
+|   `-- imagens .webp geradas
+`-- main.py
+```
+
+### Dependencia
+
+Instale a biblioteca Pillow:
 
 ```bash
-npm install
-npm run dev
+pip install pillow
 ```
 
-Mobile:
+### Como usar
+
+Coloque as imagens `.png` em `webpConverter/base/` e execute:
 
 ```bash
-npm run dev:mobile
+cd webpConverter
+python main.py
 ```
 
-Web:
-```
-npm run dev:web
-```
+O script salva os arquivos convertidos em `webpConverter/out/`, preservando subpastas quando existirem.
 
-## Decisoes de arquitetura implementadas
+## Observacoes
 
-- A web oficial deixou de ser o frontend antigo da raiz e passou a viver em `apps/web`
-- O mobile foi criado em `apps/mobile` consumindo o mesmo nucleo compartilhado
-- A fonte canonica dos dados deixou de ser a estrutura antiga e passou para `shared/data`
-- Busca, filtro, agrupamento e transformacoes de catalogo foram extraidos da UI para modulos puros
-- A navegacao mobile foi mantida local, sem React Navigation, para evitar conflito de runtime no monorepo atual
-
-## Dados do catalogo
-
-Cada console inclui, entre outros campos:
-
-- `id`
-- `nome`
-- `fabricante`
-- `ano`
-- `geracao`
-- `cpu`
-- `gpu`
-- `ram`
-- `midia`
-- `resolucao`
-- `imagem`
-- `imagem_fonte`
-- `preco_lancamento`
-- `preco_fonte`
-- `vendas_totais`
-- `vendas_fonte`
-- `resumo`
-- `cor`
-- `dimensoes`
-- `peso`
-- `retrocompatibilidade`
-- `conectividade`
-- `curiosidade_no_brasil`
-
-## Situacao das imagens
-
-- Hoje o catalogo ainda referencia imagens remotas
-- A recomendacao do projeto e migrar para imagens locais padronizadas
-- O guia de preparo das imagens esta em `recomendacoes.txt`
-
-## Proximos passos naturais
-
-- Integrar imagens locais no projeto
-- Revisar a estrategia final de publicacao da web
-- Fazer a reorganizacao estrutural futura sem misturar isso com evolucao funcional
+- O projeto nao depende de npm para a versao atual do site.
+- A pasta `.old/` guarda o conteudo anterior apenas como referencia.
+- O arquivo `recomendacoes.txt` mantem orientacoes de preparo das imagens.

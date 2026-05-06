@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "xbox",
   nome: "Xbox",
   fabricante: "Microsoft",
@@ -6,9 +6,9 @@
   geracao: 6,
   cor: "#3f7a3b",
 
-  resumo: "A entrada da Microsoft no mercado trouxe foco em hardware robusto, disco rÃ­gido interno e jogo online em console.",
+  resumo: "A entrada da Microsoft no mercado trouxe foco em hardware robusto, disco rígido interno e jogo online em console.",
   diferencial: "",
-  curiosidadeNoBrasil: "O Xbox original foi menos dominante no Brasil, mas ganhou espaÃ§o entre jogadores que buscavam Halo, multiplayer e hardware forte.",
+  curiosidadeNoBrasil: "O Xbox original foi menos dominante no Brasil, mas ganhou espaço entre jogadores que buscavam Halo, multiplayer e hardware forte.",
   jogoMaisFamoso: "Pong",
 
   hardware: {
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 299,99",
     precoFonte: "https://en.wikipedia.org/wiki/Xbox_(console)",
-    vendasTotais: "24 milhÃµes de unidades",
+    vendasTotais: "24 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Xbox_(console)"
   },
 
   detalhes: {
-    dimensoes: "320 Ã— 260 Ã— 100 mm",
+    dimensoes: "320 × 260 × 100 mm",
     peso: "3,9 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "Ethernet, 4 portas de controle, AV, disco rÃ­gido interno"
+    conectividade: "Ethernet, 4 portas de controle, AV, disco rígido interno"
   },
 
   imagens: {
-    controle: "img/xbox/gamepad.png",
-    jogoNaTela: "img/xbox/gameNaTela.png",
-    midiaJogo: "img/xbox/bestGame.png"
+    controle: "img/xbox/gamepad.webp",
+    jogoNaTela: "img/xbox/gameNaTela.webp",
+    midiaJogo: "img/xbox/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Xbox",
       ano: 2001,
-      imagem: "img/xbox/consolev1.png"
+      imagem: "img/xbox/consolev1.webp"
     },
     {
       nome: "Xbox",
       ano: 2001,
-      imagem: "img/xbox/consolev2.png"
+      imagem: "img/xbox/consolev2.webp"
     },
     {
       nome: "Xbox",
       ano: 2001,
-      imagem: "img/xbox/consolev3.png"
+      imagem: "img/xbox/consolev3.webp"
     }
   ]
 };

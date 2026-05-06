@@ -1,4 +1,4 @@
-ï»¿window.consoleData = {
+window.consoleData = {
   id: "mega-drive",
   nome: "Sega Genesis (Mega Drive)",
   fabricante: "Sega",
@@ -6,9 +6,9 @@
   geracao: 4,
   cor: "#1f1f24",
 
-  resumo: "O Mega Drive foi o principal console da Sega nos 16 bits e se destacou por jogos rÃ¡pidos, marketing agressivo e forte identidade visual.",
+  resumo: "O Mega Drive foi o principal console da Sega nos 16 bits e se destacou por jogos rápidos, marketing agressivo e forte identidade visual.",
   diferencial: "",
-  curiosidadeNoBrasil: "Com distribuiÃ§Ã£o da Tec Toy, o Mega Drive virou um dos consoles mais populares da histÃ³ria brasileira.",
+  curiosidadeNoBrasil: "Com distribuição da Tec Toy, o Mega Drive virou um dos consoles mais populares da história brasileira.",
   jogoMaisFamoso: "Pong",
 
   hardware: {
@@ -22,38 +22,38 @@
   mercado: {
     precoLancamento: "US$ 189,99",
     precoFonte: "https://en.wikipedia.org/wiki/Sega_Genesis",
-    vendasTotais: "Cerca de 30,75 milhÃµes de unidades",
+    vendasTotais: "Cerca de 30,75 milhões de unidades",
     vendasFonte: "https://en.wikipedia.org/wiki/Sega_Genesis"
   },
 
   detalhes: {
-    dimensoes: "280 Ã— 212 Ã— 75 mm",
+    dimensoes: "280 × 212 × 75 mm",
     peso: "1,8 kg",
     retrocompatibilidade: "Nenhuma",
-    conectividade: "2 portas para controle, saÃ­da RF e AV, porta de expansÃ£o"
+    conectividade: "2 portas para controle, saída RF e AV, porta de expansão"
   },
 
   imagens: {
-    controle: "img/mega-drive/gamepad.png",
-    jogoNaTela: "img/mega-drive/gameNaTela.png",
-    midiaJogo: "img/mega-drive/bestGame.png"
+    controle: "img/mega-drive/gamepad.webp",
+    jogoNaTela: "img/mega-drive/gameNaTela.webp",
+    midiaJogo: "img/mega-drive/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Sega Genesis (Mega Drive)",
       ano: 1988,
-      imagem: "img/mega-drive/consolev1.png"
+      imagem: "img/mega-drive/consolev1.webp"
     },
     {
       nome: "Sega Genesis (Mega Drive)",
       ano: 1988,
-      imagem: "img/mega-drive/consolev2.png"
+      imagem: "img/mega-drive/consolev2.webp"
     },
     {
       nome: "Sega Genesis (Mega Drive)",
       ano: 1988,
-      imagem: "img/mega-drive/consolev3.png"
+      imagem: "img/mega-drive/consolev3.webp"
     }
   ]
 };

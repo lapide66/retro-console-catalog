@@ -1,4 +1,4 @@
-﻿window.consoleData = {
+window.consoleData = {
   id: "xbox-one",
   nome: "Xbox One",
   fabricante: "Microsoft",
@@ -34,26 +34,26 @@
   },
 
   imagens: {
-    controle: "img/xbox-one/gamepad.png",
-    jogoNaTela: "img/xbox-one/gameNaTela.jpg",
-    midiaJogo: "img/xbox-one/bestGame.png"
+    controle: "img/xbox-one/gamepad.webp",
+    jogoNaTela: "img/xbox-one/gameNaTela.webp",
+    midiaJogo: "img/xbox-one/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Xbox One",
       ano: 2013,
-      imagem: "img/xbox-one/consolev1.png"
+      imagem: "img/xbox-one/consolev1.webp"
     },
     {
       nome: "Xbox One S",
       ano: 2016,
-      imagem: "img/xbox-one/consolev2.png"
+      imagem: "img/xbox-one/consolev2.webp"
     },
     {
       nome: "Xbox One X",
       ano: 2017,
-      imagem: "img/xbox-one/consolev3.png"
+      imagem: "img/xbox-one/consolev3.webp"
     }
   ]
 };
