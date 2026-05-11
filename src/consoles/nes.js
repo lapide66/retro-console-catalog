@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "A Nintendo consolidou aqui a linguagem moderna dos consoles de 8 bits e da navegação por franquias.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, ficou famoso como Nintendinho e abriu espaço para os clones que dominaram a era 8 bits.",
-  jogoMaisFamoso: "XXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Ricoh 2A03 8-bit",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/nes/gamepad.webp",
-    jogoNaTela: "img/nes/gameNaTela.webp",
+    caixaConsole: "img/nes/caixaConsole.webp",
     midiaJogo: "img/nes/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo Entertainment System",
+      modelo: "Original",
       ano: 1985,
       imagem: "img/nes/consolev1.webp"
     },
     {
       nome: "Nintendo Entertainment System",
+      modelo: "Original",
       ano: 1985,
       imagem: "img/nes/consolev2.webp"
     },
     {
       nome: "Nintendo Entertainment System",
+      modelo: "Original",
       ano: 1985,
       imagem: "img/nes/consolev3.webp"
     }

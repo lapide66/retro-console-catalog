@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O PS4 simplificou a arquitetura da Sony, fortaleceu serviços online e liderou boa parte da oitava geração.",
   diferencial: "",
   curiosidadeNoBrasil: "Chegou oficialmente ao Brasil com preço muito alto, mas ainda assim teve grande popularidade e forte mercado paralelo.",
-  jogoMaisFamoso: "The Last of US 2",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "AMD Jaguar 8-core",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/playstation-4/gamepad.webp",
-    jogoNaTela: "img/playstation-4/gameNaTela.webp",
+    caixaConsole: "img/playstation-4/caixaConsole.webp",
     midiaJogo: "img/playstation-4/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "PlayStation 4",
+      modelo: "Original",
       ano: 2013,
       imagem: "img/playstation-4/consolev1.webp"
     },
     {
       nome: "PlayStation 4",
+      modelo: "Original",
       ano: 2013,
       imagem: "img/playstation-4/consolev2.webp"
     },
     {
       nome: "PlayStation 4",
+      modelo: "Original",
       ano: 2013,
       imagem: "img/playstation-4/consolev3.webp"
     }

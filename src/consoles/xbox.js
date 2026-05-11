@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "A entrada da Microsoft no mercado trouxe foco em hardware robusto, disco rágido interno e jogo online em console.",
   diferencial: "",
   curiosidadeNoBrasil: "O Xbox original foi menos dominante no Brasil, mas ganhou espaço entre jogadores que buscavam Halo, multiplayer e hardware forte.",
-  jogoMaisFamoso: "Halo Combat Evolved",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Intel Pentium III customizado",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/xbox/gamepad.webp",
-    jogoNaTela: "img/xbox/gameNaTela.webp",
+    caixaConsole: "img/xbox/caixaConsole.webp",
     midiaJogo: "img/xbox/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Xbox",
+      modelo: "Original",
       ano: 2001,
       imagem: "img/xbox/consolev1.webp"
     },
     {
       nome: "Xbox",
+      modelo: "Original",
       ano: 2001,
       imagem: "img/xbox/consolev2.webp"
     },
     {
       nome: "Xbox",
+      modelo: "Original",
       ano: 2001,
       imagem: "img/xbox/consolev3.webp"
     }

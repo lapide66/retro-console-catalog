@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "A Mattel apostou em hardware mais sofisticado para desafiar a Atari e destacar jogos esportivos e estratágicos.",
   diferencial: "",
   curiosidadeNoBrasil: "Nunca teve a mesma penetração do Atari por aqui, mas foi conhecido em revistas e lojas especializadas como rival tecnicamente superior.",
-  jogoMaisFamoso: "XXXXXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "GI CP1610 16-bit",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/intellivision/gamepad.webp",
-    jogoNaTela: "img/intellivision/gameNaTela.webp",
+    caixaConsole: "img/intellivision/caixaConsole.webp",
     midiaJogo: "img/intellivision/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Intellivision",
+      modelo: "Original",
       ano: 1979,
       imagem: "img/intellivision/consolev1.webp"
     },
     {
       nome: "Intellivision",
+      modelo: "Original",
       ano: 1979,
       imagem: "img/intellivision/consolev2.webp"
     },
     {
       nome: "Intellivision",
+      modelo: "Original",
       ano: 1979,
       imagem: "img/intellivision/consolev3.webp"
     }

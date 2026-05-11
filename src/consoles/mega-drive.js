@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Mega Drive foi o principal console da Sega nos 16 bits e se destacou por jogos rápidos, marketing agressivo e forte identidade visual.",
   diferencial: "",
   curiosidadeNoBrasil: "Com distribuição da Tec Toy, o Mega Drive virou um dos consoles mais populares da história brasileira.",
-  jogoMaisFamoso: "XXXXXXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Motorola 68000",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/mega-drive/gamepad.webp",
-    jogoNaTela: "img/mega-drive/gameNaTela.webp",
+    caixaConsole: "img/mega-drive/caixaConsole.webp",
     midiaJogo: "img/mega-drive/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Sega Genesis (Mega Drive)",
+      modelo: "Original",
       ano: 1988,
       imagem: "img/mega-drive/consolev1.webp"
     },
     {
       nome: "Sega Genesis (Mega Drive)",
+      modelo: "Original",
       ano: 1988,
       imagem: "img/mega-drive/consolev2.webp"
     },
     {
       nome: "Sega Genesis (Mega Drive)",
+      modelo: "Original",
       ano: 1988,
       imagem: "img/mega-drive/consolev3.webp"
     }

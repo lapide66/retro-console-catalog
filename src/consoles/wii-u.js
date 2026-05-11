@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Wii U tentou combinar console HD e segunda tela no GamePad, mas sofreu com comunicação confusa e baixa adesão.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, teve presença bem mais discreta do que o Wii e acabou ofuscado por importados e pela transição para o Switch.",
-  jogoMaisFamoso: "XXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "IBM PowerPC Espresso",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/wii-u/gamepad.webp",
-    jogoNaTela: "img/wii-u/gameNaTela.webp",
+    caixaConsole: "img/wii-u/caixaConsole.webp",
     midiaJogo: "img/wii-u/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo Wii U",
+      modelo: "Original",
       ano: 2012,
       imagem: "img/wii-u/consolev1.webp"
     },
     {
       nome: "Nintendo Wii U",
+      modelo: "Original",
       ano: 2012,
       imagem: "img/wii-u/consolev2.webp"
     },
     {
       nome: "Nintendo Wii U",
+      modelo: "Original",
       ano: 2012,
       imagem: "img/wii-u/consolev3.webp"
     }

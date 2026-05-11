@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O PS2 uniu jogos, DVD e longevidade incomum, tornando-se o console doméstico mais vendido da história.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o PS2 virou um fenômeno de massa no início dos anos 2000, impulsionado pelo DVD e pela ampla disponibilidade.",
-  jogoMaisFamoso: "God of War 2",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Emotion Engine",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/playstation-2/gamepad.webp",
-    jogoNaTela: "img/playstation-2/gameNaTela.webp",
+    caixaConsole: "img/playstation-2/caixaConsole.webp",
     midiaJogo: "img/playstation-2/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "PlayStation 2",
+      modelo: "Original/Fat",
       ano: 2000,
       imagem: "img/playstation-2/consolev1.webp"
     },
     {
       nome: "PlayStation 2",
+      modelo: "Slim",
       ano: 2000,
       imagem: "img/playstation-2/consolev2.webp"
     },
     {
       nome: "PlayStation 2",
+      modelo: "Original",
       ano: 2000,
       imagem: "img/playstation-2/consolev3.webp"
     }

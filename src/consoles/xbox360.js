@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Xbox 360 ajudou a definir a era HD com Xbox Live forte, serviços online consistentes e amplo apoio third-party.",
   diferencial: "Primeiro console HD",
   curiosidadeNoBrasil: "No Brasil, se destacou pelo custo-benefício, comunidade online e forte presença em lan houses e desbloqueios.",
-  jogoMaisFamoso: "Halo 4",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "IBM Xenon",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/xbox360/gamepad.webp",
-    jogoNaTela: "img/xbox360/gameNaTela.webp",
+    caixaConsole: "img/xbox360/caixaConsole.webp",
     midiaJogo: "img/xbox360/bestGame.webp"
   },
 
   modelos: [
     {
-      nome: "Xbox 360 Fat",
+      nome: "Xbox 360",
+      modelo: "Original/Fat",
       ano: 2005,
       imagem: "img/xbox360/consolev1.webp"
     },
     {
-      nome: "Xbox 360 Slim",
+      nome: "Xbox 360",
+      modelo: "Slim",
       ano: 2010,
       imagem: "img/xbox360/consolev2.webp"
     },
     {
-      nome: "Xbox 360 Super Slim",
+      nome: "Xbox 360",
+      modelo: "Super Slim",
       ano: 2013,
       imagem: "img/xbox360/consolev3.webp"
     }

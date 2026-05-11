@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O SNES elevou o padrão de áudio, imagem e design de controles na geração de 16 bits.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o Super Nintendo marcou a consolidação da era 16-bit, especialmente em locadoras e importadoras.",
-  jogoMaisFamoso: "Super Mario World",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Ricoh 5A22",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/super-nintendo/gamepad.webp",
-    jogoNaTela: "img/super-nintendo/gameNaTela.webp",
+    caixaConsole: "img/super-nintendo/caixaConsole.webp",
     midiaJogo: "img/super-nintendo/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Super Nintendo Entertainment System",
+      modelo: "Original",
       ano: 1990,
       imagem: "img/super-nintendo/consolev1.webp"
     },
     {
       nome: "Super Nintendo Entertainment System",
+      modelo: "Original",
       ano: 1990,
       imagem: "img/super-nintendo/consolev2.webp"
     },
     {
       nome: "Super Nintendo Entertainment System",
+      modelo: "Original",
       ano: 1990,
       imagem: "img/super-nintendo/consolev3.webp"
     }

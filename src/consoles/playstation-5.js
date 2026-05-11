@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O PS5 consolidou a geração atual com SSD, carregamento rápido e forte integração de ecossistema.",
   diferencial: "",
   curiosidadeNoBrasil: "Chegou oficialmente ao Brasil em novembro de 2020 com preço alto, refletindo câmbio e tributação.",
-  jogoMaisFamoso: "Wolverine",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "AMD Zen 2",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/playstation-5/gamepad.webp",
-    jogoNaTela: "img/playstation-5/gameNaTela.webp",
+    caixaConsole: "img/playstation-5/caixaConsole.webp",
     midiaJogo: "img/playstation-5/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "PlayStation 5",
+      modelo: "Original/Fat",
       ano: 2020,
       imagem: "img/playstation-5/consolev1.webp"
     },
     {
       nome: "PlayStation 5",
+      modelo: "Slim",
       ano: 2020,
       imagem: "img/playstation-5/consolev2.webp"
     },
     {
       nome: "PlayStation 5",
+      modelo: "Pro",
       ano: 2020,
       imagem: "img/playstation-5/consolev3.webp"
     }

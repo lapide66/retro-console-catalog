@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Neo Geo levou experiência de arcade para casa com hardware premium e cartuchos famosos pelo alto custo.",
   diferencial: "",
   curiosidadeNoBrasil: "Por aqui, ficou muito mais no imaginário dos jogadores do que nas salas de estar, por causa do preço extremamente alto.",
-  jogoMaisFamoso: "XXXXXXXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Motorola 68000",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/neo-geo/gamepad.webp",
-    jogoNaTela: "img/neo-geo/gameNaTela.webp",
+    caixaConsole: "img/neo-geo/caixaConsole.webp",
     midiaJogo: "img/neo-geo/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Neo Geo AES",
+      modelo: "Original",
       ano: 1990,
       imagem: "img/neo-geo/consolev1.webp"
     },
     {
       nome: "Neo Geo AES",
+      modelo: "Original",
       ano: 1990,
       imagem: "img/neo-geo/consolev2.webp"
     },
     {
       nome: "Neo Geo AES",
+      modelo: "Original",
       ano: 1990,
       imagem: "img/neo-geo/consolev3.webp"
     }

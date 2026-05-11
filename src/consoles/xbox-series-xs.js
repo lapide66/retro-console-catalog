@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "A nona geração da Microsoft apostou em duas faixas de preço, SSD e forte continuidade com retrocompatibilidade e Game Pass.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o Series S ganhou destaque por ser a porta de entrada mais acessível para a geração atual.",
-  jogoMaisFamoso: "XXXXXXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "AMD Zen 2",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/xbox-series-xs/gamepad.webp",
-    jogoNaTela: "img/xbox-series-xs/gameNaTela.webp",
+    caixaConsole: "img/xbox-series-xs/gameNaTela.webp",
     midiaJogo: "img/xbox-series-xs/bestGame.webp"
   },
 
   modelos: [
     {
-      nome: "Xbox Series X / Xbox Series S",
+      nome: "Xbox Series",
+      modelo: "X",
       ano: 2020,
       imagem: "img/xbox-series-xs/consolev1.webp"
     },
     {
-      nome: "Xbox Series X / Xbox Series S",
+      nome: "Xbox Series",
+      modelo: "S",
       ano: 2020,
       imagem: "img/xbox-series-xs/consolev2.webp"
     },
     {
-      nome: "Xbox Series X / Xbox Series S",
+      nome: "Xbox Series",
+      modelo: "Edição sem Disco ver depois",
       ano: 2020,
       imagem: "img/xbox-series-xs/consolev3.webp"
     }

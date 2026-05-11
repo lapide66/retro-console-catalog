@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Master System foi a resposta da Sega ao NES e teve vida longa em vários mercados, especialmente fora dos Estados Unidos.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, fez enorme sucesso com a Tec Toy e permaneceu ativo por muitos anos além do ciclo original.",
-  jogoMaisFamoso: "XXXXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Zilog Z80A",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/master-system/gamepad.webp",
-    jogoNaTela: "img/master-system/gameNaTela.webp",
+    caixaConsole: "img/master-system/caixaConsole.webp",
     midiaJogo: "img/master-system/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Sega Master System",
+      modelo: "Original",
       ano: 1985,
       imagem: "img/master-system/consolev1.webp"
     },
     {
       nome: "Sega Master System",
+      modelo: "Original",
       ano: 1985,
       imagem: "img/master-system/consolev2.webp"
     },
     {
       nome: "Sega Master System",
+      modelo: "Original",
       ano: 1985,
       imagem: "img/master-system/consolev3.webp"
     }

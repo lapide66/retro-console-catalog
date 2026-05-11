@@ -1,8 +1,9 @@
+const DATA_FILE = "src/consoles/atari-2600.js";
 //const DATA_FILE = "src/consoles/xbox360.js";
 //const DATA_FILE = "src/consoles/xbox-one.js";
 //const DATA_FILE = "src/consoles/magnavox-odyssey.js";
 
-const DATA_FILE = "src/consoles/colecovision.js";
+//const DATA_FILE = "src/consoles/colecovision.js";
 
 let consoleData = {};
 let heroSlideInterval = null;
@@ -94,9 +95,10 @@ const getConsoleModels = () => {
       .map((model) => ({
         img: model.imagem,
         name: model.nome,
+        variant: model.modelo,
         release: model.ano
       }))
-      .filter((model) => isFilled(model.img) || isFilled(model.name) || isFilled(model.release));
+      .filter((model) => isFilled(model.img) || isFilled(model.name) || isFilled(model.variant) || isFilled(model.release));
   }
 
   const models = [];
@@ -104,10 +106,11 @@ const getConsoleModels = () => {
   for (let index = 1; index <= 12; index += 1) {
     const img = consoleData[`modelo${index}img`];
     const name = consoleData[`modelo${index}Nome`] || consoleData[`modelo${index}nome`];
+    const variant = consoleData[`modelo${index}Modelo`] || consoleData[`modelo${index}modelo`];
     const release = consoleData[`modelo${index}Lanca`] || consoleData[`modelo${index}lanca`];
 
-    if (isFilled(img) || isFilled(name) || isFilled(release)) {
-      models.push({ img, name, release });
+    if (isFilled(img) || isFilled(name) || isFilled(variant) || isFilled(release)) {
+      models.push({ img, name, variant, release });
     }
   }
 
@@ -155,18 +158,19 @@ const renderHeroModel = (model, index = 0) => {
 
   window.setTimeout(() => {
     heroImage.src = model.img;
-    heroImage.alt = model.name || `${consoleData.nome} visto em destaque`;
+    const modelName = model.name || consoleData.nome;
+    const modelLabel = isFilled(model.variant) ? `${modelName} ${model.variant}` : modelName;
+    heroImage.alt = modelLabel || `${consoleData.nome} visto em destaque`;
 
     if (heroYear) {
       heroYear.textContent = model.release || consoleData.ano || "";
     }
 
     if (caption) {
-      const modelName = model.name || consoleData.nome;
       const release = model.release || consoleData.ano;
       caption.textContent = isFilled(release)
-        ? `${modelName} • ${consoleData.fabricante}, ${release}`
-        : `${modelName} • ${consoleData.fabricante}`;
+        ? `${modelLabel} • ${consoleData.fabricante}, ${release}`
+        : `${modelLabel} • ${consoleData.fabricante}`;
     }
 
     heroImage.classList.remove("is-changing");
@@ -192,7 +196,9 @@ const buildHeroControls = (models, goToSlide) => {
     button.className = "hero-slider-button";
     button.type = "button";
     button.dataset.index = String(index);
-    button.setAttribute("aria-label", `Mostrar ${model.name || `modelo ${index + 1}`}`);
+    const modelName = model.name || `modelo ${index + 1}`;
+    const modelLabel = isFilled(model.variant) ? `${modelName} ${model.variant}` : modelName;
+    button.setAttribute("aria-label", `Mostrar ${modelLabel}`);
     button.setAttribute("aria-pressed", "false");
 
     if (isFilled(model.img)) {
@@ -271,6 +277,12 @@ const addConsoleModels = () => {
     title.textContent = model.name || `Modelo ${index + 1}`;
     body.appendChild(title);
 
+    if (isFilled(model.variant)) {
+      const variant = document.createElement("p");
+      variant.textContent = `Modelo: ${model.variant}`;
+      body.appendChild(variant);
+    }
+
     if (isFilled(model.release)) {
       const release = document.createElement("p");
       release.textContent = `Lançamento: ${model.release}`;
@@ -309,6 +321,25 @@ const addCoverLines = () => {
   if (!coverLines.children.length) {
     coverLines.remove();
   }
+};
+
+const getGalleryImage = (primaryImage, secondaryImage, legacyImage) =>
+  getValue(consoleData.imagens?.[primaryImage], consoleData.imagens?.[secondaryImage], consoleData[legacyImage]);
+
+const getGameScreenCaption = () => {
+  if (isFilled(consoleData.jogoMaisFamoso)) {
+    return `${consoleData.jogoMaisFamoso} na tela`;
+  }
+
+  return getValue(consoleData.caixaConsole, "Caixa do console");
+};
+
+const getGameMediaCaption = () => {
+  if (isFilled(consoleData.jogoMaisFamoso)) {
+    return `Mídia de ${consoleData.jogoMaisFamoso}`;
+  }
+
+  return "Caixa do jogo em destaque";
 };
 
 const loadConsoleData = (src) =>
@@ -363,16 +394,16 @@ const renderPage = () => {
   setText("stat-price", getValue(consoleData.mercado?.precoLancamento, consoleData.preco_lancamento));
   setText("history-summary", consoleData.resumo);
   setText("brazil-note", getValue(consoleData.curiosidadeNoBrasil, consoleData.curiosidade_no_brasil));
-  setText("game-screen-caption", isFilled(consoleData.jogoMaisFamoso) ? `${consoleData.jogoMaisFamoso} na tela` : "Jogo na tela");
-  setText("game-media-caption", isFilled(consoleData.jogoMaisFamoso) ? `Mídia de ${consoleData.jogoMaisFamoso}` : "Mídia do jogo");
+  setText("game-screen-caption", getGameScreenCaption());
+  setText("game-media-caption", getGameMediaCaption());
   setText("footer-title", consoleData.nome);
   addCoverLines();
   addConsoleModels();
 
   startHeroSlideshow();
   setImage("gallery-controller", getValue(consoleData.imagens?.controle, consoleData.imagemControle), `Controle do ${consoleData.nome}`);
-  setImage("gallery-game-screen", getValue(consoleData.imagens?.jogoNaTela, consoleData.imagemDoJogoNaTela), isFilled(consoleData.jogoMaisFamoso) ? `${consoleData.jogoMaisFamoso} exibido na tela` : "Jogo exibido na tela");
-  setImage("gallery-game-media", getValue(consoleData.imagens?.midiaJogo, consoleData.imagemMidiaJogo), isFilled(consoleData.jogoMaisFamoso) ? `Mídia do jogo ${consoleData.jogoMaisFamoso}` : "Mídia do jogo");
+  setImage("gallery-game-screen", getGalleryImage("jogoNaTela", "caixaConsole", "imagemDoJogoNaTela"), getGameScreenCaption());
+  setImage("gallery-game-media", getGalleryImage("midiaJogo", "melhorJogoCaixa", "imagemMidiaJogo"), getGameMediaCaption());
 
   const hardwareData = consoleData.hardware || {
     cpu: consoleData.cpu,

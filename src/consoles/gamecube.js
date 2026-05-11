@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "Compacto e centrado em first-party, o GameCube ficou marcado por identidade visual forte e controles muito elogiados.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, teve alcance menor que PS2, mas cultivou público fiel por franquias da Nintendo e pelo controle marcante.",
-  jogoMaisFamoso: "XXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "IBM PowerPC Gekko",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/gamecube/gamepad.webp",
-    jogoNaTela: "img/gamecube/gameNaTela.webp",
+    caixaConsole: "img/gamecube/caixaConsole.webp",
     midiaJogo: "img/gamecube/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo GameCube",
+      modelo: "Original",
       ano: 2001,
       imagem: "img/gamecube/consolev1.webp"
     },
     {
       nome: "Nintendo GameCube",
+      modelo: "Original",
       ano: 2001,
       imagem: "img/gamecube/consolev2.webp"
     },
     {
       nome: "Nintendo GameCube",
+      modelo: "Original",
       ano: 2001,
       imagem: "img/gamecube/consolev3.webp"
     }

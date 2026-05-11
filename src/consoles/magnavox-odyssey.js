@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O primeiro console doméstico comercializado em larga escala abriu o caminho para o mercado que viria depois.",
   diferencial: "Primeiro console da história",
   curiosidadeNoBrasil: "Não teve distribuição ampla no Brasil, mas virou referência histórica para a geração de consoles que depois ganharia força no país.",
-  jogoMaisFamoso: "Table Tennis",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Circuitos analógicos dedicados",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/magnavox-odyssey/gamepad.webp",
-    jogoNaTela: "img/magnavox-odyssey/gameNaTela.webp",
+    caixaConsole: "img/magnavox-odyssey/caixaConsole.webp",
     midiaJogo: "img/magnavox-odyssey/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Magnavox Odyssey",
+      modelo: "Original",
       ano: 1972,
       imagem: "img/magnavox-odyssey/consolev1.webp"
     },
     {
-      nome: "Magnavox Odyssey 3000",
+      nome: "Magnavox Odyssey",
+      modelo: "3000",
       ano: 1977,
       imagem: "img/magnavox-odyssey/consolev2.webp"
     },
     {
-      nome: "Magnavox Odyssey 4000",
+      nome: "Magnavox Odyssey",
+      modelo: "4000",
       ano: 1977,
       imagem: "img/magnavox-odyssey/consolev3.webp"
     }

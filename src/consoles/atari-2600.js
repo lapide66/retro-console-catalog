@@ -8,8 +8,8 @@ window.consoleData = {
 
   resumo: "O console popularizou cartuchos intercambiáveis e transformou videogame em produto de massa.",
   diferencial: "",
-  curiosidadeNoBrasil: "Virou sin�nimo de videogame doméstico no Brasil e foi amplamente conhecido por seus clones locais.",
-  jogoMaisFamoso: "XXXX",
+  curiosidadeNoBrasil: "Virou sinônimo de videogame doméstico no Brasil e foi amplamente conhecido por seus clones locais.",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "MOS 6507 8-bit",
@@ -35,24 +35,27 @@ window.consoleData = {
 
   imagens: {
     controle: "img/atari-2600/gamepad.webp",
-    jogoNaTela: "img/atari-2600/gameNaTela.webp",
+    caixaConsole: "img/atari-2600/caixaConsole.webp",
     midiaJogo: "img/atari-2600/bestGame.webp"
   },
 
   modelos: [
     {
-      nome: "Atari 2600",
+      nome: "Atari",
+      modelo: "VCS",
       ano: 1977,
       imagem: "img/atari-2600/consolev1.webp"
     },
     {
       nome: "Atari 2600",
-      ano: 1977,
+      modelo: "4-Switch",
+      ano: 1980,
       imagem: "img/atari-2600/consolev2.webp"
     },
     {
       nome: "Atari 2600",
-      ano: 1977,
+      modelo: "Jr.",
+      ano: 1986,
       imagem: "img/atari-2600/consolev3.webp"
     }
   ]

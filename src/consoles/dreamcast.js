@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "Óltimo console da Sega, o Dreamcast combinou hardware avançado, rede integrada e uma biblioteca muito cultuada.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, ganhou sobrevida em feiras, locadoras e comunidades de importação, tornando-se um console de culto.",
-  jogoMaisFamoso: "XXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Hitachi SH-4",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/dreamcast/gamepad.webp",
-    jogoNaTela: "img/dreamcast/gameNaTela.webp",
+    caixaConsole: "img/dreamcast/caixaConsole.webp",
     midiaJogo: "img/dreamcast/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Dreamcast",
+      modelo: "Original",
       ano: 1998,
       imagem: "img/dreamcast/consolev1.webp"
     },
     {
       nome: "Dreamcast",
+      modelo: "Original",
       ano: 1998,
       imagem: "img/dreamcast/consolev2.webp"
     },
     {
       nome: "Dreamcast",
+      modelo: "Original",
       ano: 1998,
       imagem: "img/dreamcast/consolev3.webp"
     }

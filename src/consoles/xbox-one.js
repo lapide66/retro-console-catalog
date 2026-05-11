@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Xbox One começou cercado por controvérsias de posicionamento, mas amadureceu com foco em serviços, retrocompatibilidade e Game Pass.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, disputou espaço com o PS4 e se destacou entre usuários atraídos por Halo, Forza e serviços da Microsoft.",
-  jogoMaisFamoso: "Forza Horizon 5",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "AMD Jaguar 8-core",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/xbox-one/gamepad.webp",
-    jogoNaTela: "img/xbox-one/gameNaTela.webp",
+    caixaConsole: "img/xbox-one/caixaConsole.webp",
     midiaJogo: "img/xbox-one/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Xbox One",
+      modelo: "Original",
       ano: 2013,
       imagem: "img/xbox-one/consolev1.webp"
     },
     {
-      nome: "Xbox One S",
+      nome: "Xbox One",
+      modelo: "S",
       ano: 2016,
       imagem: "img/xbox-one/consolev2.webp"
     },
     {
       nome: "Xbox One X",
+      modelo: "X",
       ano: 2017,
       imagem: "img/xbox-one/consolev3.webp"
     }

@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O primeiro PlayStation fez do CD a mídia dominante e virou um divisor de águas no mercado doméstico.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o PS1 se espalhou por importação e mercado paralelo e virou um dos consoles mais lembrados da geração 32-bit.",
-  jogoMaisFamoso: "Gran Turismo 2",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "MIPS R3000A",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/playstation/gamepad.webp",
-    jogoNaTela: "img/playstation/gameNaTela.webp",
+    caixaConsole: "img/playstation/caixaConsole.webp",
     midiaJogo: "img/playstation/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "PlayStation",
+      modelo: "Original/Fat",
       ano: 1994,
       imagem: "img/playstation/consolev1.webp"
     },
     {
       nome: "PlayStation",
+      modelo: "Slim",
       ano: 1994,
       imagem: "img/playstation/consolev2.webp"
     },
     {
       nome: "PlayStation",
+      modelo: "PS One",
       ano: 1994,
       imagem: "img/playstation/consolev3.webp"
     }

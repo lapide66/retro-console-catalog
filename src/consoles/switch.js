@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O híbrido da Nintendo juntou portátil e console de mesa em um único produto muito bem aceito.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o Switch cresceu apesar do preço alto e virou um dos consoles mais comentados da geração recente.",
-  jogoMaisFamoso: "The Legend of Zeld x",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "NVIDIA Tegra X1",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/switch/gamepad.webp",
-    jogoNaTela: "img/switch/gameNaTela.webp",
+    caixaConsole: "img/switch/caixaConsole.webp",
     midiaJogo: "img/switch/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo Switch",
+      modelo: "Original",
       ano: 2017,
       imagem: "img/switch/consolev1.webp"
     },
     {
       nome: "Nintendo Switch",
+      modelo: "Lite",
       ano: 2017,
       imagem: "img/switch/consolev2.webp"
     },
     {
       nome: "Nintendo Switch",
+      modelo: "Oled",
       ano: 2017,
       imagem: "img/switch/consolev3.webp"
     }

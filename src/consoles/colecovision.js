@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O ColecoVision trouxe jogos de visual mais próximo dos arcades e virou um dos pontos altos da segunda geração.",
   diferencial: "",
   curiosidadeNoBrasil: "Apareceu pouco no mercado brasileiro, mas ganhou fama entre colecionadores por seu módulo de expansão compatível com Atari 2600.",
-  jogoMaisFamoso: "XXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Zilog Z80A",
@@ -35,24 +35,27 @@ window.consoleData = {
 
   imagens: {
     controle: "img/colecovision/gamepad.webp",
-    jogoNaTela: "img/colecovision/gameNaTela.webp",
+    caixaConsole: "img/colecovision/caixaConsole.webp",
     midiaJogo: "img/colecovision/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "ColecoVision",
+      modelo: "Original",
       ano: 1982,
       imagem: "img/colecovision/consolev1.webp"
     },
     {
       nome: "ColecoVision",
+      modelo: "Europeu",
       ano: 1982,
       imagem: "img/colecovision/consolev2.webp"
     },
     {
       nome: "ColecoVision",
-      ano: 1982,
+      modelo: "Flashback Relançamento",
+      ano: 2014,
       imagem: "img/colecovision/consolev3.webp"
     }
   ]

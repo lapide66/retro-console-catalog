@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O N64 foi o salto da Nintendo para o 3D em tempo real com controles de design muito influente.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o custo dos cartuchos importados limitou a popularidade do N64 frente ao PlayStation.",
-  jogoMaisFamoso: "XXXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "NEC VR4300",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/nintendo-64/gamepad.webp",
-    jogoNaTela: "img/nintendo-64/gameNaTela.webp",
+    caixaConsole: "img/nintendo-64/caixaConsole.webp",
     midiaJogo: "img/nintendo-64/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo 64",
+      modelo: "Original",
       ano: 1996,
       imagem: "img/nintendo-64/consolev1.webp"
     },
     {
       nome: "Nintendo 64",
+      modelo: "Original",
       ano: 1996,
       imagem: "img/nintendo-64/consolev2.webp"
     },
     {
       nome: "Nintendo 64",
+      modelo: "Original",
       ano: 1996,
       imagem: "img/nintendo-64/consolev3.webp"
     }

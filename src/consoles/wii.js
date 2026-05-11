@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Wii reposicionou o videogame como atividade física e social, não só como hobby tradicional.",
   diferencial: "",
   curiosidadeNoBrasil: "A proposta de movimento fez o Wii aparecer em casas, festas, escolas e espaços de convivência no Brasil.",
-  jogoMaisFamoso: "Super Mario Galaxy",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Broadway PowerPC",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/wii/gamepad.webp",
-    jogoNaTela: "img/wii/gameNaTela.webp",
+    caixaConsole: "img/wii/caixaConsole.webp",
     midiaJogo: "img/wii/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Nintendo Wii",
+      modelo: "Original",
       ano: 2006,
       imagem: "img/wii/consolev1.webp"
     },
     {
       nome: "Nintendo Wii",
+      modelo: "Original",
       ano: 2006,
       imagem: "img/wii/consolev2.webp"
     },
     {
       nome: "Nintendo Wii",
+      modelo: "Original",
       ano: 2006,
       imagem: "img/wii/consolev3.webp"
     }

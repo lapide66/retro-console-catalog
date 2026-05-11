@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O Saturn ficou marcado por arquitetura complexa, bom desempenho em 2D e uma transição turbulenta da Sega para os 32 bits.",
   diferencial: "",
   curiosidadeNoBrasil: "Teve circulação menor no Brasil do que o concorrente PlayStation, mas criou uma base fiel entre entusiastas e locadoras.",
-  jogoMaisFamoso: "XXXXXXXXX",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Dual Hitachi SH-2",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/sega-saturn/gamepad.webp",
-    jogoNaTela: "img/sega-saturn/gameNaTela.webp",
+    caixaConsole: "img/sega-saturn/caixaConsole.webp",
     midiaJogo: "img/sega-saturn/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "Sega Saturn",
+      modelo: "Original",
       ano: 1994,
       imagem: "img/sega-saturn/consolev1.webp"
     },
     {
       nome: "Sega Saturn",
+      modelo: "Original",
       ano: 1994,
       imagem: "img/sega-saturn/consolev2.webp"
     },
     {
       nome: "Sega Saturn",
+      modelo: "Original",
       ano: 1994,
       imagem: "img/sega-saturn/consolev3.webp"
     }

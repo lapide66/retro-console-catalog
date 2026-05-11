@@ -9,7 +9,7 @@ window.consoleData = {
   resumo: "O PS3 marcou a entrada da Sony no Blu-ray e em serviços online mais robustos, apesar do início caro e complexo.",
   diferencial: "",
   curiosidadeNoBrasil: "No Brasil, o preço inicial alto dificultou a adoção, mas o aparelho ganhou terreno ao longo da geracão.",
-  jogoMaisFamoso: "The Last of US",
+  caixaConsole: "Caixa do console",
 
   hardware: {
     cpu: "Cell Broadband Engine",
@@ -35,23 +35,26 @@ window.consoleData = {
 
   imagens: {
     controle: "img/playstation-3/gamepad.webp",
-    jogoNaTela: "img/playstation-3/gameNaTela.webp",
+    caixaConsole: "img/playstation-3/caixaConsole.webp",
     midiaJogo: "img/playstation-3/bestGame.webp"
   },
 
   modelos: [
     {
       nome: "PlayStation 3",
+      modelo: "Original",
       ano: 2006,
       imagem: "img/playstation-3/consolev1.webp"
     },
     {
       nome: "PlayStation 3",
+      modelo: "Original",
       ano: 2006,
       imagem: "img/playstation-3/consolev2.webp"
     },
     {
       nome: "PlayStation 3",
+      modelo: "Original",
       ano: 2006,
       imagem: "img/playstation-3/consolev3.webp"
     }
