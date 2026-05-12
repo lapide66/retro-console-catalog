@@ -48,14 +48,14 @@ window.consoleData = {
     },
     {
       nome: "Nintendo GameCube",
-      modelo: "Original",
-      ano: 2001,
+      modelo: "Panasonic Q",
+      ano: 2003,
       imagem: "img/gamecube/consolev2.webp"
     },
     {
       nome: "Nintendo GameCube",
-      modelo: "Original",
-      ano: 2001,
+      modelo: "Revisão",
+      ano: 2004,
       imagem: "img/gamecube/consolev3.webp"
     }
   ]

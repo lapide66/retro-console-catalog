@@ -42,20 +42,20 @@ window.consoleData = {
   modelos: [
     {
       nome: "Dreamcast",
-      modelo: "Original",
+      modelo: "Japão",
       ano: 1998,
       imagem: "img/dreamcast/consolev1.webp"
     },
     {
       nome: "Dreamcast",
-      modelo: "Original",
-      ano: 1998,
+      modelo: "USA",
+      ano: 1999,
       imagem: "img/dreamcast/consolev2.webp"
     },
     {
       nome: "Dreamcast",
-      modelo: "Original",
-      ano: 1998,
+      modelo: "RE Code Veronica",
+      ano: 2000,
       imagem: "img/dreamcast/consolev3.webp"
     }
   ]
