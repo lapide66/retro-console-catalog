@@ -5,7 +5,12 @@ https://www.colecovision.dk/colecovision.htm
 Atari 7800 é terceira geração, lançado em 1986
 
 
-me dê um panorama geral sobre o console gamecube, versões lançadas do console, datas de lançamento, jogo mais famoso do console
+me dê um panorama geral sobre o console mega-drive, versões lançadas do console, datas de lançamento de cada versão, edições especiais mais marcantes, jogo mais famoso do console
+
+refaça esta arte com fundo transparente
+preciso que preserve os detalhes do console, se necessário reduza o tamanho para caber na imagem quadrada
+
+preciso que seja transparente apenas externamente, preservando as caracteristicas da caixa
 
 -----------------
 Consoles prontos
@@ -14,10 +19,10 @@ Atari 2600              -- OK
 colecovision            -- OK
 dreamcast               -- OK
 gamecube                -- OK
-intellivision           -- 
+intellivision           -- OK
 magnavox-odyssey        -- OK
-master-system           -- 
-mega-drive              -- 
+master-system           -- OK
+mega-drive              -- OK
 neo-geo                 -- 
 nes                     -- 
 nintendo-64             -- 

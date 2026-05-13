@@ -1,6 +1,6 @@
 window.consoleData = {
   id: "mega-drive",
-  nome: "Sega Genesis (Mega Drive)",
+  nome: "Mega Drive",
   fabricante: "Sega",
   ano: 1988,
   geracao: 4,
@@ -42,20 +42,20 @@ window.consoleData = {
   modelos: [
     {
       nome: "Sega Genesis (Mega Drive)",
-      modelo: "Original",
+      modelo: "Modelo 1",
       ano: 1988,
       imagem: "img/mega-drive/consolev1.webp"
     },
     {
       nome: "Sega Genesis (Mega Drive)",
-      modelo: "Original",
-      ano: 1988,
+      modelo: "Modelo 2",
+      ano: 1993,
       imagem: "img/mega-drive/consolev2.webp"
     },
     {
       nome: "Sega Genesis (Mega Drive)",
-      modelo: "Original",
-      ano: 1988,
+      modelo: "Modelo 3",
+      ano: 1998,
       imagem: "img/mega-drive/consolev3.webp"
     }
   ]

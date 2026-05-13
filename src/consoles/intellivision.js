@@ -48,14 +48,14 @@ window.consoleData = {
     },
     {
       nome: "Intellivision",
-      modelo: "Original",
-      ano: 1979,
+      modelo: "Sears Super Video Arcade",
+      ano: 1981,
       imagem: "img/intellivision/consolev2.webp"
     },
     {
       nome: "Intellivision",
-      modelo: "Original",
-      ano: 1979,
+      modelo: "Radio Shack Tandyvision One",
+      ano: 1982,
       imagem: "img/intellivision/consolev3.webp"
     }
   ]

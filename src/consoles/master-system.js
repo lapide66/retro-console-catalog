@@ -42,20 +42,20 @@ window.consoleData = {
   modelos: [
     {
       nome: "Sega Master System",
-      modelo: "Original",
+      modelo: "Sega Mark III",
       ano: 1985,
       imagem: "img/master-system/consolev1.webp"
     },
     {
       nome: "Sega Master System",
-      modelo: "Original",
-      ano: 1985,
+      modelo: "Modelo 1",
+      ano: 1986,
       imagem: "img/master-system/consolev2.webp"
     },
     {
       nome: "Sega Master System",
-      modelo: "Original",
-      ano: 1985,
+      modelo: "Modelo 3",
+      ano: 1990,
       imagem: "img/master-system/consolev3.webp"
     }
   ]
