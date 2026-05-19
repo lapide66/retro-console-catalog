@@ -42,20 +42,20 @@ window.consoleData = {
   modelos: [
     {
       nome: "Nintendo Entertainment System",
-      modelo: "Original",
-      ano: 1985,
+      modelo: "Famicom",
+      ano: 1983,
       imagem: "img/nes/consolev1.webp"
     },
     {
       nome: "Nintendo Entertainment System",
-      modelo: "Original",
+      modelo: "Ocidental",
       ano: 1985,
       imagem: "img/nes/consolev2.webp"
     },
     {
       nome: "Nintendo Entertainment System",
-      modelo: "Original",
-      ano: 1985,
+      modelo: "NES Top Loader",
+      ano: 1994,
       imagem: "img/nes/consolev3.webp"
     }
   ]

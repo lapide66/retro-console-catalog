@@ -1,6 +1,6 @@
 window.consoleData = {
   id: "neo-geo",
-  nome: "Neo Geo AES",
+  nome: "Neo Geo MVS",
   fabricante: "SNK",
   ano: 1990,
   geracao: 4,
@@ -41,21 +41,21 @@ window.consoleData = {
 
   modelos: [
     {
-      nome: "Neo Geo AES",
-      modelo: "Original",
+      nome: "Neo Geo",
+      modelo: "AES",
       ano: 1990,
       imagem: "img/neo-geo/consolev1.webp"
     },
     {
-      nome: "Neo Geo AES",
-      modelo: "Original",
-      ano: 1990,
+      nome: "Neo Geo",
+      modelo: "Gold System",
+      ano: 1991,
       imagem: "img/neo-geo/consolev2.webp"
     },
     {
-      nome: "Neo Geo AES",
-      modelo: "Original",
-      ano: 1990,
+      nome: "Neo Geo",
+      modelo: "AES+ Anniversary Edition",
+      ano: 2026,
       imagem: "img/neo-geo/consolev3.webp"
     }
   ]
