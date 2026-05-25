@@ -48,14 +48,14 @@ window.consoleData = {
     },
     {
       nome: "Xbox",
-      modelo: "Original",
+      modelo: "Halo Combate Evolved Edition",
       ano: 2001,
       imagem: "img/xbox/consolev2.webp"
     },
     {
       nome: "Xbox",
-      modelo: "Original",
-      ano: 2001,
+      modelo: "Halo 2 Edition",
+      ano: 2005,
       imagem: "img/xbox/consolev3.webp"
     }
   ]

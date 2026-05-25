@@ -6,3 +6,7 @@ a imagem que será usada na página principal, será uma com menor resolução, 
 img/consoleHome/
 
 a intenção é fazer que a página principal seja bem otimizada
+
+
+Página Home com todos os consoles
+Quando terminar, montar a página home, estudar para ver se é recomendado usar o mesmo css para dar coerencia aos elementos ou se é melhor criar um novo js

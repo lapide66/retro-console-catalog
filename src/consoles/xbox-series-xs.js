@@ -35,7 +35,7 @@ window.consoleData = {
 
   imagens: {
     controle: "img/xbox-series-xs/gamepad.webp",
-    caixaConsole: "img/xbox-series-xs/gameNaTela.webp",
+    caixaConsole: "img/xbox-series-xs/caixaConsole.webp",
     midiaJogo: "img/xbox-series-xs/bestGame.webp"
   },
 
@@ -54,8 +54,8 @@ window.consoleData = {
     },
     {
       nome: "Xbox Series",
-      modelo: "Edição sem Disco ver depois",
-      ano: 2020,
+      modelo: "X Digital Edition",
+      ano: 2024,
       imagem: "img/xbox-series-xs/consolev3.webp"
     }
   ]

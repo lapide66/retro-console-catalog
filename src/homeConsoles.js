@@ -72,7 +72,7 @@ window.homeConsoles = {
       geracao: 3,
       modelo: {
         nome: "Sega Master System",
-        modelo: "Original",
+        modelo: "Sega Mark III",
         ano: 1985,
         imagem: "img/master-system/consolev1.webp"
       }
@@ -83,7 +83,7 @@ window.homeConsoles = {
       geracao: 4,
       modelo: {
         nome: "Sega Genesis (Mega Drive)",
-        modelo: "Original",
+        modelo: "Modelo 1",
         ano: 1988,
         imagem: "img/mega-drive/consolev1.webp"
       }
@@ -93,8 +93,8 @@ window.homeConsoles = {
       fabricante: "SNK",
       geracao: 4,
       modelo: {
-        nome: "Neo Geo AES",
-        modelo: "Original",
+        nome: "Neo Geo",
+        modelo: "AES",
         ano: 1990,
         imagem: "img/neo-geo/consolev1.webp"
       }
@@ -105,8 +105,8 @@ window.homeConsoles = {
       geracao: 3,
       modelo: {
         nome: "Nintendo Entertainment System",
-        modelo: "Original",
-        ano: 1985,
+        modelo: "Famicom",
+        ano: 1983,
         imagem: "img/nes/consolev1.webp"
       }
     },

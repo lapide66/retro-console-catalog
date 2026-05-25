@@ -14,6 +14,10 @@ preciso que seja transparente apenas externamente, preservando as caracteristica
 
 quero que deixe o fundo transparente desta imagem, não altere os detalhes do console
 
+preciso que desta imagem com fundo transparente, preserve os detalhes originais do console
+
+melhore a qualidade da imagem e nitidez, preserve os detalhes originais
+
 -----------------
 Consoles prontos
 -----------------
@@ -26,19 +30,19 @@ magnavox-odyssey        -- OK
 master-system           -- OK
 mega-drive              -- OK
 neo-geo                 -- OK
-nes                     -- 
-nintendo-64             -- 
+nes                     -- OK
+nintendo-64             -- OK
+playstation             -- 
 playstation-2           -- 
 playstation-3           -- 
 playstation-4           -- 
 playstation-5           -- 
-playstation             -- 
 sega-saturn             -- 
 super-nintendo          -- 
 switch                  -- 
 wii-u                   -- 
 wii                     -- 
 xbox one                -- OK
-xbox-series-xs          --  
-xbox                    -- 
+xbox-series-xs          -- OK
+xbox                    -- OK
 xbox 360                -- OK

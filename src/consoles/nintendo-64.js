@@ -48,13 +48,13 @@ window.consoleData = {
     },
     {
       nome: "Nintendo 64",
-      modelo: "Original",
-      ano: 1996,
+      modelo: "Donkey Kong",
+      ano: 1999,
       imagem: "img/nintendo-64/consolev2.webp"
     },
     {
       nome: "Nintendo 64",
-      modelo: "Original",
+      modelo: "Pikachu",
       ano: 1996,
       imagem: "img/nintendo-64/consolev3.webp"
     }
