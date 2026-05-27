@@ -42,20 +42,20 @@ window.consoleData = {
   modelos: [
     {
       nome: "PlayStation",
-      modelo: "Original/Fat",
+      modelo: "Original / Fat",
       ano: 1994,
       imagem: "img/playstation/consolev1.webp"
     },
     {
       nome: "PlayStation",
-      modelo: "Slim",
-      ano: 1994,
+      modelo: "Net Yaroze / Dev kit",
+      ano: 1996,
       imagem: "img/playstation/consolev2.webp"
     },
     {
       nome: "PlayStation",
-      modelo: "PS One",
-      ano: 1994,
+      modelo: "Slim / PS One",
+      ano: 2000,
       imagem: "img/playstation/consolev3.webp"
     }
   ]

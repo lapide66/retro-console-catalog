@@ -1,4 +1,4 @@
-const DATA_FILE = "src/consoles/xbox-series-xs.js";
+const DATA_FILE = "src/consoles/playstation-2.js";
 //const DATA_FILE = "src/consoles/gamecube.js";
 //const DATA_FILE = "src/consoles/xbox360.js";
 //const DATA_FILE = "src/consoles/xbox-one.js";

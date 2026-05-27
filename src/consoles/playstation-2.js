@@ -48,13 +48,13 @@ window.consoleData = {
     },
     {
       nome: "PlayStation 2",
-      modelo: "Slim",
-      ano: 2000,
+      modelo: "Sakura Pink Edition",
+      ano: 2003,
       imagem: "img/playstation-2/consolev2.webp"
     },
     {
       nome: "PlayStation 2",
-      modelo: "Original",
+      modelo: "Slim",
       ano: 2000,
       imagem: "img/playstation-2/consolev3.webp"
     }

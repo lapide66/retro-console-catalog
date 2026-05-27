@@ -32,8 +32,8 @@ mega-drive              -- OK
 neo-geo                 -- OK
 nes                     -- OK
 nintendo-64             -- OK
-playstation             -- 
-playstation-2           -- 
+playstation             -- OK
+playstation-2           -- OK
 playstation-3           -- 
 playstation-4           -- 
 playstation-5           -- 
