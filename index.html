@@ -4,138 +4,108 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Retro Catalog</title>
-    <meta name="description" content="Página estática de catálogo sobre consoles retrô.">
+    <meta name="description" content="Pagina principal do catalogo de consoles retro.">
     <link rel="stylesheet" href="src/styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="Cabeçalho">
+    <header class="site-header" aria-label="Cabecalho">
       <a class="brand" href="#topo" aria-label="Retro Catalog">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Retro Catalog</span>
       </a>
-      <nav class="site-nav" aria-label="Navegação principal">
-        <a href="#historia">História</a>
-        <a href="#especificacoes">Ficha</a>
-        <a href="#galeria">Galeria</a>
+      <nav class="site-nav" aria-label="Navegacao principal">
+        <a href="#geracoes">Geracoes</a>
+        <a href="#busca">Busca</a>
+        <a href="consoles.html">Console</a>
       </nav>
     </header>
 
     <main id="topo">
-      <section class="hero magazine-cover" aria-labelledby="console-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Especial Retro</p>
-          <p class="issue-line" id="console-generation"></p>
-          <h1 id="console-title"></h1>
-          <p class="hero-summary" id="console-summary"></p>
-          <div class="cover-lines" id="cover-lines" aria-label="Chamadas da edição"></div>
+      <section class="hero magazine-cover home-cover" aria-labelledby="home-title">
+        <div class="hero-copy home-copy">
+          <p class="eyebrow">Edicao especial</p>
+          <p class="issue-line">Linha do tempo dos consoles</p>
+          <h1 id="home-title">Retro Catalog</h1>
+          <p class="hero-summary">
+            Uma vitrine rapida dos consoles do catalogo, organizada por geracao para navegar pela historia dos videogames domesticos.
+          </p>
+          <div class="cover-lines" aria-label="Chamadas da edicao">
+            <span>Busca por console ou fabricante</span>
+            <span>Geracoes em ordem crescente</span>
+            <span>Cards leves com uma imagem principal</span>
+          </div>
           <div class="hero-actions" aria-label="Atalhos">
-            <a class="button primary" href="#especificacoes">Ver ficha técnica</a>
-            <a class="button ghost" href="#galeria">Ver imagens</a>
+            <a class="button primary" href="#geracoes">Ver geracoes</a>
+            <a class="button ghost" href="#busca">Pesquisar</a>
           </div>
         </div>
-        <figure class="hero-media">
-          <span class="cover-badge" id="console-hero-year"></span>
-          <img id="console-image" alt="">
-          <div class="hero-slider-controls" id="hero-slider-controls" aria-label="Selecionar versão do console"></div>
-          <figcaption id="console-caption"></figcaption>
-        </figure>
-      </section>
-
-      <section class="stats-band" aria-label="Dados principais">
-        <div class="stat">
-          <span>Ano</span>
-          <strong id="stat-year"></strong>
-        </div>
-        <div class="stat">
-          <span>Fabricante</span>
-          <strong id="stat-maker"></strong>
-        </div>
-        <div class="stat">
-          <span>Vendas</span>
-          <strong id="stat-sales"></strong>
-        </div>
-        <div class="stat">
-          <span>Preço</span>
-          <strong id="stat-price"></strong>
+        <div class="home-cover-stack" aria-hidden="true">
+          <div class="home-cover-card home-cover-card-primary">
+            <span>1UP</span>
+            <strong>Console Guide</strong>
+          </div>
+          <div class="home-cover-card home-cover-card-secondary">
+            <span>RETRO</span>
+            <strong>Generation Map</strong>
+          </div>
         </div>
       </section>
 
-      <section class="content-section story-section" id="historia" aria-labelledby="history-title">
-        <div>
-          <p class="section-kicker">Contexto</p>
-          <h2 id="history-title">O ponto de partida dos consoles domésticos</h2>
+      <section class="stats-band home-stats" aria-label="Resumo do catalogo">
+        <div class="stat">
+          <span>Consoles</span>
+          <strong id="home-total-consoles">0</strong>
         </div>
-        <div class="story-grid">
-          <article class="story-panel">
-            <h3>Resumo histórico</h3>
-            <p id="history-summary"></p>
-          </article>
-          <article class="story-panel accent-panel">
-            <h3>No Brasil</h3>
-            <p id="brazil-note"></p>
-          </article>
+        <div class="stat">
+          <span>Geracoes</span>
+          <strong id="home-total-generations">0</strong>
+        </div>
+        <div class="stat">
+          <span>Fabricantes</span>
+          <strong id="home-total-makers">0</strong>
+        </div>
+        <div class="stat">
+          <span>Periodo</span>
+          <strong id="home-year-range">--</strong>
         </div>
       </section>
 
-      <section class="content-section spec-section" id="especificacoes" aria-labelledby="spec-title">
+      <section class="content-section home-search-section" id="busca" aria-labelledby="search-title">
         <div class="section-heading">
-          <p class="section-kicker">Detalhes</p>
-          <h2 id="spec-title">Ficha técnica organizada</h2>
+          <p class="section-kicker">Busca</p>
+          <h2 id="search-title">Encontre por nome ou fabricante</h2>
         </div>
-        <div class="spec-layout">
-          <div class="spec-card">
-            <h3>Hardware</h3>
-            <dl id="hardware-list"></dl>
+        <form class="home-search" role="search">
+          <label for="console-search">Pesquisar console</label>
+          <div class="home-search-box">
+            <input
+              id="console-search"
+              name="search"
+              type="search"
+              autocomplete="off"
+              placeholder="Digite Nintendo, Sega, PlayStation, Xbox..."
+            >
+            <button class="button primary" type="button" id="clear-search">Limpar</button>
           </div>
-          <div class="spec-card">
-            <h3>Formato e uso</h3>
-            <dl id="format-list"></dl>
-          </div>
-        </div>
+        </form>
       </section>
 
-      <section class="content-section gallery-section" id="galeria" aria-labelledby="gallery-title">
+      <section class="content-section generations-section" id="geracoes" aria-labelledby="generations-title">
         <div class="section-heading">
-          <p class="section-kicker">Imagens</p>
-          <h2 id="gallery-title">Console, controle e itens em destaque</h2>
+          <p class="section-kicker">Catalogo</p>
+          <h2 id="generations-title">Consoles por geracao</h2>
         </div>
-        <section class="models-section" aria-labelledby="models-title">
-          <div class="models-heading">
-            <h3 id="models-title">Console versões</h3>
-            <p>Modelos lançados desta família de console.</p>
-          </div>
-          <div class="models-grid" id="models-grid"></div>
-        </section>
-        <div class="gallery-grid">
-          <figure class="gallery-card">
-            <img id="gallery-controller" alt="">
-            <figcaption>Controle</figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <img id="gallery-game-screen" alt="">
-            <figcaption id="game-screen-caption"></figcaption>
-          </figure>
-          <figure class="gallery-card">
-            <img id="gallery-game-media" alt="">
-            <figcaption id="game-media-caption"></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="content-section source-section" aria-labelledby="source-title">
-        <div class="section-heading">
-          <p class="section-kicker">Referências</p>
-          <h2 id="source-title">Fontes registradas</h2>
-        </div>
-        <div class="source-list" id="source-list"></div>
+        <div class="generation-list" id="generation-list"></div>
+        <p class="empty-state" id="empty-state" hidden>Nenhum console encontrado para esta busca.</p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span id="footer-title"></span>
-      <span>Site estático offline gerado a partir do conteúdo local.</span>
+      <span>Retro Catalog</span>
+      <span>Site estatico offline gerado a partir do conteudo local.</span>
     </footer>
 
-    <script src="src/script.js"></script>
+    <script src="src/homeConsoles.js"></script>
+    <script src="src/home.js"></script>
   </body>
 </html>

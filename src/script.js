@@ -1,10 +1,17 @@
-const DATA_FILE = "src/consoles/playstation-2.js";
-//const DATA_FILE = "src/consoles/gamecube.js";
-//const DATA_FILE = "src/consoles/xbox360.js";
-//const DATA_FILE = "src/consoles/xbox-one.js";
-//const DATA_FILE = "src/consoles/magnavox-odyssey.js";
+const DEFAULT_DATA_FILE = "src/consoles/playstation-2.js";
+const DATA_FILE_ALIASES = {
+  "xbox-360": "src/consoles/xbox360.js"
+};
 
-//const DATA_FILE = "src/consoles/colecovision.js";
+const getRequestedDataFile = () => {
+  const id = new URLSearchParams(window.location.search).get("id");
+
+  if (!isFilled(id)) {
+    return DEFAULT_DATA_FILE;
+  }
+
+  return DATA_FILE_ALIASES[id] || `src/consoles/${id}.js`;
+};
 
 let consoleData = {};
 let heroSlideInterval = null;
@@ -444,6 +451,6 @@ const renderError = (error) => {
   }
 };
 
-loadConsoleData(DATA_FILE)
+loadConsoleData(getRequestedDataFile())
   .then(renderPage)
   .catch(renderError);
