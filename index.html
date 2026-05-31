@@ -16,7 +16,7 @@
       <nav class="site-nav" aria-label="Navegacao principal">
         <a href="#geracoes">Geracoes</a>
         <a href="#busca">Busca</a>
-        <a href="consoles.html">Console</a>
+        <a href="#rodape">Info</a>
       </nav>
     </header>
 
@@ -29,51 +29,18 @@
           <p class="hero-summary">
             Uma vitrine rapida dos consoles do catalogo, organizada por geracao para navegar pela historia dos videogames domesticos.
           </p>
-          <div class="cover-lines" aria-label="Chamadas da edicao">
-            <span>Busca por console ou fabricante</span>
-            <span>Geracoes em ordem crescente</span>
-            <span>Cards leves com uma imagem principal</span>
-          </div>
-          <div class="hero-actions" aria-label="Atalhos">
-            <a class="button primary" href="#geracoes">Ver geracoes</a>
-            <a class="button ghost" href="#busca">Pesquisar</a>
-          </div>
         </div>
         <div class="home-cover-stack" aria-hidden="true">
           <div class="home-cover-card home-cover-card-primary">
             <span>1UP</span>
             <strong>Console Guide</strong>
           </div>
-          <div class="home-cover-card home-cover-card-secondary">
-            <span>RETRO</span>
-            <strong>Generation Map</strong>
-          </div>
         </div>
       </section>
 
-      <section class="stats-band home-stats" aria-label="Resumo do catalogo">
-        <div class="stat">
-          <span>Consoles</span>
-          <strong id="home-total-consoles">0</strong>
-        </div>
-        <div class="stat">
-          <span>Geracoes</span>
-          <strong id="home-total-generations">0</strong>
-        </div>
-        <div class="stat">
-          <span>Fabricantes</span>
-          <strong id="home-total-makers">0</strong>
-        </div>
-        <div class="stat">
-          <span>Periodo</span>
-          <strong id="home-year-range">--</strong>
-        </div>
-      </section>
-
-      <section class="content-section home-search-section" id="busca" aria-labelledby="search-title">
+      <section class="content-section home-search-section" id="busca" aria-label="Busca">
         <div class="section-heading">
           <p class="section-kicker">Busca</p>
-          <h2 id="search-title">Encontre por nome ou fabricante</h2>
         </div>
         <form class="home-search" role="search">
           <label for="console-search">Pesquisar console</label>
@@ -98,11 +65,30 @@
         <div class="generation-list" id="generation-list"></div>
         <p class="empty-state" id="empty-state" hidden>Nenhum console encontrado para esta busca.</p>
       </section>
+
+      <section class="stats-band home-stats" aria-label="Resumo do catalogo">
+        <div class="stat">
+          <span>Consoles</span>
+          <strong id="home-total-consoles">0</strong>
+        </div>
+        <div class="stat">
+          <span>Geracoes</span>
+          <strong id="home-total-generations">0</strong>
+        </div>
+        <div class="stat">
+          <span>Fabricantes</span>
+          <strong id="home-total-makers">0</strong>
+        </div>
+        <div class="stat">
+          <span>Periodo</span>
+          <strong id="home-year-range">--</strong>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="rodape">
       <span>Retro Catalog</span>
-      <span>Site estatico offline gerado a partir do conteudo local.</span>
+      <span>Site desenvolvido por Fred Oliveira e Lucas Lápide.</span>
     </footer>
 
     <script src="src/homeConsoles.js"></script>

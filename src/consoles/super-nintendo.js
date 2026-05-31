@@ -1,6 +1,6 @@
 window.consoleData = {
   id: "super-nintendo",
-  nome: "Super Nintendo Entertainment System",
+  nome: "Super Nintendo",
   fabricante: "Nintendo",
   ano: 1990,
   geracao: 4,
@@ -41,19 +41,19 @@ window.consoleData = {
 
   modelos: [
     {
-      nome: "Super Nintendo Entertainment System",
+      nome: "Super Nintendo",
       modelo: "Original",
       ano: 1990,
       imagem: "img/super-nintendo/consolev1.webp"
     },
     {
-      nome: "Super Nintendo Entertainment System",
+      nome: "Super Nintendo",
       modelo: "Original",
       ano: 1990,
       imagem: "img/super-nintendo/consolev2.webp"
     },
     {
-      nome: "Super Nintendo Entertainment System",
+      nome: "Super Nintendo",
       modelo: "Original",
       ano: 1990,
       imagem: "img/super-nintendo/consolev3.webp"

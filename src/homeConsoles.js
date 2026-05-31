@@ -171,7 +171,7 @@ window.homeConsoles = {
       geracao: 5,
       modelo: {
         nome: "PlayStation",
-        modelo: "Original/Fat",
+        modelo: "Original / Fat",
         ano: 1994,
         imagem: "img/playstation/consolev1.webp"
       }
@@ -192,7 +192,7 @@ window.homeConsoles = {
       fabricante: "Nintendo",
       geracao: 4,
       modelo: {
-        nome: "Super Nintendo Entertainment System",
+        nome: "Super Nintendo",
         modelo: "Original",
         ano: 1990,
         imagem: "img/super-nintendo/consolev1.webp"
